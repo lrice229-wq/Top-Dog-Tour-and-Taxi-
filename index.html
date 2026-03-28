@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Top Dog Tour & Taxi | St. Thomas USVI</title>
+  <style>
+    :root{
+      --navy:#1f2432;
+      --gold:#c8a55a;
+      --gold-dark:#b08d43;
+      --cream:#f8f6f1;
+      --white:#ffffff;
+      --text:#2d3340;
+      --muted:#6f7684;
+      --line:#e7e3da;
+      --shadow:0 10px 28px rgba(23, 32, 52, 0.08);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      color:var(--text);
+      background:var(--cream);
+    }
+
+    .container{
+      max-width:1180px;
+      margin:0 auto;
+      padding:0 24px;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(255,255,255,0.95);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      min-height:76px;
+      gap:24px;
+    }
+
+    .brand{
+      font-size:28px;
+      font-weight:800;
+      color:var(--navy);
+      text-decoration:none;
+      letter-spacing:.2px;
+    }
+
+    .brand span{ color:var(--gold); }
+
+    .nav-links{
+      display:flex;
+      gap:26px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .nav-links a{
+      text-decoration:none;
+      color:var(--navy);
+      font-weight:600;
+      font-size:15px;
+    }
+
+    .nav-links a:hover{ color:var(--gold-dark); }
+
+    .nav-cta{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      text-decoration:none;
+      border:none;
+      border-radius:12px;
+      padding:14px 22px;
+      font-weight:700;
+      cursor:pointer;
+      transition:.2s ease;
+    }
+
+    .btn-gold{
+      background:var(--gold);
+      color:#fff;
+    }
+
+    .btn-gold:hover{ background:var(--gold-dark); }
+
+    .btn-light{
+      background:#fff;
+      color:var(--navy);
+      border:1px solid var(--line);
+    }
+
+    .btn-light:hover{
+      background:#fafafa;
+    }
+
+    .hero{
+      position:relative;
+      min-height:760px;
+      display:flex;
+      align-items:center;
+      color:#fff;
+      background:
+        linear-gradient(rgba(20,28,42,.58), rgba(20,28,42,.55)),
+        url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:34px;
+      align-items:center;
+      width:100%;
+    }
+
+    .hero-copy h1{
+      font-size:68px;
+      line-height:1.02;
+      margin:0 0 18px;
+      font-weight:800;
+      max-width:760px;
+    }
+
+    .hero-copy p{
+      font-size:27px;
+      line-height:1.45;
+      max-width:820px;
+      margin:0 0 26px;
+      color:rgba(255,255,255,.95);
+    }
+
+    .hero-copy .subline{
+      font-size:20px;
+      color:rgba(255,255,255,.88);
+      margin-bottom:28px;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .hero-card{
+      background:rgba(255,255,255,.96);
+      color:var(--text);
+      border-radius:20px;
+      padding:26px;
+      box-shadow:var(--shadow);
+    }
+
+    .hero-card h3{
+      margin:0 0 10px;
+      color:var(--navy);
+      font-size:28px;
+    }
+
+    .hero-card p{
+      margin:0 0 18px;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.5;
+    }
+
+    .quick-list{
+      display:grid;
+      gap:12px;
+    }
+
+    .quick-item{
+      background:#fcfbf8;
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:14px 16px;
+      font-size:15px;
+      color:var(--text);
+    }
+
+    section{
+      padding:82px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:20px;
+    }
+
+    .section-title h2{
+      margin:0 0 10px;
+      font-size:48px;
+      color:var(--navy);
+    }
+
+    .section-title p{
+      margin:0 auto;
+      max-width:800px;
+      color:var(--muted);
+      font-size:20px;
+      line-height:1.5;
+    }
+
+    .services-grid,
+    .pricing-grid{
+      display:grid;
+      grid-template-columns:repeat(4, 1fr);
+      gap:22px;
+      margin-top:38px;
+    }
+
+    .service-card,
+    .price-card{
+      background:var(--white);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:26px;
+      box-shadow:var(--shadow);
+    }
+
+    .service-card h3,
+    .price-card h3{
+      margin:0 0 10px;
+      font-size:24px;
+      color:var(--navy);
+    }
+
+    .service-card p,
+    .price-card p{
+      margin:0;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.55;
+    }
+
+    .price-highlight{
+      color:var(--gold-dark);
+      font-weight:800;
+      font-size:20px;
+      display:block;
+      margin:8px 0 12px;
+    }
+
+    .quote-wrap{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:28px;
+      align-items:start;
+      margin-top:36px;
+    }
+
+    .card{
+      background:var(--white);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:28px;
+      box-shadow:var(--shadow);
+    }
+
+    .card h3{
+      margin:0 0 10px;
+      font-size:32px;
+      color:var(--navy);
+    }
+
+    .card p.lead{
+      margin:0 0 20px;
+      color:var(--muted);
+      line-height:1.5;
+      font-size:17px;
+    }
+
+    form{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+    }
+
+    .full{ grid-column:1 / -1; }
+
+    label{
+      display:block;
+      margin:0 0 7px;
+      font-size:14px;
+      font-weight:700;
+      color:var(--navy);
+    }
+
+    input, select, textarea{
+      width:100%;
+      padding:14px 14px;
+      border-radius:12px;
+      border:1px solid #d8dce2;
+      font-size:15px;
+      background:#fff;
+      color:var(--text);
+    }
+
+    textarea{
+      min-height:95px;
+      resize:vertical;
+    }
+
+    .quote-total{
+      font-size:52px;
+      font-weight:800;
+      color:var(--navy);
+      margin:14px 0 12px;
+    }
+
+    .quote-box{
+      background:#fcfbf8;
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:18px;
+      margin-top:18px;
+    }
+
+    .quote-box strong{
+      color:var(--navy);
+    }
+
+    .notice{
+      margin-top:18px;
+      background:#fff8ec;
+      border:1px solid #ecd8a6;
+      color:#725318;
+      padding:14px 16px;
+      border-radius:14px;
+      font-weight:700;
+    }
+
+    .about-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:34px;
+      align-items:center;
+      margin-top:26px;
+    }
+
+    .about-copy h3{
+      font-size:42px;
+      color:var(--navy);
+      margin:0 0 16px;
+    }
+
+    .about-copy p{
+      color:var(--muted);
+      font-size:18px;
+      line-height:1.7;
+      margin:0 0 18px;
+    }
+
+    .about-list{
+      display:grid;
+      gap:14px;
+      margin-top:24px;
+    }
+
+    .about-item{
+      padding:16px 18px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:#fff;
+      box-shadow:var(--shadow);
+    }
+
+    .about-item strong{
+      display:block;
+      color:var(--navy);
+      margin-bottom:6px;
+      font-size:18px;
+    }
+
+    .about-image{
+      width:100%;
+      border-radius:22px;
+      min-height:430px;
+      background:
+        url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+      box-shadow:var(--shadow);
+    }
+
+    .contact-strip{
+      margin-top:30px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:18px;
+      align-items:center;
+    }
+
+    .contact-pill{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:12px 16px;
+      color:var(--navy);
+      font-weight:700;
+      box-shadow:var(--shadow);
+    }
+
+    footer{
+      background:var(--navy);
+      color:rgba(255,255,255,.8);
+      padding:30px 0;
+      margin-top:40px;
+    }
+
+    footer p{
+      margin:0;
+      text-align:center;
+      font-size:14px;
+    }
+
+    @media (max-width: 1100px){
+      .services-grid,
+      .pricing-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .hero-copy h1{ font-size:54px; }
+      .hero-copy p{ font-size:22px; }
+    }
+
+    @media (max-width: 860px){
+      .nav{
+        flex-direction:column;
+        align-items:flex-start;
+        padding:16px 0;
+      }
+
+      .hero{
+        min-height:auto;
+        padding:70px 0;
+      }
+
+      .hero-grid,
+      .quote-wrap,
+      .about-grid{
+        grid-template-columns:1fr;
+      }
+
+      form{
+        grid-template-columns:1fr;
+      }
+
+      .services-grid,
+      .pricing-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero-copy h1{ font-size:42px; }
+      .hero-copy p{ font-size:19px; }
+      .section-title h2{ font-size:36px; }
+      .about-copy h3{ font-size:34px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#home" class="brand">Top Dog <span>Tour & Taxi</span></a>
+
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#about">About</a>
+      <a href="#quote">Contact</a>
+    </nav>
+
+    <div class="nav-cta">
+      <a href="#quote" class="btn btn-gold">Book Now</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <h1>Top Dog Tour & Taxi</h1>
+      <p>
+        Private transportation and tour service in St. Thomas, USVI offering
+        airport transfers, personalized island tours, grocery stops, and villa/Airbnb pickups.
+      </p>
+      <div class="subline">Reliable, private transportation for your St. Thomas stay.</div>
+
+      <div class="hero-actions">
+        <a href="#quote" class="btn btn-gold">Book Now</a>
+        <a href="#services" class="btn btn-light">View Services</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <h3>Luxury private transportation</h3>
+      <p>
+        Clean presentation, private service, custom island rides, and a much more polished experience than the usual random island scramble.
+      </p>
+
+      <div class="quick-list">
+        <div class="quick-item"><strong>Airport Transfers</strong><br>Fast private pickup and drop-off service</div>
+        <div class="quick-item"><strong>Personalized Island Tours</strong><br>Custom rides built around your day</div>
+        <div class="quick-item"><strong>Grocery Stops</strong><br>Convenient add-on before hotel or Airbnb drop-off</div>
+        <div class="quick-item"><strong>Villa & Airbnb Pickups</strong><br>Flexible service even for unlisted stays</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-title">
+      <h2>Our Services</h2>
+      <p>
+        From airport arrivals to island exploration, we offer comprehensive transportation solutions.
+      </p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Airport Transfers</h3>
+        <p>Seamless pickup and drop-off service from Henry E. Rohlsen airport and throughout St. Thomas with private transportation.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Personalized Island Tours</h3>
+        <p>Discover the beauty of St. Thomas with customized tours led by local island knowledge and flexible scheduling.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Grocery Stops</h3>
+        <p>Shopping assistance with convenient transportation to major supermarkets and local markets before drop-off.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Villa & Airbnb Pickups</h3>
+        <p>Convenient transportation from your accommodations to activities, marinas, beaches, restaurants, and custom stops.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="container">
+    <div class="section-title">
+      <h2>Transparent Pricing</h2>
+      <p>
+        Flexible rates based on your needs. Final pricing confirmed via personalized quote with no hidden fees.
+      </p>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="price-card">
+        <h3>Airport Transfers</h3>
+        <span class="price-highlight">Zone-based private pricing</span>
+        <p>Rates are based on destination zone and group size with private service markup included.</p>
+      </div>
+
+      <div class="price-card">
+        <h3>Island Tours</h3>
+        <span class="price-highlight">Custom quote</span>
+        <p>Personalized island tours are quoted based on itinerary, timing, group size, and stops.</p>
+      </div>
+
+      <div class="price-card">
+        <h3>Grocery Stops</h3>
+        <span class="price-highlight">+$20 add-on</span>
+        <p>Convenient grocery stop added to your ride before hotel, villa, or Airbnb drop-off.</p>
+      </div>
+
+      <div class="price-card">
+        <h3>Villa / Airbnb Pickups</h3>
+        <span class="price-highlight">Quoted by zone</span>
+        <p>Custom rates for unlisted or private accommodations based on location and service requested.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="quote">
+  <div class="container">
+    <div class="section-title">
+      <h2>Book Your Transportation</h2>
+      <p>
+        Fill out the form below for a quick quote. Use the calculator for an estimate, then send it to WhatsApp.
+      </p>
+    </div>
+
+    <div class="quote-wrap">
+      <div class="card">
+        <h3>Get a Quote</h3>
+        <p class="lead">
+          Private transportation estimate based on your destination, group size, and service options.
+        </p>
+
+        <form onsubmit="return false;">
+          <div>
+            <label for="date">Arrival / Departure Date</label>
+            <input id="date" type="date">
+          </div>
+
+          <div>
+            <label for="airline">Airline</label>
+            <input id="airline" type="text" placeholder="American, Delta, JetBlue...">
+          </div>
+
+          <div>
+            <label for="flight">Flight Number</label>
+            <input id="flight" type="text" placeholder="AA1234">
+          </div>
+
+          <div>
+            <label for="hotel">Pickup / Drop-off Location</label>
+            <input id="hotel" type="text" placeholder="Hotel, villa, Airbnb, marina...">
+          </div>
+
+          <div>
+            <label for="zone">Destination Zone</label>
+            <select id="zone">
+              <option value="20">Town / Charlotte Amalie ($20)</option>
+              <option value="22">Bolongo / Harbor View / Limetree ($22)</option>
+              <option value="24">Fortuna / West ($24)</option>
+              <option value="25">East End / Red Hook / Sapphire / Margaritaville ($25)</option>
+              <option value="26">Northside / Magens Bay / Mafolie ($26)</option>
+              <option value="28">Ritz / Secret Harbour / Luxury East End ($28)</option>
+              <option value="custom">Airbnb / Unlisted</option>
+              <option value="unlimited">Unlimited (Ask us)</option>
+            </select>
+          </div>
+
+          <div id="customWrap" style="display:none;">
+            <label for="customRate">Custom Base Rate</label>
+            <input id="customRate" type="number" min="0" step="1" placeholder="Enter custom base rate">
+          </div>
+
+          <div>
+            <label for="people">Number of Passengers</label>
+            <input id="people" type="number" min="1" value="2">
+          </div>
+
+          <div>
+            <label for="bags">Bags</label>
+            <input id="bags" type="number" min="0" value="2">
+          </div>
+
+          <div>
+            <label for="grocery">Grocery Stop</label>
+            <select id="grocery">
+              <option value="0">No</option>
+              <option value="20">Yes (+$20)</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="payment">Payment Method</label>
+            <select id="payment">
+              <option value="cash">Cash</option>
+              <option value="app">PayPal / Venmo / Cash App / Apple Pay / Zelle (+5%)</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="deposit">Deposit</label>
+            <select id="deposit">
+              <option value="no">No</option>
+              <option value="yes">Yes (10% off)</option>
+            </select>
+          </div>
+
+          <div class="full">
+            <label for="notes">Notes</label>
+            <textarea id="notes" placeholder="Child seats, custom stops, Airbnb notes, tour request..."></textarea>
+          </div>
+
+          <div class="full hero-actions">
+            <button class="btn btn-gold" type="button" onclick="calculate()">Get a Quote</button>
+            <a class="btn btn-light" id="whatsapp" target="_blank" rel="noopener">Send Quote on WhatsApp</a>
+          </div>
+        </form>
+
+        <div class="contact-strip">
+          <div class="contact-pill">Call / Text: 786-719-9870</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Instant Quote</h3>
+        <p class="lead">
+          Quick estimate based on your trip details. Final pricing is confirmed directly with us.
+        </p>
+
+        <div class="quote-box">
+          <div><strong>Estimated Total</strong></div>
+          <div class="quote-total" id="total">$0.00</div>
+          <div id="breakdown">
+            <strong>Breakdown</strong><br>
+            Enter your trip details and click Get a Quote.
+          </div>
+        </div>
+
+        <div class="notice">Ask us about weekly rate specials</div>
+        <div class="notice">Ask us about unlimited rates</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-copy">
+        <h3>About Top Dog Tour & Taxi</h3>
+        <p>
+          Based in beautiful St. Thomas, USVI, Top Dog Tour & Taxi is committed to providing exceptional private transportation and personalized tour experiences.
+        </p>
+        <p>
+          We understand that your island vacation is precious, and our goal is to make every journey comfortable, safe, memorable, and easy to book.
+        </p>
+
+        <div class="about-list">
+          <div class="about-item">
+            <strong>Professional Drivers</strong>
+            Courteous, dependable local service with island knowledge.
+          </div>
+          <div class="about-item">
+            <strong>Luxury Feel</strong>
+            Clean, comfortable presentation with a more polished experience.
+          </div>
+          <div class="about-item">
+            <strong>Flexible Service</strong>
+            Airport rides, tours, grocery stops, villas, Airbnbs, and custom routes.
+          </div>
+          <div class="about-item">
+            <strong>Reliable Booking</strong>
+            Fast communication and direct quote support through WhatsApp.
+          </div>
+        </div>
+      </div>
+
+      <div class="about-image"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 Top Dog Tour & Taxi. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+function calculate() {
+  let zone = document.getElementById("zone").value;
+  let base = Number(zone);
+  let people = Number(document.getElementById("people").value || 1);
+  let bags = Number(document.getElementById("bags").value || 0);
+  let grocery = Number(document.getElementById("grocery").value || 0);
+  let payment = document.getElementById("payment").value;
+  let deposit = document.getElementById("deposit").value;
+  let hotel = document.getElementById("hotel").value || "Not provided";
+  let airline = document.getElementById("airline").value || "Not provided";
+  let flight = document.getElementById("flight").value || "Not provided";
+  let date = document.getElementById("date").value || "Not provided";
+  let notes = document.getElementById("notes").value || "None";
+  let zoneText = document.getElementById("zone").options[document.getElementById("zone").selectedIndex].text;
+
+  if(zone === "custom"){
+    base = Number(document.getElementById("customRate").value || 0);
+  }
+
+  if(zone === "unlimited"){
+    document.getElementById("total").innerText = "Contact for pricing";
+    document.getElementById("breakdown").innerHTML =
+      "<strong>Breakdown</strong><br>Unlimited service selected. Contact us for custom pricing.";
+
+    let unlimitedMessage =
+      "Hello, I would like a quote from Top Dog Tour & Taxi.%0A%0A" +
+      "Service: Unlimited%0A" +
+      "Date: " + encodeURIComponent(date) + "%0A" +
+      "Location: " + encodeURIComponent(hotel) + "%0A" +
+      "Passengers: " + people + "%0A" +
+      "Bags: " + bags + "%0A" +
+      "Notes: " + encodeURIComponent(notes);
+
+    document.getElementById("whatsapp").href =
+      "https://wa.me/17867199870?text=" + unlimitedMessage;
+    return;
+  }
+
+  let markup = people >= 4 ? 5 : 10;
+  let pricePerPerson = base + markup;
+  let total = (pricePerPerson * people) + grocery;
+
+  if(deposit === "yes") total *= 0.9;
+  if(payment === "app") total *= 1.05;
+
+  document.getElementById("total").innerText = "$" + total.toFixed(2);
+
+  document.getElementById("breakdown").innerHTML =
+    "<strong>Breakdown</strong><br>" +
+    "Base rate: $" + base.toFixed(2) + "<br>" +
+    "Private markup: $" + markup.toFixed(2) + " per person<br>" +
+    "Passengers: " + people + "<br>" +
+    "Bags: " + bags + "<br>" +
+    "Price per person: $" + pricePerPerson.toFixed(2) + "<br>" +
+    "Grocery stop: $" + grocery.toFixed(2);
+
+  let message =
+    "Hello, I would like a quote from Top Dog Tour & Taxi.%0A%0A" +
+    "Date: " + encodeURIComponent(date) + "%0A" +
+    "Airline: " + encodeURIComponent(airline) + "%0A" +
+    "Flight: " + encodeURIComponent(flight) + "%0A" +
+    "Location: " + encodeURIComponent(hotel) + "%0A" +
+    "Zone: " + encodeURIComponent(zoneText) + "%0A" +
+    "Passengers: " + people + "%0A" +
+    "Bags: " + bags + "%0A" +
+    "Estimated Total: $" + total.toFixed(2) + "%0A" +
+    "Notes: " + encodeURIComponent(notes);
+
+  document.getElementById("whatsapp").href =
+    "https://wa.me/17867199870?text=" + message;
+}
+
+document.getElementById("zone").addEventListener("change", function(){
+  document.getElementById("customWrap").style.display =
+    this.value === "custom" ? "block" : "none";
+});
+</script>
+
+</body>
+</html>
