@@ -115,13 +115,6 @@
       margin-bottom: 20px;
     }
 
-    .card {
-      background: white;
-      border-radius: 14px;
-      padding: 22px;
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
-    }
-
     .logo-row {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -129,12 +122,17 @@
       align-items: center;
     }
 
-    .logo-card {
+    .logo-card,
+    .service-card,
+    .card {
       background: white;
       border-radius: 14px;
       padding: 20px;
-      text-align: center;
       box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    .logo-card {
+      text-align: center;
     }
 
     .logo-card img {
@@ -192,13 +190,6 @@
       gap: 18px;
     }
 
-    .service-card {
-      background: white;
-      border-radius: 14px;
-      padding: 20px;
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
-    }
-
     .service-card h3 {
       margin-top: 0;
     }
@@ -216,11 +207,71 @@
       margin: 0 auto 18px;
     }
 
+    .calculator-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .calculator-card label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .calculator-card input,
+    .calculator-card select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #c9d8e2;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .calc-btn {
+      width: 100%;
+      margin-top: 18px;
+      padding: 14px;
+      background: #0b84c6;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .calc-btn:hover {
+      background: #08689b;
+    }
+
+    .quote-total {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #0b84c6;
+      margin: 10px 0 16px;
+    }
+
+    .quote-box {
+      background: #f4fbff;
+      border-radius: 12px;
+      padding: 16px;
+      margin-top: 10px;
+    }
+
     footer {
       text-align: center;
       padding: 25px 20px 40px;
       color: #4d6678;
       font-size: 0.95rem;
+    }
+
+    @media (max-width: 900px) {
+      .calculator-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 768px) {
@@ -242,7 +293,7 @@
 
   <header>
     <div class="container">
-      <img src="logo1.jpeg" alt="Top Dog Tour and Taxi Logo" class="top-logo" />
+      <img src="logo1.png" alt="Top Dog Tour and Taxi Logo" class="top-logo" />
 
       <h1>Top Dog Tour and Taxi</h1>
       <p class="subtitle">
@@ -265,13 +316,12 @@
 
   <section>
     <div class="container">
-      <h2>Our Logos</h2>
       <div class="logo-row">
         <div class="logo-card">
-          <img src="logo1.jpeg" alt="Top Dog logo 1" />
+          <img src="logo1.png" alt="Top Dog logo 1" />
         </div>
         <div class="logo-card">
-          <img src="logo2.jpeg" alt="Top Dog logo 2" />
+          <img src="logo2.png" alt="Top Dog logo 2" />
         </div>
       </div>
     </div>
@@ -282,7 +332,7 @@
       <h2>Island Moments</h2>
 
       <div class="slideshow-wrap">
-        <img class="slides active" src="slide1.jpeg" alt="Island photo 1">
+        <img class="slides active" src="slide1.png" alt="Island photo 1">
         <img class="slides" src="slide2.jpeg" alt="Island photo 2">
         <img class="slides" src="slide3.jpeg" alt="Island photo 3">
         <img class="slides" src="slide4.jpeg" alt="Island photo 4">
@@ -296,6 +346,79 @@
           <span class="dot" onclick="showSlide(3)"></span>
           <span class="dot" onclick="showSlide(4)"></span>
           <span class="dot" onclick="showSlide(5)"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Quick Price Calculator</h2>
+
+      <div class="calculator-grid">
+        <div class="card calculator-card">
+          <label for="date">Date</label>
+          <input id="date" type="date">
+
+          <label for="airline">Airline</label>
+          <input id="airline" type="text" placeholder="Airline name">
+
+          <label for="flight">Flight Number</label>
+          <input id="flight" type="text" placeholder="Flight number">
+
+          <label for="hotel">Hotel / Pickup Location</label>
+          <input id="hotel" type="text" placeholder="Hotel or pickup location">
+
+          <label for="zone">Zone</label>
+          <select id="zone">
+            <option value="20">Town ($20)</option>
+            <option value="22">Bolongo ($22)</option>
+            <option value="25">East End ($25)</option>
+            <option value="28">Ritz ($28)</option>
+          </select>
+
+          <label for="people">People</label>
+          <input id="people" type="number" value="2" min="1">
+
+          <label for="bags">Bags</label>
+          <input id="bags" type="number" value="2" min="0">
+
+          <label for="grocery">Grocery Stop</label>
+          <select id="grocery">
+            <option value="0">No</option>
+            <option value="20">Yes (+$20)</option>
+          </select>
+
+          <label for="payment">Payment</label>
+          <select id="payment">
+            <option value="cash">Cash</option>
+            <option value="app">Apps (+5%)</option>
+          </select>
+
+          <label for="deposit">Deposit</label>
+          <select id="deposit">
+            <option value="no">No</option>
+            <option value="yes">Yes (10% off)</option>
+          </select>
+
+          <button class="calc-btn" onclick="calculate()">Calculate Price</button>
+        </div>
+
+        <div class="card">
+          <h3>Your Quote</h3>
+          <div class="quote-total" id="total">$0.00</div>
+
+          <div class="quote-box" id="breakdown">
+            Fill out the form and tap Calculate Price.
+          </div>
+
+          <p style="margin-top:20px;">
+            <strong>Ask us about weekly rate specials.</strong>
+          </p>
+
+          <div class="button-row" style="justify-content:flex-start;">
+            <a class="btn btn-primary" id="whatsappQuote" href="#" target="_blank">Send Quote on WhatsApp</a>
+          </div>
         </div>
       </div>
     </div>
@@ -369,7 +492,6 @@
     function showSlide(index) {
       slides.forEach((slide) => slide.classList.remove("active"));
       dots.forEach((dot) => dot.classList.remove("active"));
-
       slides[index].classList.add("active");
       dots[index].classList.add("active");
       currentSlide = index;
@@ -381,6 +503,53 @@
     }
 
     setInterval(autoSlide, 3500);
+
+    function calculate() {
+      let date = document.getElementById("date").value;
+      let airline = document.getElementById("airline").value;
+      let flight = document.getElementById("flight").value;
+      let hotel = document.getElementById("hotel").value;
+      let base = Number(document.getElementById("zone").value);
+      let people = Number(document.getElementById("people").value);
+      let bags = Number(document.getElementById("bags").value);
+      let grocery = Number(document.getElementById("grocery").value);
+      let payment = document.getElementById("payment").value;
+      let deposit = document.getElementById("deposit").value;
+
+      let markup = people >= 4 ? 5 : 10;
+      let pricePerPerson = base + markup;
+      let total = (pricePerPerson * people) + grocery;
+
+      if (deposit === "yes") total *= 0.9;
+      if (payment === "app") total *= 1.05;
+
+      document.getElementById("total").innerText = "$" + total.toFixed(2);
+
+      document.getElementById("breakdown").innerHTML =
+        "<strong>Price per person:</strong> $" + pricePerPerson.toFixed(2) + "<br>" +
+        "<strong>People:</strong> " + people + "<br>" +
+        "<strong>Bags:</strong> " + bags + "<br>" +
+        "<strong>Grocery stop:</strong> $" + grocery.toFixed(2) + "<br>" +
+        "<strong>Payment type:</strong> " + (payment === "app" ? "App payment (+5%)" : "Cash") + "<br>" +
+        "<strong>Deposit:</strong> " + (deposit === "yes" ? "Yes (10% off)" : "No") + "<br>" +
+        (date ? "<strong>Date:</strong> " + date + "<br>" : "") +
+        (airline ? "<strong>Airline:</strong> " + airline + "<br>" : "") +
+        (flight ? "<strong>Flight #:</strong> " + flight + "<br>" : "") +
+        (hotel ? "<strong>Hotel / Pickup:</strong> " + hotel : "");
+
+      let message =
+        "Quote request:%0A" +
+        (date ? "Date: " + date + "%0A" : "") +
+        (airline ? "Airline: " + airline + "%0A" : "") +
+        (flight ? "Flight #: " + flight + "%0A" : "") +
+        (hotel ? "Hotel/Pickup: " + hotel + "%0A" : "") +
+        "People: " + people + "%0A" +
+        "Bags: " + bags + "%0A" +
+        "Total: $" + total.toFixed(2);
+
+      document.getElementById("whatsappQuote").href =
+        "https://wa.me/17867199870?text=" + message;
+    }
   </script>
 
 </body>
