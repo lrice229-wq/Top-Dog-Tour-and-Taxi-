@@ -380,6 +380,94 @@
       box-shadow:var(--shadow);
     }
 
+    .reviews-grid{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:22px;
+      margin-top:38px;
+    }
+
+    .review-card{
+      background:var(--white);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:24px;
+      box-shadow:var(--shadow);
+    }
+
+    .stars{
+      color:var(--gold-dark);
+      font-size:20px;
+      letter-spacing:2px;
+      margin-bottom:10px;
+    }
+
+    .review-card p{
+      margin:0 0 14px;
+      color:var(--text);
+      line-height:1.6;
+      font-size:17px;
+    }
+
+    .review-meta{
+      color:var(--muted);
+      font-size:14px;
+      font-weight:700;
+    }
+
+    .brand-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
+      margin-top:36px;
+    }
+
+    .brand-card{
+      background:linear-gradient(145deg,#2f3548,#1f2432);
+      color:#fff;
+      border-radius:20px;
+      padding:30px;
+      box-shadow:var(--shadow);
+      min-height:260px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .brand-card::before{
+      content:"";
+      position:absolute;
+      width:220px;
+      height:220px;
+      border-radius:50%;
+      right:-60px;
+      top:-60px;
+      background:rgba(200,165,90,.2);
+      border:1px solid rgba(200,165,90,.4);
+    }
+
+    .brand-card h3{
+      margin:0 0 10px;
+      font-size:30px;
+      position:relative;
+      z-index:1;
+    }
+
+    .brand-card p{
+      margin:0;
+      color:rgba(255,255,255,.9);
+      line-height:1.6;
+      position:relative;
+      z-index:1;
+    }
+
+    .brand-note{
+      margin-top:14px;
+      color:#f1d79f;
+      font-weight:700;
+      position:relative;
+      z-index:1;
+    }
+
     .about-item strong{
       display:block;
       color:var(--navy);
@@ -435,6 +523,7 @@
       .pricing-grid{
         grid-template-columns:repeat(2,1fr);
       }
+      .reviews-grid{ grid-template-columns:1fr 1fr; }
 
       .hero-copy h1{ font-size:54px; }
       .hero-copy p{ font-size:22px; }
@@ -466,6 +555,10 @@
       .pricing-grid{
         grid-template-columns:1fr;
       }
+      .reviews-grid,
+      .brand-grid{
+        grid-template-columns:1fr;
+      }
 
       .hero-copy h1{ font-size:42px; }
       .hero-copy p{ font-size:19px; }
@@ -484,7 +577,8 @@
       <a href="#home">Home</a>
       <a href="#services">Services</a>
       <a href="#pricing">Pricing</a>
-      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#brand">Brand</a>
       <a href="#quote">Contact</a>
     </nav>
 
@@ -724,39 +818,89 @@
   </div>
 </section>
 
-<section id="about">
+<section id="reviews">
   <div class="container">
-    <div class="about-grid">
-      <div class="about-copy">
-        <h3>About Top Dog Tour & Taxi</h3>
-        <p>
-          Based in beautiful St. Thomas, USVI, Top Dog Tour & Taxi is committed to providing exceptional private transportation and personalized tour experiences.
-        </p>
-        <p>
-          We understand that your island vacation is precious, and our goal is to make every journey comfortable, safe, memorable, and easy to book.
-        </p>
+    <div class="section-title">
+      <h2>5-Star Guest Reviews</h2>
+      <p>
+        Real feedback from recent Top Dog Tour & Taxi guests who booked rides and private island tours.
+      </p>
+    </div>
 
-        <div class="about-list">
-          <div class="about-item">
-            <strong>Professional Drivers</strong>
-            Courteous, dependable local service with island knowledge.
-          </div>
-          <div class="about-item">
-            <strong>Luxury Feel</strong>
-            Clean, comfortable presentation with a more polished experience.
-          </div>
-          <div class="about-item">
-            <strong>Flexible Service</strong>
-            Airport rides, tours, grocery stops, villas, Airbnbs, and custom routes.
-          </div>
-          <div class="about-item">
-            <strong>Reliable Booking</strong>
-            Fast communication and direct quote support through WhatsApp.
-          </div>
-        </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>“Best driver on the island.”</p>
+        <div class="review-meta">Jacob Tyson · Google Review</div>
       </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>“Amazing private tour. We learned so much and saw cool places without the chaos of a tour bus.”</p>
+        <div class="review-meta">Heather Edwards · Google Review</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>“Alex was there from the moment we arrived, with flawless communication throughout our stay.”</p>
+        <div class="review-meta">Hannah Hale · Google Review</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <div class="about-image"></div>
+<section id="brand">
+  <div class="container">
+    <div class="section-title">
+      <h2>Top Dog Brand Highlights</h2>
+      <p>
+        We incorporated your new artwork direction and flyer messaging to reinforce your island identity and trusted service.
+      </p>
+    </div>
+
+    <div class="brand-grid">
+      <div class="brand-card">
+        <h3>Logo Direction</h3>
+        <p>
+          Sunset badge styling, island palms, and Top Dog Jeep/taxi themes are now reflected as a signature visual direction across the site.
+        </p>
+        <div class="brand-note">Inspired by your uploaded logo concepts.</div>
+      </div>
+      <div class="brand-card">
+        <h3>Service Flyer Messaging</h3>
+        <p>
+          Your featured offers are now emphasized: airport rides, private island tours, grocery pickup/drop-off, and direct restaurant food delivery.
+        </p>
+        <div class="brand-note">Built from your uploaded services flyer.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="highlights">
+  <div class="container">
+    <div class="section-title">
+      <h2>What Guests Love Most</h2>
+      <p>
+        Fast communication, private service (no packed vans), reliable timing, and local island knowledge.
+      </p>
+    </div>
+
+    <div class="about-list">
+      <div class="about-item">
+        <strong>Airport + Cruise Pickups</strong>
+        Clean, private pickup service with quick routing to hotels, villas, and marinas.
+      </div>
+      <div class="about-item">
+        <strong>Private Island Tours</strong>
+        Fully customized routes to beaches, scenic overlooks, local gems, and food stops.
+      </div>
+      <div class="about-item">
+        <strong>Food & Grocery Runs</strong>
+        Flexible same-day rides for groceries, restaurant pickups, and delivery support.
+      </div>
+      <div class="about-item">
+        <strong>Trusted Local Service</strong>
+        5-star guest satisfaction backed by dependable communication and on-time service.
+      </div>
     </div>
   </div>
 </section>
