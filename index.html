@@ -50,11 +50,23 @@
     }
 
     .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
       font-size:28px;
       font-weight:800;
       color:var(--navy);
       text-decoration:none;
       letter-spacing:.2px;
+    }
+
+    .brand-logo{
+      width:48px;
+      height:48px;
+      border-radius:50%;
+      object-fit:cover;
+      border:2px solid rgba(31,36,50,.12);
+      box-shadow:var(--shadow);
     }
 
     .brand span{ color:var(--gold); }
@@ -182,6 +194,30 @@
     .quick-list{
       display:grid;
       gap:12px;
+    }
+
+    .logo-chip{
+      margin-top:18px;
+      display:flex;
+      align-items:center;
+      gap:14px;
+      padding:12px;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:14px;
+    }
+
+    .logo-chip img{
+      width:56px;
+      height:56px;
+      border-radius:12px;
+      object-fit:cover;
+    }
+
+    .logo-chip span{
+      font-size:14px;
+      color:var(--muted);
+      font-weight:700;
     }
 
     .quick-item{
@@ -415,6 +451,49 @@
       font-weight:700;
     }
 
+    .slider-wrap{
+      margin-top:34px;
+      border-radius:22px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      background:#fff;
+    }
+
+    .slider{
+      position:relative;
+      aspect-ratio:16/8;
+      min-height:280px;
+    }
+
+    .slide{
+      position:absolute;
+      inset:0;
+      opacity:0;
+      transition:opacity .8s ease;
+    }
+
+    .slide.active{ opacity:1; }
+
+    .slide img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .slide-caption{
+      position:absolute;
+      bottom:0;
+      left:0;
+      right:0;
+      padding:16px 20px;
+      background:linear-gradient(transparent, rgba(16,22,34,.72));
+      color:#fff;
+      font-weight:700;
+      letter-spacing:.2px;
+    }
+
     .brand-grid{
       display:grid;
       grid-template-columns:1fr 1fr;
@@ -564,6 +643,7 @@
       .hero-copy p{ font-size:19px; }
       .section-title h2{ font-size:36px; }
       .about-copy h3{ font-size:34px; }
+      .brand{ font-size:24px; }
     }
   </style>
 </head>
@@ -571,11 +651,15 @@
 
 <header>
   <div class="container nav">
-    <a href="#home" class="brand">Top Dog <span>Tour & Taxi</span></a>
+    <a href="#home" class="brand">
+      <img src="Logo-1.jpg" alt="Top Dog Tour & Taxi logo" class="brand-logo">
+      Top Dog <span>Tour & Taxi</span>
+    </a>
 
     <nav class="nav-links">
       <a href="#home">Home</a>
       <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
       <a href="#pricing">Pricing</a>
       <a href="#reviews">Reviews</a>
       <a href="#brand">Brand</a>
@@ -594,7 +678,7 @@
       <h1>Top Dog Tour & Taxi</h1>
       <p>
         Private transportation and tour service in St. Thomas, USVI offering
-        airport transfers, personalized island tours, grocery stops, and villa/Airbnb pickups.
+        airport transfers from Cyril E. King Airport, personalized island tours, grocery stops, and villa/Airbnb pickups.
       </p>
       <div class="subline">Reliable, private transportation for your St. Thomas stay.</div>
 
@@ -616,6 +700,11 @@
         <div class="quick-item"><strong>Grocery Stops</strong><br>Convenient add-on before hotel or Airbnb drop-off</div>
         <div class="quick-item"><strong>Villa & Airbnb Pickups</strong><br>Flexible service even for unlisted stays</div>
       </div>
+
+      <div class="logo-chip">
+        <img src="Logo-2.PNG" alt="Top Dog secondary logo">
+        <span>Professional private service trusted by visitors across St. Thomas.</span>
+      </div>
     </div>
   </div>
 </section>
@@ -632,7 +721,7 @@
     <div class="services-grid">
       <div class="service-card">
         <h3>Airport Transfers</h3>
-        <p>Seamless pickup and drop-off service from Henry E. Rohlsen airport and throughout St. Thomas with private transportation.</p>
+        <p>Seamless pickup and drop-off service from Cyril E. King Airport (STT) and throughout St. Thomas with private transportation.</p>
       </div>
 
       <div class="service-card">
@@ -685,6 +774,38 @@
         <h3>Villa / Airbnb Pickups</h3>
         <span class="price-highlight">Quoted by zone</span>
         <p>Custom rates for unlisted or private accommodations based on location and service requested.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="container">
+    <div class="section-title">
+      <h2>Tour Highlights</h2>
+      <p>
+        A rotating look at the Top Dog experience across the island.
+      </p>
+    </div>
+
+    <div class="slider-wrap">
+      <div class="slider" id="slider">
+        <div class="slide active">
+          <img src="Slideshow-1.JPG" alt="Top Dog slideshow image 1">
+          <div class="slide-caption">Private rides with island comfort</div>
+        </div>
+        <div class="slide">
+          <img src="Slideshow-2.JPG" alt="Top Dog slideshow image 2">
+          <div class="slide-caption">Custom tours with local insight</div>
+        </div>
+        <div class="slide">
+          <img src="Slideshow-3%20.JPG" alt="Top Dog slideshow image 3">
+          <div class="slide-caption">On-time airport and hotel transfers</div>
+        </div>
+        <div class="slide">
+          <img src="Slide-4%20.JPG" alt="Top Dog slideshow image 4">
+          <div class="slide-caption">Stress-free transportation in St. Thomas</div>
+        </div>
       </div>
     </div>
   </div>
@@ -821,9 +942,9 @@
 <section id="reviews">
   <div class="container">
     <div class="section-title">
-      <h2>5-Star Guest Reviews</h2>
+      <h2>What Customers Are Saying</h2>
       <p>
-        Real feedback from recent Top Dog Tour & Taxi guests who booked rides and private island tours.
+        Why choose Top Dog Tour & Taxi: private service, fast pickups, and local insight that helps guests enjoy more of St. Thomas.
       </p>
     </div>
 
@@ -835,13 +956,13 @@
       </div>
       <div class="review-card">
         <div class="stars">★★★★★</div>
-        <p>“Amazing private tour. We learned so much and saw cool places without the chaos of a tour bus.”</p>
+        <p>“We used Top Dog Taxi and Tours and they were so amazing. We learned so much about the islands and saw cool places without the chaos of a tour bus. They were accommodating, communicative, and took away transportation stress during our stay. We cannot recommend them enough... 10 stars.”</p>
         <div class="review-meta">Heather Edwards · Google Review</div>
       </div>
       <div class="review-card">
         <div class="stars">★★★★★</div>
-        <p>“Alex was there from the moment we arrived, with flawless communication throughout our stay.”</p>
-        <div class="review-meta">Hannah Hale · Google Review</div>
+        <p>“Alex and Lauren made transportation easy from start to finish. They showed up quickly, shared great island tips, helped with photo stops, and made it simple for us to visit both St. Thomas and St. John. Friendly, reliable, and highly recommended.”</p>
+        <div class="review-meta">Paraphrased from Aurora Carey · Local Guide Review</div>
       </div>
     </div>
   </div>
@@ -988,6 +1109,15 @@ document.getElementById("zone").addEventListener("change", function(){
   document.getElementById("customWrap").style.display =
     this.value === "custom" ? "block" : "none";
 });
+
+const slides = document.querySelectorAll(".slide");
+let slideIndex = 0;
+
+setInterval(() => {
+  slides[slideIndex].classList.remove("active");
+  slideIndex = (slideIndex + 1) % slides.length;
+  slides[slideIndex].classList.add("active");
+}, 4200);
 </script>
 
 </body>
