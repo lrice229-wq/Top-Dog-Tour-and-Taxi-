@@ -93,6 +93,14 @@
       cursor:pointer;
       transition:.2s ease;
     }
+    .btn:focus-visible,
+    .nav-links a:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible{
+      outline:3px solid rgba(200,165,90,.5);
+      outline-offset:2px;
+    }
 
     .btn-gold{
       background:var(--gold);
@@ -156,6 +164,23 @@
       display:flex;
       gap:14px;
       flex-wrap:wrap;
+    }
+
+    .badges{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:16px;
+    }
+
+    .badge{
+      background:rgba(255,255,255,.16);
+      border:1px solid rgba(255,255,255,.28);
+      border-radius:999px;
+      padding:8px 12px;
+      font-size:13px;
+      font-weight:700;
+      color:#fff;
     }
 
     .hero-card{
@@ -345,6 +370,13 @@
       font-weight:700;
     }
 
+    .form-note{
+      margin-top:14px;
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.5;
+    }
+
     .about-grid{
       display:grid;
       grid-template-columns:1fr 1fr;
@@ -503,6 +535,11 @@
         airport transfers, personalized island tours, grocery stops, and villa/Airbnb pickups.
       </p>
       <div class="subline">Reliable, private transportation for your St. Thomas stay.</div>
+      <div class="badges" aria-label="Service highlights">
+        <div class="badge">Locally Owned</div>
+        <div class="badge">Private Rides</div>
+        <div class="badge">WhatsApp Booking</div>
+      </div>
 
       <div class="hero-actions">
         <a href="#quote" class="btn btn-gold">Book Now</a>
@@ -538,7 +575,7 @@
     <div class="services-grid">
       <div class="service-card">
         <h3>Airport Transfers</h3>
-        <p>Seamless pickup and drop-off service from Henry E. Rohlsen airport and throughout St. Thomas with private transportation.</p>
+        <p>Seamless pickup and drop-off service from Cyril E. King Airport (STT) and throughout St. Thomas with private transportation.</p>
       </div>
 
       <div class="service-card">
@@ -612,10 +649,10 @@
           Private transportation estimate based on your destination, group size, and service options.
         </p>
 
-        <form onsubmit="return false;">
+        <form onsubmit="return false;" aria-label="Transportation quote form">
           <div>
             <label for="date">Arrival / Departure Date</label>
-            <input id="date" type="date">
+            <input id="date" type="date" required>
           </div>
 
           <div>
@@ -630,7 +667,7 @@
 
           <div>
             <label for="hotel">Pickup / Drop-off Location</label>
-            <input id="hotel" type="text" placeholder="Hotel, villa, Airbnb, marina...">
+            <input id="hotel" type="text" placeholder="Hotel, villa, Airbnb, marina..." required>
           </div>
 
           <div>
@@ -654,12 +691,12 @@
 
           <div>
             <label for="people">Number of Passengers</label>
-            <input id="people" type="number" min="1" value="2">
+            <input id="people" type="number" min="1" max="12" value="2">
           </div>
 
           <div>
             <label for="bags">Bags</label>
-            <input id="bags" type="number" min="0" value="2">
+            <input id="bags" type="number" min="0" max="20" value="2">
           </div>
 
           <div>
@@ -696,9 +733,13 @@
             <a class="btn btn-light" id="whatsapp" target="_blank" rel="noopener">Send Quote on WhatsApp</a>
           </div>
         </form>
+        <div class="form-note">
+          Estimates are for planning only and may vary based on exact pickup point, wait time, and luggage volume.
+        </div>
 
         <div class="contact-strip">
-          <div class="contact-pill">Call / Text: 786-719-9870</div>
+          <a class="contact-pill" href="tel:+17867199870">Call / Text: 786-719-9870</a>
+          <a class="contact-pill" href="https://wa.me/17867199870" target="_blank" rel="noopener">WhatsApp: +1 (786) 719-9870</a>
         </div>
       </div>
 
@@ -763,17 +804,22 @@
 
 <footer>
   <div class="container">
-    <p>© 2026 Top Dog Tour & Taxi. All rights reserved.</p>
+    <p>© <span id="year"></span> Top Dog Tour & Taxi. All rights reserved.</p>
   </div>
 </footer>
 
 <script>
+function toNumber(value, fallback = 0) {
+  const next = Number(value);
+  return Number.isFinite(next) ? next : fallback;
+}
+
 function calculate() {
   let zone = document.getElementById("zone").value;
-  let base = Number(zone);
-  let people = Number(document.getElementById("people").value || 1);
-  let bags = Number(document.getElementById("bags").value || 0);
-  let grocery = Number(document.getElementById("grocery").value || 0);
+  let base = toNumber(zone);
+  let people = Math.max(1, Math.min(12, toNumber(document.getElementById("people").value, 1)));
+  let bags = Math.max(0, Math.min(20, toNumber(document.getElementById("bags").value, 0)));
+  let grocery = toNumber(document.getElementById("grocery").value, 0);
   let payment = document.getElementById("payment").value;
   let deposit = document.getElementById("deposit").value;
   let hotel = document.getElementById("hotel").value || "Not provided";
@@ -784,7 +830,16 @@ function calculate() {
   let zoneText = document.getElementById("zone").options[document.getElementById("zone").selectedIndex].text;
 
   if(zone === "custom"){
-    base = Number(document.getElementById("customRate").value || 0);
+    base = Math.max(0, toNumber(document.getElementById("customRate").value, 0));
+  }
+
+  if (people > 8) {
+    document.getElementById("total").innerText = "Custom quote required";
+    document.getElementById("breakdown").innerHTML =
+      "<strong>Breakdown</strong><br>Groups over 8 passengers require a custom vehicle plan. Please message us for exact pricing.";
+    document.getElementById("whatsapp").href =
+      "https://wa.me/17867199870?text=Hello%2C%20I%20need%20a%20custom%20quote%20for%20more%20than%208%20passengers.";
+    return;
   }
 
   if(zone === "unlimited"){
@@ -808,7 +863,8 @@ function calculate() {
 
   let markup = people >= 4 ? 5 : 10;
   let pricePerPerson = base + markup;
-  let total = (pricePerPerson * people) + grocery;
+  let bagSurcharge = bags > 4 ? (bags - 4) * 2 : 0;
+  let total = (pricePerPerson * people) + grocery + bagSurcharge;
 
   if(deposit === "yes") total *= 0.9;
   if(payment === "app") total *= 1.05;
@@ -822,7 +878,8 @@ function calculate() {
     "Passengers: " + people + "<br>" +
     "Bags: " + bags + "<br>" +
     "Price per person: $" + pricePerPerson.toFixed(2) + "<br>" +
-    "Grocery stop: $" + grocery.toFixed(2);
+    "Grocery stop: $" + grocery.toFixed(2) + "<br>" +
+    "Extra bag surcharge: $" + bagSurcharge.toFixed(2);
 
   let message =
     "Hello, I would like a quote from Top Dog Tour & Taxi.%0A%0A" +
@@ -833,6 +890,7 @@ function calculate() {
     "Zone: " + encodeURIComponent(zoneText) + "%0A" +
     "Passengers: " + people + "%0A" +
     "Bags: " + bags + "%0A" +
+    "Extra bag surcharge: $" + bagSurcharge.toFixed(2) + "%0A" +
     "Estimated Total: $" + total.toFixed(2) + "%0A" +
     "Notes: " + encodeURIComponent(notes);
 
@@ -843,7 +901,19 @@ function calculate() {
 document.getElementById("zone").addEventListener("change", function(){
   document.getElementById("customWrap").style.display =
     this.value === "custom" ? "block" : "none";
+  calculate();
 });
+
+[
+  "date", "airline", "flight", "hotel", "customRate",
+  "people", "bags", "grocery", "payment", "deposit", "notes"
+].forEach(function(id){
+  document.getElementById(id).addEventListener("input", calculate);
+  document.getElementById(id).addEventListener("change", calculate);
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
+calculate();
 </script>
 
 </body>
