@@ -33,7 +33,7 @@
         url('slide6.jpeg') center/cover no-repeat;
       color: white;
       text-align: center;
-      padding: 70px 20px 50px;
+      padding: 80px 20px 60px;
     }
 
     .top-logo {
@@ -45,13 +45,13 @@
     }
 
     h1 {
-      margin: 0 0 10px;
+      margin: 0 0 12px;
       font-size: 2.4rem;
     }
 
     .subtitle {
       max-width: 800px;
-      margin: 0 auto 20px;
+      margin: 0 auto 28px;
       font-size: 1.1rem;
     }
 
@@ -91,7 +91,7 @@
     }
 
     .payment-row {
-      margin-top: 12px;
+      margin-top: 10px;
     }
 
     .btn-pay {
@@ -106,7 +106,7 @@
     }
 
     section {
-      padding: 35px 0;
+      padding: 52px 0;
     }
 
     h2 {
@@ -115,31 +115,27 @@
       margin-bottom: 20px;
     }
 
-    .logo-row {
+    .trust-strip {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-      align-items: center;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-top: 26px;
     }
 
-    .logo-card,
-    .service-card,
-    .card {
-      background: white;
-      border-radius: 14px;
-      padding: 20px;
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
-    }
-
-    .logo-card {
+    .trust-item {
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-weight: bold;
+      font-size: 0.95rem;
       text-align: center;
     }
 
-    .logo-card img {
-      width: 100%;
-      max-width: 360px;
-      height: auto;
-      border-radius: 12px;
+    .info-strip {
+      margin-top: 14px;
+      color: #e9f7ff;
+      font-size: 0.95rem;
     }
 
     .slideshow-wrap {
@@ -184,14 +180,33 @@
       background-color: #0b84c6;
     }
 
-    .services-grid {
+    .services-grid,
+    .reviews-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 18px;
     }
 
-    .service-card h3 {
+    .service-card,
+    .review-card,
+    .card {
+      background: white;
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    .service-card h3,
+    .review-card h3 {
       margin-top: 0;
+      margin-bottom: 8px;
+    }
+
+    .section-note {
+      max-width: 840px;
+      margin: 0 auto 24px;
+      text-align: center;
+      color: #35536a;
     }
 
     .cta-box {
@@ -199,24 +214,33 @@
       background: #0b84c6;
       color: white;
       border-radius: 16px;
-      padding: 30px 20px;
+      padding: 36px 24px;
     }
 
     .cta-box p {
-      max-width: 750px;
-      margin: 0 auto 18px;
+      max-width: 760px;
+      margin: 0 auto 20px;
     }
 
     .calculator-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
+      gap: 24px;
       align-items: start;
     }
 
+    .calculator-card form {
+      display: grid;
+      gap: 12px;
+    }
+
+    .field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
     .calculator-card label {
-      display: block;
-      margin-top: 10px;
       font-weight: bold;
     }
 
@@ -224,15 +248,15 @@
     .calculator-card select {
       width: 100%;
       padding: 10px;
-      margin-top: 6px;
       border: 1px solid #c9d8e2;
       border-radius: 8px;
       font-size: 1rem;
+      background: white;
     }
 
     .calc-btn {
       width: 100%;
-      margin-top: 18px;
+      margin-top: 8px;
       padding: 14px;
       background: #0b84c6;
       color: white;
@@ -257,7 +281,7 @@
     .quote-box {
       background: #f4fbff;
       border-radius: 12px;
-      padding: 16px;
+      padding: 18px;
       margin-top: 10px;
     }
 
@@ -297,31 +321,117 @@
 
       <h1>Top Dog Tour and Taxi</h1>
       <p class="subtitle">
-        Reliable airport pickups, island rides, tours, food stops, and private transportation in St. Thomas, U.S. Virgin Islands.
+        Reliable airport pickups, private rides, island tours, and local stops in St. Thomas, USVI.
       </p>
 
       <div class="button-row">
-        <a class="btn btn-primary" href="sms:+17867199870?body=Hi%20Top%20Dog%20Tour%20and%20Taxi%2C%20I%20want%20to%20book%20a%20ride.">Text to Book</a>
-        <a class="btn btn-secondary" href="https://wa.me/17867199870?text=Hi%20Top%20Dog%20Tour%20and%20Taxi%2C%20I%20want%20to%20book%20a%20ride." target="_blank">WhatsApp</a>
-        <a class="btn btn-secondary" href="mailto:topdogtaxiandtoursstt@gmail.com?subject=Top%20Dog%20Tour%20and%20Taxi%20Booking%20Request">Email Us</a>
-        <a class="btn btn-secondary" href="https://calendar.app.google/QhGbrGE2vqHfdK3t5" target="_blank">Book on Calendar</a>
+        <a class="btn btn-secondary" href="https://wa.me/17867199870?text=Hi%20Top%20Dog%20Tour%20and%20Taxi%2C%20I%20want%20to%20book%20a%20ride." target="_blank">Book on WhatsApp</a>
+        <a class="btn btn-secondary" href="mailto:topdogtaxiandtoursstt@gmail.com?subject=Top%20Dog%20Tour%20and%20Taxi%20Booking%20Request">Book by Email</a>
+        <a class="btn btn-secondary" href="https://calendar.app.google/QhGbrGE2vqHfdK3t5" target="_blank">Reserve on Calendar</a>
       </div>
 
-      <div class="button-row payment-row">
-        <a class="btn btn-pay" href="https://venmo.com/u/Lauren-Rice-49" target="_blank">Pay Deposit with Venmo</a>
-        <a class="btn btn-pay" href="https://cash.app/$topdogtourandtaxi" target="_blank">Pay Deposit with Cash App</a>
+      <div class="trust-strip">
+        <div class="trust-item">Airport pickups</div>
+        <div class="trust-item">Private rides</div>
+        <div class="trust-item">Island tours</div>
+        <div class="trust-item">Local driver</div>
+        <div class="trust-item">Fast WhatsApp booking</div>
       </div>
+      <p class="info-strip">Serving St. Thomas, USVI • Private transportation • Same-day availability when open</p>
     </div>
   </header>
 
   <section>
     <div class="container">
-      <div class="logo-row">
-        <div class="logo-card">
-          <img src="logo1.png" alt="Top Dog logo 1" />
+      <h2>Quick Price Calculator</h2>
+      <p class="section-note">Base quote shown instantly. Final pricing may vary for custom stops, late-night rides, or larger groups.</p>
+
+      <div class="calculator-grid">
+        <div class="card calculator-card">
+          <form>
+            <div class="field-group">
+              <label for="date">Date</label>
+              <input id="date" type="date">
+            </div>
+
+            <div class="field-group">
+              <label for="airline">Airline</label>
+              <input id="airline" type="text" placeholder="Airline name">
+            </div>
+
+            <div class="field-group">
+              <label for="flight">Flight number</label>
+              <input id="flight" type="text" placeholder="Flight number">
+            </div>
+
+            <div class="field-group">
+              <label for="hotel">Pickup location</label>
+              <input id="hotel" type="text" placeholder="Hotel or pickup location">
+            </div>
+
+            <div class="field-group">
+              <label for="zone">Zone</label>
+              <select id="zone">
+                <option value="20">Town ($20)</option>
+                <option value="22">Bolongo ($22)</option>
+                <option value="25">East End ($25)</option>
+                <option value="28">Ritz ($28)</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="people">Number of people</label>
+              <input id="people" type="number" value="2" min="1">
+            </div>
+
+            <div class="field-group">
+              <label for="bags">Number of bags</label>
+              <input id="bags" type="number" value="2" min="0">
+            </div>
+
+            <div class="field-group">
+              <label for="grocery">Grocery stop</label>
+              <select id="grocery">
+                <option value="0">No</option>
+                <option value="20">Yes (+$20)</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="payment">Payment method</label>
+              <select id="payment">
+                <option value="cash">Cash</option>
+                <option value="app">Apps (+5%)</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="deposit">Deposit option</label>
+              <select id="deposit">
+                <option value="no">No</option>
+                <option value="yes">Yes (10% off)</option>
+              </select>
+            </div>
+
+            <button class="calc-btn" type="button" onclick="calculate()">Calculate Price</button>
+          </form>
         </div>
-        <div class="logo-card">
-          <img src="logo2.png" alt="Top Dog logo 2" />
+
+        <div class="card">
+          <h3>Your Quote</h3>
+          <div class="quote-total" id="total">$0.00</div>
+
+          <div class="quote-box" id="breakdown">
+            Fill out the form and tap Calculate Price.
+          </div>
+
+          <p style="margin-top:20px;">
+            <strong>Ask us about weekly rate specials.</strong>
+          </p>
+
+          <div class="button-row" style="justify-content:flex-start; margin-top: 12px;">
+            <a class="btn btn-primary" id="whatsappQuote" href="#" target="_blank">Send Quote on WhatsApp</a>
+          </div>
         </div>
       </div>
     </div>
@@ -329,7 +439,56 @@
 
   <section>
     <div class="container">
-      <h2>Island Moments</h2>
+      <h2>Services</h2>
+      <p class="section-note">Serving airport pickups, resorts, beaches, local neighborhoods, and custom destinations across St. Thomas.</p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Airport Pickups</h3>
+          <p>Easy transportation to and from the airport with reliable communication.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>Island Tours</h3>
+          <p>Enjoy scenic drives, beaches, local spots, and memorable stops around St. Thomas.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>Private Rides</h3>
+          <p>Need multiple stops or custom transportation? Reach out for private ride options.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>Custom Stops</h3>
+          <p>Need errands or local food pickup? We can build your ride around your plans.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Customer Reviews</h2>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <h3>Dawn Gnieski</h3>
+          <p>“Top Dog Taxi and Tours is the BEST taxi service in St Thomas! Alex was on time, safe, and friendly for our whole trip.”</p>
+        </div>
+        <div class="review-card">
+          <h3>Aurora Carey</h3>
+          <p>“Alex and Lauren were the absolute best! Skip the lines and waits of public taxis and use Top Dog.”</p>
+        </div>
+        <div class="review-card">
+          <h3>Nicole Loffredo</h3>
+          <p>“Always one call away when we needed a ride and gave us so much information about the island.”</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Tour &amp; Ride Gallery</h2>
 
       <div class="slideshow-wrap">
         <img class="slides active" src="slide1.png" alt="Island photo 1">
@@ -353,118 +512,16 @@
 
   <section>
     <div class="container">
-      <h2>Quick Price Calculator</h2>
-
-      <div class="calculator-grid">
-        <div class="card calculator-card">
-          <label for="date">Date</label>
-          <input id="date" type="date">
-
-          <label for="airline">Airline</label>
-          <input id="airline" type="text" placeholder="Airline name">
-
-          <label for="flight">Flight Number</label>
-          <input id="flight" type="text" placeholder="Flight number">
-
-          <label for="hotel">Hotel / Pickup Location</label>
-          <input id="hotel" type="text" placeholder="Hotel or pickup location">
-
-          <label for="zone">Zone</label>
-          <select id="zone">
-            <option value="20">Town ($20)</option>
-            <option value="22">Bolongo ($22)</option>
-            <option value="25">East End ($25)</option>
-            <option value="28">Ritz ($28)</option>
-          </select>
-
-          <label for="people">People</label>
-          <input id="people" type="number" value="2" min="1">
-
-          <label for="bags">Bags</label>
-          <input id="bags" type="number" value="2" min="0">
-
-          <label for="grocery">Grocery Stop</label>
-          <select id="grocery">
-            <option value="0">No</option>
-            <option value="20">Yes (+$20)</option>
-          </select>
-
-          <label for="payment">Payment</label>
-          <select id="payment">
-            <option value="cash">Cash</option>
-            <option value="app">Apps (+5%)</option>
-          </select>
-
-          <label for="deposit">Deposit</label>
-          <select id="deposit">
-            <option value="no">No</option>
-            <option value="yes">Yes (10% off)</option>
-          </select>
-
-          <button class="calc-btn" onclick="calculate()">Calculate Price</button>
-        </div>
-
-        <div class="card">
-          <h3>Your Quote</h3>
-          <div class="quote-total" id="total">$0.00</div>
-
-          <div class="quote-box" id="breakdown">
-            Fill out the form and tap Calculate Price.
-          </div>
-
-          <p style="margin-top:20px;">
-            <strong>Ask us about weekly rate specials.</strong>
-          </p>
-
-          <div class="button-row" style="justify-content:flex-start;">
-            <a class="btn btn-primary" id="whatsappQuote" href="#" target="_blank">Send Quote on WhatsApp</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <h2>Services</h2>
-
-      <div class="services-grid">
-        <div class="service-card">
-          <h3>Airport Pickups</h3>
-          <p>Easy transportation to and from the airport with reliable communication.</p>
-        </div>
-
-        <div class="service-card">
-          <h3>Island Tours</h3>
-          <p>Enjoy scenic drives, beaches, local spots, and memorable stops around St. Thomas.</p>
-        </div>
-
-        <div class="service-card">
-          <h3>Private Rides</h3>
-          <p>Need multiple stops or custom transportation? Reach out for private ride options.</p>
-        </div>
-
-        <div class="service-card">
-          <h3>Food Stops</h3>
-          <p>Grab local food and island favorites along the way.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
       <div class="cta-box">
         <h2>Book Your Ride</h2>
         <p>
-          Contact Top Dog Tour and Taxi for availability, pickup details, private rides, and deposit questions.
+          Book your airport pickup, island ride, or private transportation in minutes. Message us on WhatsApp for the fastest response.
         </p>
 
         <div class="button-row">
-          <a class="btn btn-secondary" href="sms:+17867199870?body=Hi%20Top%20Dog%20Tour%20and%20Taxi%2C%20I%20need%20a%20ride.">Text to Book</a>
-          <a class="btn btn-secondary" href="https://wa.me/17867199870?text=Hi%20Top%20Dog%20Tour%20and%20Taxi%2C%20I%20need%20a%20ride." target="_blank">WhatsApp</a>
-          <a class="btn btn-secondary" href="mailto:topdogtaxiandtoursstt@gmail.com?subject=Top%20Dog%20Tour%20and%20Taxi%20Booking%20Request">Email Us</a>
-          <a class="btn btn-secondary" href="https://calendar.app.google/QhGbrGE2vqHfdK3t5" target="_blank">Book on Calendar</a>
+          <a class="btn btn-secondary" href="https://wa.me/17867199870?text=Hi%20Top%20Dog%20Tour%20and%20Taxi%2C%20I%20need%20a%20ride." target="_blank">Book on WhatsApp</a>
+          <a class="btn btn-secondary" href="mailto:topdogtaxiandtoursstt@gmail.com?subject=Top%20Dog%20Tour%20and%20Taxi%20Booking%20Request">Book by Email</a>
+          <a class="btn btn-secondary" href="https://calendar.app.google/QhGbrGE2vqHfdK3t5" target="_blank">Reserve on Calendar</a>
         </div>
 
         <div class="button-row payment-row">
@@ -472,7 +529,7 @@
           <a class="btn btn-pay" href="https://cash.app/$topdogtourandtaxi" target="_blank">Pay Deposit with Cash App</a>
         </div>
 
-        <div style="margin-top:20px;">
+        <div style="margin-top:22px;">
           <p><strong>Phone:</strong> <a href="tel:+17867199870" style="color:white;">(786) 719-9870</a></p>
           <p><strong>Email:</strong> <a href="mailto:topdogtaxiandtoursstt@gmail.com" style="color:white;">topdogtaxiandtoursstt@gmail.com</a></p>
         </div>
