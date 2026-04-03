@@ -69,6 +69,9 @@
       border-radius: 10px;
       font-weight: bold;
       transition: 0.2s ease;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
     }
 
     .btn-primary {
@@ -91,18 +94,29 @@
     }
 
     .payment-row {
-      margin-top: 10px;
+      margin-top: 14px;
     }
 
-    .btn-pay {
-      background: #ffd76a;
-      color: #163047;
-      font-weight: bold;
+    .deposit-box {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .deposit-box select {
+      min-width: 260px;
+      padding: 12px;
+      border-radius: 10px;
       border: none;
+      font-size: 1rem;
     }
 
-    .btn-pay:hover {
-      background: #f3c94e;
+    .deposit-note {
+      margin-top: 10px;
+      font-size: 0.95rem;
+      color: #e9f7ff;
     }
 
     section {
@@ -285,6 +299,12 @@
       margin-top: 10px;
     }
 
+    .help-text {
+      font-size: 0.92rem;
+      color: #5a7388;
+      margin-top: 2px;
+    }
+
     footer {
       text-align: center;
       padding: 25px 20px 40px;
@@ -310,6 +330,10 @@
       .top-logo {
         width: 140px;
       }
+
+      .deposit-box select {
+        min-width: 100%;
+      }
     }
   </style>
 </head>
@@ -329,6 +353,16 @@
         <a class="btn btn-secondary" href="mailto:topdogtaxiandtoursstt@gmail.com?subject=Top%20Dog%20Tour%20and%20Taxi%20Booking%20Request">Book by Email</a>
         <a class="btn btn-secondary" href="https://calendar.app.google/QhGbrGE2vqHfdK3t5" target="_blank">Reserve on Calendar</a>
       </div>
+
+      <div class="deposit-box">
+        <select id="depositMethodHeader">
+          <option value="">Choose deposit payment method</option>
+          <option value="https://venmo.com/u/Lauren-Rice-49">Pay deposit with Venmo</option>
+          <option value="https://cash.app/$topdogtourandtaxi">Pay deposit with Cash App</option>
+        </select>
+        <button class="btn btn-primary" onclick="goToDeposit('depositMethodHeader')">Go to Deposit Link</button>
+      </div>
+      <p class="deposit-note">Deposits can be paid by Venmo or Cash App.</p>
 
       <div class="trust-strip">
         <div class="trust-item">Airport pickups</div>
@@ -365,17 +399,22 @@
             </div>
 
             <div class="field-group">
-              <label for="hotel">Pickup location</label>
-              <input id="hotel" type="text" placeholder="Hotel or pickup location">
+              <label for="hotel">Pickup location or hotel</label>
+              <input id="hotel" type="text" placeholder="Hotel, villa, Airbnb, or pickup point">
+              <div class="help-text">If you are not sure which area to choose, type your hotel or Airbnb here and select “Not sure yet.”</div>
             </div>
 
             <div class="field-group">
-              <label for="zone">Zone</label>
+              <label for="zone">Destination area</label>
               <select id="zone">
-                <option value="20">Town ($20)</option>
-                <option value="22">Bolongo ($22)</option>
-                <option value="25">East End ($25)</option>
-                <option value="28">Ritz ($28)</option>
+                <option value="20">Town / Charlotte Amalie ($20)</option>
+                <option value="22">Bolongo / Southside ($22)</option>
+                <option value="24">Marriott / Frenchman’s Reef ($24)</option>
+                <option value="25">Sapphire / East End ($25)</option>
+                <option value="28">Ritz-Carlton ($28)</option>
+                <option value="26">Magens Bay ($26)</option>
+                <option value="30">West End / Mountaintop ($30)</option>
+                <option value="0">Not sure yet? Ask us</option>
               </select>
             </div>
 
@@ -390,10 +429,10 @@
             </div>
 
             <div class="field-group">
-              <label for="grocery">Grocery stop</label>
+              <label for="grocery">Grocery or extra stop</label>
               <select id="grocery">
-                <option value="0">No</option>
-                <option value="20">Yes (+$20)</option>
+                <option value="0">No grocery or extra stop</option>
+                <option value="20">Yes, add a grocery/extra stop (+$20)</option>
               </select>
             </div>
 
@@ -401,15 +440,15 @@
               <label for="payment">Payment method</label>
               <select id="payment">
                 <option value="cash">Cash</option>
-                <option value="app">Apps (+5%)</option>
+                <option value="app">Payment app (+5%)</option>
               </select>
             </div>
 
             <div class="field-group">
               <label for="deposit">Deposit option</label>
               <select id="deposit">
-                <option value="no">No</option>
-                <option value="yes">Yes (10% off)</option>
+                <option value="no">No deposit</option>
+                <option value="yes">Pay deposit now (10% off)</option>
               </select>
             </div>
 
@@ -460,9 +499,48 @@
 
         <div class="service-card">
           <h3>Custom Stops</h3>
-          <p>Need errands or local food pickup? We can build your ride around your plans.</p>
+          <p>Need errands, groceries, or a local stop added to your trip? We can build your ride around your plans.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Groceries &amp; Order-Ahead Options</h2>
+      <p class="section-note">
+        Want to save time and energy after arrival? Some guests like to check grocery options ahead of time before check-in. Depending on the store, you may be able to shop online, place an order ahead, or review what you need before you land.
+      </p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>The Market St. Thomas</h3>
+          <p>
+            A popular option for groceries and essentials. Guests can check the store online and explore order-ahead options.
+          </p>
+          <p><a class="btn btn-primary" href="https://www.themarketstt.com/" target="_blank">Open The Market</a></p>
+        </div>
+
+        <div class="service-card">
+          <h3>Moe’s Marketplace</h3>
+          <p>
+            Another convenient option for groceries, prepared foods, and household basics. Guests can review the site and use online shopping options.
+          </p>
+          <p><a class="btn btn-primary" href="https://www.moesmarketplacevi.com/" target="_blank">Open Moe’s Marketplace</a></p>
+        </div>
+
+        <div class="service-card">
+          <h3>Cost.U.Less St. Thomas</h3>
+          <p>
+            A common stop for bulk items, drinks, snacks, and house supplies. Guests can check the St. Thomas location before arrival to save time.
+          </p>
+          <p><a class="btn btn-primary" href="https://www.costuless.com/" target="_blank">Open Cost.U.Less</a></p>
+        </div>
+      </div>
+
+      <p class="section-note" style="margin-top:20px;">
+        We are not affiliated with these stores. These links are provided only as a convenience for guests.
+      </p>
     </div>
   </section>
 
@@ -524,10 +602,15 @@
           <a class="btn btn-secondary" href="https://calendar.app.google/QhGbrGE2vqHfdK3t5" target="_blank">Reserve on Calendar</a>
         </div>
 
-        <div class="button-row payment-row">
-          <a class="btn btn-pay" href="https://venmo.com/u/Lauren-Rice-49" target="_blank">Pay Deposit with Venmo</a>
-          <a class="btn btn-pay" href="https://cash.app/$topdogtourandtaxi" target="_blank">Pay Deposit with Cash App</a>
+        <div class="deposit-box">
+          <select id="depositMethodBottom">
+            <option value="">Choose deposit payment method</option>
+            <option value="https://venmo.com/u/Lauren-Rice-49">Pay deposit with Venmo</option>
+            <option value="https://cash.app/$topdogtourandtaxi">Pay deposit with Cash App</option>
+          </select>
+          <button class="btn btn-primary" onclick="goToDeposit('depositMethodBottom')">Go to Deposit Link</button>
         </div>
+        <p class="deposit-note">Deposits can be paid by Venmo or Cash App.</p>
 
         <div style="margin-top:22px;">
           <p><strong>Phone:</strong> <a href="tel:+17867199870" style="color:white;">(786) 719-9870</a></p>
@@ -561,17 +644,43 @@
 
     setInterval(autoSlide, 3500);
 
+    function goToDeposit(selectId) {
+      const select = document.getElementById(selectId);
+      const url = select.value;
+
+      if (!url) {
+        alert("Please choose a deposit payment method.");
+        return;
+      }
+
+      window.open(url, "_blank");
+    }
+
     function calculate() {
       let date = document.getElementById("date").value;
       let airline = document.getElementById("airline").value;
       let flight = document.getElementById("flight").value;
       let hotel = document.getElementById("hotel").value;
-      let base = Number(document.getElementById("zone").value);
+      let zoneSelect = document.getElementById("zone");
+      let zoneText = zoneSelect.options[zoneSelect.selectedIndex].text;
+      let base = Number(zoneSelect.value);
       let people = Number(document.getElementById("people").value);
       let bags = Number(document.getElementById("bags").value);
       let grocery = Number(document.getElementById("grocery").value);
       let payment = document.getElementById("payment").value;
       let deposit = document.getElementById("deposit").value;
+
+      if (base === 0) {
+        document.getElementById("total").innerText = "Ask Us";
+        document.getElementById("breakdown").innerHTML =
+          "<strong>Destination area:</strong> " + zoneText + "<br>" +
+          "Please send your hotel, Airbnb, or destination and we’ll confirm the correct area and quote.";
+        document.getElementById("whatsappQuote").href =
+          "https://wa.me/17867199870?text=" + encodeURIComponent(
+            "Hi, I’m not sure which destination area to choose. My pickup/destination is: " + hotel
+          );
+        return;
+      }
 
       let markup = people >= 4 ? 5 : 10;
       let pricePerPerson = base + markup;
@@ -583,29 +692,31 @@
       document.getElementById("total").innerText = "$" + total.toFixed(2);
 
       document.getElementById("breakdown").innerHTML =
+        "<strong>Destination area:</strong> " + zoneText + "<br>" +
         "<strong>Price per person:</strong> $" + pricePerPerson.toFixed(2) + "<br>" +
         "<strong>People:</strong> " + people + "<br>" +
         "<strong>Bags:</strong> " + bags + "<br>" +
-        "<strong>Grocery stop:</strong> $" + grocery.toFixed(2) + "<br>" +
-        "<strong>Payment type:</strong> " + (payment === "app" ? "App payment (+5%)" : "Cash") + "<br>" +
+        "<strong>Grocery / extra stop:</strong> $" + grocery.toFixed(2) + "<br>" +
+        "<strong>Payment type:</strong> " + (payment === "app" ? "Payment app (+5%)" : "Cash") + "<br>" +
         "<strong>Deposit:</strong> " + (deposit === "yes" ? "Yes (10% off)" : "No") + "<br>" +
         (date ? "<strong>Date:</strong> " + date + "<br>" : "") +
         (airline ? "<strong>Airline:</strong> " + airline + "<br>" : "") +
         (flight ? "<strong>Flight #:</strong> " + flight + "<br>" : "") +
-        (hotel ? "<strong>Hotel / Pickup:</strong> " + hotel : "");
+        (hotel ? "<strong>Pickup / Hotel:</strong> " + hotel : "");
 
       let message =
-        "Quote request:%0A" +
-        (date ? "Date: " + date + "%0A" : "") +
-        (airline ? "Airline: " + airline + "%0A" : "") +
-        (flight ? "Flight #: " + flight + "%0A" : "") +
-        (hotel ? "Hotel/Pickup: " + hotel + "%0A" : "") +
-        "People: " + people + "%0A" +
-        "Bags: " + bags + "%0A" +
+        "Quote request:\n" +
+        "Destination area: " + zoneText + "\n" +
+        (date ? "Date: " + date + "\n" : "") +
+        (airline ? "Airline: " + airline + "\n" : "") +
+        (flight ? "Flight #: " + flight + "\n" : "") +
+        (hotel ? "Pickup/Hotel: " + hotel + "\n" : "") +
+        "People: " + people + "\n" +
+        "Bags: " + bags + "\n" +
         "Total: $" + total.toFixed(2);
 
       document.getElementById("whatsappQuote").href =
-        "https://wa.me/17867199870?text=" + message;
+        "https://wa.me/17867199870?text=" + encodeURIComponent(message);
     }
   </script>
 
