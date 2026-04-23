@@ -72,6 +72,7 @@
       border: none;
       cursor: pointer;
       font-size: 1rem;
+      text-align: center;
     }
 
     .btn-primary {
@@ -90,6 +91,16 @@
     }
 
     .btn-secondary:hover {
+      background: #e9f7ff;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #0b84c6;
+      border: 2px solid #0b84c6;
+    }
+
+    .btn-outline:hover {
       background: #e9f7ff;
     }
 
@@ -239,7 +250,8 @@
       align-items: start;
     }
 
-    .calculator-card form {
+    .calculator-card form,
+    .booking-form {
       display: grid;
       gap: 12px;
     }
@@ -250,18 +262,25 @@
       gap: 6px;
     }
 
-    .calculator-card label {
+    label {
       font-weight: bold;
     }
 
-    .calculator-card input,
-    .calculator-card select {
+    input,
+    select,
+    textarea {
       width: 100%;
       padding: 10px;
       border: 1px solid #c9d8e2;
       border-radius: 8px;
       font-size: 1rem;
       background: white;
+      font-family: Arial, sans-serif;
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
     }
 
     .calc-btn {
@@ -301,6 +320,42 @@
       margin-top: 2px;
     }
 
+    .booking-layout {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .info-panel {
+      background: #f4fbff;
+      border-radius: 12px;
+      padding: 18px;
+    }
+
+    .info-panel h3 {
+      margin-top: 0;
+    }
+
+    .small-note {
+      font-size: 0.93rem;
+      color: #5a7388;
+    }
+
+    .success-note {
+      background: #eaf7ff;
+      border: 1px solid #b9e1f5;
+      color: #174866;
+      padding: 12px 14px;
+      border-radius: 10px;
+      margin-top: 14px;
+      font-size: 0.95rem;
+    }
+
+    .hidden {
+      display: none;
+    }
+
     footer {
       text-align: center;
       padding: 25px 20px 40px;
@@ -309,7 +364,8 @@
     }
 
     @media (max-width: 900px) {
-      .calculator-grid {
+      .calculator-grid,
+      .booking-layout {
         grid-template-columns: 1fr;
       }
     }
@@ -341,7 +397,7 @@
 
       <h1>Top Dog Tour and Taxi</h1>
       <p class="subtitle">
-        Reliable airport pickups, private rides, island tours, and local stops in St. Thomas, USVI.
+        Reliable airport pickups, private rides, island tours, grocery runs, and local delivery in St. Thomas, USVI.
       </p>
 
       <div class="button-row">
@@ -364,12 +420,175 @@
         <div class="trust-item">Airport pickups</div>
         <div class="trust-item">Private rides</div>
         <div class="trust-item">Island tours</div>
-        <div class="trust-item">Local driver</div>
+        <div class="trust-item">Grocery delivery</div>
         <div class="trust-item">Fast WhatsApp booking</div>
       </div>
-      <p class="info-strip">Serving St. Thomas, USVI • Private transportation • Same-day availability when open</p>
+      <p class="info-strip">Serving St. Thomas, USVI • Private transportation • Grocery / food delivery from Cost U Less and The Market</p>
     </div>
   </header>
+
+  <section>
+    <div class="container">
+      <h2>Booking Request Form</h2>
+      <p class="section-note">
+        Send your booking details here so we receive your phone number, Airbnb or pickup location, and trip details. You can still use our Google Calendar to reserve your time.
+      </p>
+
+      <div class="booking-layout">
+        <div class="card">
+          <form id="bookingForm" class="booking-form">
+            <div class="field-group">
+              <label for="serviceType">Service type</label>
+              <select id="serviceType" onchange="toggleServiceFields()" required>
+                <option value="airport">Airport pickup / drop-off</option>
+                <option value="private">Private ride</option>
+                <option value="tour">Island tour</option>
+                <option value="grocery">Grocery / food delivery only</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="customerName">Full name</label>
+              <input id="customerName" type="text" placeholder="Your full name" required>
+            </div>
+
+            <div class="field-group">
+              <label for="phoneNumber">Best phone number</label>
+              <input id="phoneNumber" type="tel" placeholder="Best contact number" required>
+            </div>
+
+            <div class="field-group">
+              <label for="emailAddress">Email address</label>
+              <input id="emailAddress" type="email" placeholder="Your email address" required>
+            </div>
+
+            <div class="field-group">
+              <label for="date">Date</label>
+              <input id="date" type="date" required>
+            </div>
+
+            <div class="field-group">
+              <label for="time">Time</label>
+              <input id="time" type="time" required>
+            </div>
+
+            <div id="rideFields">
+              <div class="field-group">
+                <label for="airline">Airline</label>
+                <input id="airline" type="text" placeholder="Airline name">
+              </div>
+
+              <div class="field-group">
+                <label for="flight">Flight number</label>
+                <input id="flight" type="text" placeholder="Flight number">
+              </div>
+
+              <div class="field-group">
+                <label for="pickupLocation">Pickup location / Airbnb</label>
+                <input id="pickupLocation" type="text" placeholder="Hotel, villa, Airbnb, airport, or pickup point">
+              </div>
+
+              <div class="field-group">
+                <label for="destination">Destination</label>
+                <input id="destination" type="text" placeholder="Where are you going?">
+              </div>
+
+              <div class="field-group">
+                <label for="people">Number of people</label>
+                <input id="people" type="number" value="2" min="1">
+              </div>
+
+              <div class="field-group">
+                <label for="bags">Number of bags</label>
+                <input id="bags" type="number" value="2" min="0">
+              </div>
+
+              <div class="field-group">
+                <label for="extraStop">Grocery or extra stop</label>
+                <select id="extraStop">
+                  <option value="No">No grocery or extra stop</option>
+                  <option value="Yes (+$20)">Yes, add a grocery / extra stop (+$20)</option>
+                </select>
+              </div>
+            </div>
+
+            <div id="groceryFields" class="hidden">
+              <div class="field-group">
+                <label for="storeChoice">Store</label>
+                <select id="storeChoice">
+                  <option value="Cost U Less">Cost U Less</option>
+                  <option value="The Market">The Market</option>
+                </select>
+              </div>
+
+              <div class="field-group">
+                <label for="deliveryLocation">Delivery location</label>
+                <input id="deliveryLocation" type="text" placeholder="Hotel, villa, Airbnb, condo, or address">
+              </div>
+
+              <div class="field-group">
+                <label for="deliveryList">Delivery details</label>
+                <textarea id="deliveryList" placeholder="List what you need delivered, or tell us to contact you for details"></textarea>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="paymentType">Payment method</label>
+              <select id="paymentType">
+                <option value="Cash">Cash</option>
+                <option value="Payment app (+5%)">Payment app (+5%)</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="depositOption">Deposit option</label>
+              <select id="depositOption">
+                <option value="No deposit">No deposit</option>
+                <option value="Pay deposit now (10% off)">Pay deposit now (10% off)</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="notes">Extra notes</label>
+              <textarea id="notes" placeholder="Anything else we should know?"></textarea>
+            </div>
+
+            <div class="button-row" style="justify-content:flex-start;">
+              <button type="button" class="btn btn-primary" onclick="prepareBooking()">Prepare Booking Details</button>
+              <a class="btn btn-outline" id="emailBookingBtn" href="#">Send Booking by Email</a>
+              <a class="btn btn-outline" id="whatsappBookingBtn" href="#" target="_blank">Send Booking on WhatsApp</a>
+            </div>
+
+            <div class="success-note">
+              After you tap <strong>Prepare Booking Details</strong>, use one of the send buttons above. If you want to reserve a time slot, also tap <strong>Reserve on Calendar</strong>.
+            </div>
+          </form>
+        </div>
+
+        <div class="card">
+          <div class="info-panel">
+            <h3>How it works</h3>
+            <p>1. Fill out this form.</p>
+            <p>2. Tap <strong>Prepare Booking Details</strong>.</p>
+            <p>3. Send the details by email or WhatsApp.</p>
+            <p>4. Then use Google Calendar to reserve your time if needed.</p>
+
+            <div class="button-row" style="justify-content:flex-start;">
+              <a class="btn btn-primary" href="https://calendar.app.google/QhGbrGE2vqHfdK3t5" target="_blank">Reserve on Calendar</a>
+            </div>
+
+            <p class="small-note" style="margin-top:16px;">
+              This keeps Google Calendar on your site, but also makes sure you get the phone number, Airbnb or pickup location, and booking details.
+            </p>
+          </div>
+
+          <div class="quote-box" id="bookingPreview" style="margin-top:18px;">
+            Booking details preview will appear here after you tap <strong>Prepare Booking Details</strong>.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section>
     <div class="container">
@@ -380,29 +599,8 @@
         <div class="card calculator-card">
           <form>
             <div class="field-group">
-              <label for="date">Date</label>
-              <input id="date" type="date">
-            </div>
-
-            <div class="field-group">
-              <label for="airline">Airline</label>
-              <input id="airline" type="text" placeholder="Airline name">
-            </div>
-
-            <div class="field-group">
-              <label for="flight">Flight number</label>
-              <input id="flight" type="text" placeholder="Flight number">
-            </div>
-
-            <div class="field-group">
-              <label for="hotel">Pickup location or hotel</label>
-              <input id="hotel" type="text" placeholder="Hotel, villa, Airbnb, or pickup point">
-              <div class="help-text">If you are not sure which area to choose, type your hotel or Airbnb here and select “Not sure yet.”</div>
-            </div>
-
-            <div class="field-group">
-              <label for="zone">Destination area</label>
-              <select id="zone">
+              <label for="calcZone">Destination area</label>
+              <select id="calcZone">
                 <option value="20">Town / Charlotte Amalie ($20)</option>
                 <option value="22">Bolongo / Southside ($22)</option>
                 <option value="24">Marriott / Frenchman’s Reef ($24)</option>
@@ -415,40 +613,40 @@
             </div>
 
             <div class="field-group">
-              <label for="people">Number of people</label>
-              <input id="people" type="number" value="2" min="1">
+              <label for="calcPeople">Number of people</label>
+              <input id="calcPeople" type="number" value="2" min="1">
             </div>
 
             <div class="field-group">
-              <label for="bags">Number of bags</label>
-              <input id="bags" type="number" value="2" min="0">
+              <label for="calcBags">Number of bags</label>
+              <input id="calcBags" type="number" value="2" min="0">
             </div>
 
             <div class="field-group">
-              <label for="grocery">Grocery or extra stop</label>
-              <select id="grocery">
+              <label for="calcGrocery">Grocery or extra stop</label>
+              <select id="calcGrocery">
                 <option value="0">No grocery or extra stop</option>
-                <option value="20">Yes, add a grocery/extra stop (+$20)</option>
+                <option value="20">Yes, add a grocery / extra stop (+$20)</option>
               </select>
             </div>
 
             <div class="field-group">
-              <label for="payment">Payment method</label>
-              <select id="payment">
+              <label for="calcPayment">Payment method</label>
+              <select id="calcPayment">
                 <option value="cash">Cash</option>
                 <option value="app">Payment app (+5%)</option>
               </select>
             </div>
 
             <div class="field-group">
-              <label for="deposit">Deposit option</label>
-              <select id="deposit">
+              <label for="calcDeposit">Deposit option</label>
+              <select id="calcDeposit">
                 <option value="no">No deposit</option>
                 <option value="yes">Pay deposit now (10% off)</option>
               </select>
             </div>
 
-            <button class="calc-btn" type="button" onclick="calculate()">Calculate Price</button>
+            <button class="calc-btn" type="button" onclick="calculateQuote()">Calculate Price</button>
           </form>
         </div>
 
@@ -457,7 +655,7 @@
           <div class="quote-total" id="total">$0.00</div>
 
           <div class="quote-box" id="breakdown">
-            Fill out the form and tap Calculate Price.
+            Fill out the calculator and tap Calculate Price.
           </div>
 
           <p style="margin-top:20px;">
@@ -475,7 +673,7 @@
   <section>
     <div class="container">
       <h2>Services</h2>
-      <p class="section-note">Serving airport pickups, resorts, beaches, local neighborhoods, and custom destinations across St. Thomas.</p>
+      <p class="section-note">Serving airport pickups, resorts, beaches, local neighborhoods, custom destinations, and grocery delivery across St. Thomas.</p>
 
       <div class="services-grid">
         <div class="service-card">
@@ -494,8 +692,8 @@
         </div>
 
         <div class="service-card">
-          <h3>Custom Stops</h3>
-          <p>Need errands, groceries, or a local stop added to your trip? We can build your ride around your plans.</p>
+          <h3>Grocery / Food Delivery</h3>
+          <p>Need groceries or essentials delivered? We offer delivery from Cost U Less and The Market.</p>
         </div>
       </div>
     </div>
@@ -505,32 +703,20 @@
     <div class="container">
       <h2>Groceries &amp; Order-Ahead Options</h2>
       <p class="section-note">
-        Want to save time and energy after arrival? Some guests like to check grocery options ahead of time before check-in. Depending on the store, you may be able to shop online, place an order ahead, or review what you need before you land.
+        Want to save time after arrival? Guests can plan ahead and we can help with grocery or food delivery from Cost U Less and The Market.
       </p>
 
       <div class="services-grid">
         <div class="service-card">
           <h3>The Market St. Thomas</h3>
-          <p>
-            A convenient option for groceries and essentials. Guests can check the store online before arrival.
-          </p>
+          <p>A convenient option for groceries and essentials. Guests can check the store online before arrival.</p>
           <p><a class="btn btn-primary" href="https://www.themarketstt.com/" target="_blank">Open The Market</a></p>
         </div>
 
         <div class="service-card">
-          <h3>Moe’s Marketplace</h3>
-          <p>
-            Another grocery option for prepared foods, basics, and household items. Guests can check the website ahead of time.
-          </p>
-          <p><a class="btn btn-primary" href="https://www.moesmarketplacevi.com/" target="_blank">Open Moe’s Marketplace</a></p>
-        </div>
-
-        <div class="service-card">
-          <h3>Cost.U.Less St. Thomas</h3>
-          <p>
-            Helpful for bulk items, drinks, snacks, and house supplies before or after check-in.
-          </p>
-          <p><a class="btn btn-primary" href="https://www.costuless.com/" target="_blank">Open Cost.U.Less</a></p>
+          <h3>Cost U Less St. Thomas</h3>
+          <p>Helpful for bulk items, drinks, snacks, and house supplies before or after check-in.</p>
+          <p><a class="btn btn-primary" href="https://www.costuless.com/" target="_blank">Open Cost U Less</a></p>
         </div>
       </div>
 
@@ -567,154 +753,4 @@
       <div class="slideshow-wrap">
         <img class="slides active" src="slide1.png" alt="Island photo 1">
         <img class="slides" src="slide2.jpeg" alt="Island photo 2">
-        <img class="slides" src="slide3.jpeg" alt="Island photo 3">
-        <img class="slides" src="slide4.jpeg" alt="Island photo 4">
-        <img class="slides" src="slide5.jpeg" alt="Island photo 5">
-        <img class="slides" src="slide6.jpeg" alt="Island photo 6">
-
-        <div class="dots">
-          <span class="dot active" onclick="showSlide(0)"></span>
-          <span class="dot" onclick="showSlide(1)"></span>
-          <span class="dot" onclick="showSlide(2)"></span>
-          <span class="dot" onclick="showSlide(3)"></span>
-          <span class="dot" onclick="showSlide(4)"></span>
-          <span class="dot" onclick="showSlide(5)"></span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="cta-box">
-        <h2>Book Your Ride</h2>
-        <p>
-          Book your airport pickup, island ride, or private transportation in minutes. Message us on WhatsApp for the fastest response.
-        </p>
-
-        <div class="button-row">
-          <a class="btn btn-secondary" href="https://wa.me/17867199870?text=Hi%20Top%20Dog%20Tour%20and%20Taxi%2C%20I%20need%20a%20ride." target="_blank">Book on WhatsApp</a>
-          <a class="btn btn-secondary" href="mailto:topdogtaxiandtoursstt@gmail.com?subject=Top%20Dog%20Tour%20and%20Taxi%20Booking%20Request">Book by Email</a>
-          <a class="btn btn-secondary" href="https://calendar.app.google/QhGbrGE2vqHfdK3t5" target="_blank">Reserve on Calendar</a>
-        </div>
-
-        <div class="deposit-box">
-          <select id="depositMethodBottom">
-            <option value="">Choose deposit payment method</option>
-            <option value="https://venmo.com/u/Lauren-Rice-49">Pay deposit with Venmo</option>
-            <option value="https://cash.app/$topdogtourandtaxi">Pay deposit with Cash App</option>
-          </select>
-          <button class="btn btn-primary" onclick="goToDeposit('depositMethodBottom')">Go to Deposit Link</button>
-        </div>
-        <p class="deposit-note">Deposits can be paid by Venmo or Cash App.</p>
-
-        <div style="margin-top:22px;">
-          <p><strong>Phone:</strong> <a href="tel:+17867199870" style="color:white;">(786) 719-9870</a></p>
-          <p><strong>Email:</strong> <a href="mailto:topdogtaxiandtoursstt@gmail.com" style="color:white;">topdogtaxiandtoursstt@gmail.com</a></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>Top Dog Tour and Taxi © 2026</p>
-  </footer>
-
-  <script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll(".slides");
-    const dots = document.querySelectorAll(".dot");
-
-    function showSlide(index) {
-      slides.forEach((slide) => slide.classList.remove("active"));
-      dots.forEach((dot) => dot.classList.remove("active"));
-      slides[index].classList.add("active");
-      dots[index].classList.add("active");
-      currentSlide = index;
-    }
-
-    function autoSlide() {
-      currentSlide = (currentSlide + 1) % slides.length;
-      showSlide(currentSlide);
-    }
-
-    setInterval(autoSlide, 3500);
-
-    function goToDeposit(selectId) {
-      const select = document.getElementById(selectId);
-      const url = select.value;
-
-      if (!url) {
-        alert("Please choose a deposit payment method.");
-        return;
-      }
-
-      window.open(url, "_blank");
-    }
-
-    function calculate() {
-      let date = document.getElementById("date").value;
-      let airline = document.getElementById("airline").value;
-      let flight = document.getElementById("flight").value;
-      let hotel = document.getElementById("hotel").value;
-      let zoneSelect = document.getElementById("zone");
-      let zoneText = zoneSelect.options[zoneSelect.selectedIndex].text;
-      let base = Number(zoneSelect.value);
-      let people = Number(document.getElementById("people").value);
-      let bags = Number(document.getElementById("bags").value);
-      let grocery = Number(document.getElementById("grocery").value);
-      let payment = document.getElementById("payment").value;
-      let deposit = document.getElementById("deposit").value;
-
-      if (base === 0) {
-        document.getElementById("total").innerText = "Ask Us";
-        document.getElementById("breakdown").innerHTML =
-          "<strong>Destination area:</strong> " + zoneText + "<br>" +
-          "Please send your hotel, Airbnb, or destination and we’ll confirm the correct area and quote.";
-        document.getElementById("whatsappQuote").href =
-          "https://wa.me/17867199870?text=" + encodeURIComponent(
-            "Hi, I’m not sure which destination area to choose. My pickup/destination is: " + hotel
-          );
-        return;
-      }
-
-      let markup = people >= 4 ? 5 : 10;
-      let pricePerPerson = base + markup;
-      let total = (pricePerPerson * people) + grocery;
-
-      if (deposit === "yes") total *= 0.9;
-      if (payment === "app") total *= 1.05;
-
-      document.getElementById("total").innerText = "$" + total.toFixed(2);
-
-      document.getElementById("breakdown").innerHTML =
-        "<strong>Destination area:</strong> " + zoneText + "<br>" +
-        "<strong>Price per person:</strong> $" + pricePerPerson.toFixed(2) + "<br>" +
-        "<strong>People:</strong> " + people + "<br>" +
-        "<strong>Bags:</strong> " + bags + "<br>" +
-        "<strong>Grocery / extra stop:</strong> $" + grocery.toFixed(2) + "<br>" +
-        "<strong>Payment type:</strong> " + (payment === "app" ? "Payment app (+5%)" : "Cash") + "<br>" +
-        "<strong>Deposit:</strong> " + (deposit === "yes" ? "Yes (10% off)" : "No") + "<br>" +
-        (date ? "<strong>Date:</strong> " + date + "<br>" : "") +
-        (airline ? "<strong>Airline:</strong> " + airline + "<br>" : "") +
-        (flight ? "<strong>Flight #:</strong> " + flight + "<br>" : "") +
-        (hotel ? "<strong>Pickup / Hotel:</strong> " + hotel : "");
-
-      let message =
-        "Quote request:\n" +
-        "Destination area: " + zoneText + "\n" +
-        (date ? "Date: " + date + "\n" : "") +
-        (airline ? "Airline: " + airline + "\n" : "") +
-        (flight ? "Flight #: " + flight + "\n" : "") +
-        (hotel ? "Pickup/Hotel: " + hotel + "\n" : "") +
-        "People: " + people + "\n" +
-        "Bags: " + bags + "\n" +
-        "Total: $" + total.toFixed(2);
-
-      document.getElementById("whatsappQuote").href =
-        "https://wa.me/17867199870?text=" + encodeURIComponent(message);
-    }
-  </script>
-
-</body>
-</html>
+        <img class="slides" src="slide
