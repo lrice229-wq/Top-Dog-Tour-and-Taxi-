@@ -1,4 +1,4 @@
-DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -6,53 +6,67 @@ DOCTYPE html>
   <title>Top Dog Tour and Taxi</title>
 
   <style>
-    * {
-      box-sizing: border-box;
+    * { box-sizing: border-box; }
+
+    :root {
+      --teal: #0f8b8d;
+      --ocean: #0b6e8a;
+      --sky: #dff6ff;
+      --sand: #fff4df;
+      --sun: #ffb703;
+      --coral: #ff7b54;
+      --text: #17384d;
+      --white: #ffffff;
+      --card-shadow: 0 10px 30px rgba(13, 59, 85, 0.12);
+      --radius: 18px;
     }
 
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f4fbff;
-      color: #163047;
-      line-height: 1.5;
+      background: linear-gradient(180deg, #fdfcf7 0%, #eefbff 45%, #fef8eb 100%);
+      color: var(--text);
+      line-height: 1.6;
     }
 
-    a {
-      text-decoration: none;
-    }
+    a { text-decoration: none; }
 
     .container {
-      max-width: 1100px;
+      max-width: 1120px;
       margin: auto;
       padding: 20px;
     }
 
     header {
-      background: linear-gradient(rgba(11, 132, 198, 0.72), rgba(11, 132, 198, 0.72)),
+      background:
+        linear-gradient(rgba(8, 90, 110, 0.50), rgba(255, 183, 3, 0.22)),
         url('slide6.jpeg') center/cover no-repeat;
       color: white;
       text-align: center;
-      padding: 80px 20px 60px;
+      padding: 90px 20px 70px;
+      position: relative;
     }
 
     .top-logo {
-      width: 180px;
-      max-width: 80%;
+      width: 190px;
+      max-width: 82%;
       display: block;
-      margin: 0 auto 20px;
-      border-radius: 16px;
+      margin: 0 auto 22px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     }
 
     h1 {
       margin: 0 0 12px;
-      font-size: 2.4rem;
+      font-size: 2.7rem;
+      letter-spacing: 0.2px;
     }
 
     .subtitle {
-      max-width: 800px;
-      margin: 0 auto 28px;
+      max-width: 820px;
+      margin: 0 auto 26px;
       font-size: 1.1rem;
+      color: #f7fcff;
     }
 
     .button-row {
@@ -66,97 +80,178 @@ DOCTYPE html>
     .btn {
       display: inline-block;
       padding: 14px 22px;
-      border-radius: 10px;
+      border-radius: 999px;
       font-weight: bold;
       transition: 0.2s ease;
       border: none;
       cursor: pointer;
       font-size: 1rem;
-      text-align: center;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.10);
     }
 
-    .btn-primary {
-      background: #0b84c6;
-      color: white;
-    }
-
-    .btn-primary:hover {
-      background: #08689b;
-    }
+    .btn-primary { background: var(--coral); color: white; }
+    .btn-primary:hover { background: #f06742; transform: translateY(-1px); }
 
     .btn-secondary {
       background: white;
-      color: #0b84c6;
-      border: 2px solid white;
+      color: var(--ocean);
+      border: 2px solid rgba(255,255,255,0.85);
     }
 
-    .btn-secondary:hover {
-      background: #e9f7ff;
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: #0b84c6;
-      border: 2px solid #0b84c6;
-    }
-
-    .btn-outline:hover {
-      background: #e9f7ff;
-    }
+    .btn-secondary:hover { background: #fff7ec; transform: translateY(-1px); }
 
     .deposit-box {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 10px;
-      margin-top: 14px;
+      margin-top: 16px;
     }
 
     .deposit-box select {
-      min-width: 260px;
-      padding: 12px;
-      border-radius: 10px;
+      min-width: 280px;
+      padding: 13px 14px;
+      border-radius: 999px;
       border: none;
       font-size: 1rem;
+      background: white;
+      color: var(--text);
     }
 
     .deposit-note {
       margin-top: 10px;
       font-size: 0.95rem;
-      color: #e9f7ff;
+      color: #fdf9ef;
     }
 
-    section {
-      padding: 52px 0;
-    }
+    section { padding: 56px 0; }
 
     h2 {
       text-align: center;
       font-size: 2rem;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
+      color: var(--ocean);
+    }
+
+    .section-note {
+      max-width: 860px;
+      margin: 0 auto 24px;
+      text-align: center;
+      color: #4f6d7d;
     }
 
     .trust-strip {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 12px;
-      margin-top: 26px;
+      margin-top: 28px;
     }
 
     .trust-item {
       background: rgba(255, 255, 255, 0.18);
-      border: 1px solid rgba(255, 255, 255, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.4);
       border-radius: 999px;
       padding: 10px 14px;
       font-weight: bold;
       font-size: 0.95rem;
       text-align: center;
+      backdrop-filter: blur(4px);
     }
 
-    .info-strip {
-      margin-top: 14px;
-      color: #e9f7ff;
-      font-size: 0.95rem;
+    .info-strip { margin-top: 14px; color: #f5fbff; font-size: 0.96rem; }
+
+    .critical-notice {
+      margin-top: 18px;
+      background: rgba(255, 255, 255, 0.94);
+      color: #8f250d;
+      border: 3px solid #ffb703;
+      border-radius: 16px;
+      padding: 16px 18px;
+      font-size: 1.35rem;
+      font-weight: 900;
+      line-height: 1.35;
+      text-transform: uppercase;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
+    }
+
+    .services-grid, .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+
+    .service-card, .review-card, .card {
+      background: rgba(255,255,255,0.94);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--card-shadow);
+      border: 1px solid rgba(15, 139, 141, 0.08);
+    }
+
+    .service-card h3, .review-card h3, .card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: var(--ocean);
+    }
+
+    .calculator-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .calculator-card form { display: grid; gap: 12px; }
+
+    .field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .calculator-card label { font-weight: bold; color: var(--ocean); }
+
+    .calculator-card input, .calculator-card select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #cfe2ea;
+      border-radius: 12px;
+      font-size: 1rem;
+      background: white;
+      color: var(--text);
+    }
+
+    .help-text { font-size: 0.92rem; color: #617d8c; margin-top: 2px; }
+
+    .calc-btn {
+      width: 100%;
+      margin-top: 8px;
+      padding: 15px;
+      background: linear-gradient(135deg, var(--coral), var(--sun));
+      color: white;
+      border: none;
+      border-radius: 999px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 10px 22px rgba(255, 123, 84, 0.22);
+    }
+
+    .calc-btn:hover { opacity: 0.96; transform: translateY(-1px); }
+
+    .quote-total {
+      font-size: 2.2rem;
+      font-weight: bold;
+      color: var(--coral);
+      margin: 10px 0 16px;
+    }
+
+    .quote-box {
+      background: linear-gradient(180deg, #f9feff 0%, #fff9ef 100%);
+      border-radius: 16px;
+      padding: 18px;
+      margin-top: 10px;
+      border: 1px solid #e7eef1;
     }
 
     .slideshow-wrap {
@@ -164,28 +259,22 @@ DOCTYPE html>
       max-width: 1000px;
       margin: 0 auto;
       overflow: hidden;
-      border-radius: 16px;
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+      border-radius: 22px;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
       background: white;
     }
 
     .slides {
       display: none;
       width: 100%;
-      height: 520px;
+      height: 540px;
       object-fit: cover;
       background: #ddd;
     }
 
-    .slides.active {
-      display: block;
-    }
+    .slides.active { display: block; }
 
-    .dots {
-      text-align: center;
-      padding: 14px 0 8px;
-      background: white;
-    }
+    .dots { text-align: center; padding: 14px 0 10px; background: white; }
 
     .dot {
       height: 12px;
@@ -197,195 +286,36 @@ DOCTYPE html>
       cursor: pointer;
     }
 
-    .dot.active {
-      background-color: #0b84c6;
-    }
-
-    .services-grid,
-    .reviews-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 18px;
-    }
-
-    .service-card,
-    .review-card,
-    .card {
-      background: white;
-      border-radius: 14px;
-      padding: 22px;
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
-    }
-
-    .service-card h3,
-    .review-card h3 {
-      margin-top: 0;
-      margin-bottom: 8px;
-    }
-
-    .section-note {
-      max-width: 840px;
-      margin: 0 auto 24px;
-      text-align: center;
-      color: #35536a;
-    }
+    .dot.active { background-color: var(--coral); }
 
     .cta-box {
       text-align: center;
-      background: #0b84c6;
+      background: linear-gradient(135deg, var(--teal), var(--ocean));
       color: white;
-      border-radius: 16px;
-      padding: 36px 24px;
+      border-radius: 24px;
+      padding: 40px 24px;
+      box-shadow: 0 12px 28px rgba(11, 110, 138, 0.22);
     }
 
-    .cta-box p {
-      max-width: 760px;
-      margin: 0 auto 20px;
-    }
-
-    .calculator-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      align-items: start;
-    }
-
-    .calculator-card form,
-    .booking-form {
-      display: grid;
-      gap: 12px;
-    }
-
-    .field-group {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    label {
-      font-weight: bold;
-    }
-
-    input,
-    select,
-    textarea {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #c9d8e2;
-      border-radius: 8px;
-      font-size: 1rem;
-      background: white;
-      font-family: Arial, sans-serif;
-    }
-
-    textarea {
-      min-height: 110px;
-      resize: vertical;
-    }
-
-    .calc-btn {
-      width: 100%;
-      margin-top: 8px;
-      padding: 14px;
-      background: #0b84c6;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      font-weight: bold;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-
-    .calc-btn:hover {
-      background: #08689b;
-    }
-
-    .quote-total {
-      font-size: 2rem;
-      font-weight: bold;
-      color: #0b84c6;
-      margin: 10px 0 16px;
-    }
-
-    .quote-box {
-      background: #f4fbff;
-      border-radius: 12px;
-      padding: 18px;
-      margin-top: 10px;
-    }
-
-    .help-text {
-      font-size: 0.92rem;
-      color: #5a7388;
-      margin-top: 2px;
-    }
-
-    .booking-layout {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 24px;
-      align-items: start;
-    }
-
-    .info-panel {
-      background: #f4fbff;
-      border-radius: 12px;
-      padding: 18px;
-    }
-
-    .info-panel h3 {
-      margin-top: 0;
-    }
-
-    .small-note {
-      font-size: 0.93rem;
-      color: #5a7388;
-    }
-
-    .success-note {
-      background: #eaf7ff;
-      border: 1px solid #b9e1f5;
-      color: #174866;
-      padding: 12px 14px;
-      border-radius: 10px;
-      margin-top: 14px;
-      font-size: 0.95rem;
-    }
-
-    .hidden {
-      display: none;
-    }
+    .cta-box p { max-width: 760px; margin: 0 auto 20px; }
 
     footer {
       text-align: center;
-      padding: 25px 20px 40px;
-      color: #4d6678;
+      padding: 28px 20px 44px;
+      color: #5c7381;
       font-size: 0.95rem;
     }
 
     @media (max-width: 900px) {
-      .calculator-grid,
-      .booking-layout {
-        grid-template-columns: 1fr;
-      }
+      .calculator-grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 768px) {
-      h1 {
-        font-size: 2rem;
-      }
-
-      .slides {
-        height: 300px;
-      }
-
-      .top-logo {
-        width: 140px;
-      }
-
-      .deposit-box select {
-        min-width: 100%;
-      }
+      h1 { font-size: 2rem; }
+      .slides { height: 300px; }
+      .top-logo { width: 145px; }
+      .deposit-box select { min-width: 100%; }
+      .btn { width: 100%; }
     }
   </style>
 </head>
@@ -397,11 +327,10 @@ DOCTYPE html>
 
       <h1>Top Dog Tour and Taxi</h1>
       <p class="subtitle">
-        Reliable airport pickups, private rides, island tours, grocery runs, and local delivery in St. Thomas, USVI.
+        Reliable airport pickups, private rides, island tours, grocery delivery, and local transportation in beautiful St. Thomas, USVI.
       </p>
 
       <div class="button-row">
-        <a class="btn btn-secondary" href="https://wa.me/17867199870?text=Hi%20Top%20Dog%20Tour%20and%20Taxi%2C%20I%20want%20to%20book%20a%20ride." target="_blank">Book on WhatsApp</a>
         <a class="btn btn-secondary" href="mailto:topdogtaxiandtoursstt@gmail.com?subject=Top%20Dog%20Tour%20and%20Taxi%20Booking%20Request">Book by Email</a>
         <a class="btn btn-secondary" href="https://calendar.app.google/QhGbrGE2vqHfdK3t5" target="_blank">Reserve on Calendar</a>
       </div>
@@ -414,6 +343,7 @@ DOCTYPE html>
         </select>
         <button class="btn btn-primary" onclick="goToDeposit('depositMethodHeader')">Go to Deposit Link</button>
       </div>
+
       <p class="deposit-note">Deposits can be paid by Venmo or Cash App.</p>
 
       <div class="trust-strip">
@@ -421,76 +351,46 @@ DOCTYPE html>
         <div class="trust-item">Private rides</div>
         <div class="trust-item">Island tours</div>
         <div class="trust-item">Grocery delivery</div>
-        <div class="trust-item">Fast WhatsApp booking</div>
+        <div class="trust-item">Simple Google booking</div>
       </div>
-      <p class="info-strip">Serving St. Thomas, USVI • Private transportation • Grocery / food delivery from Cost U Less and The Market</p>
+
+      <p class="info-strip">Serving St. Thomas, USVI • Delivery from Cost U Less and The Market</p>
+
+      <p class="critical-notice">Airport pickups are not guaranteed if you do not call or text 786-719-9870.</p>
     </div>
   </header>
 
   <section>
     <div class="container">
-      <h2>Booking Request Form</h2>
+      <h2>Quick Price Calculator</h2>
       <p class="section-note">
-        Send your booking details here so we receive your phone number, Airbnb or pickup location, and trip details. You can still use our Google Calendar to reserve your time.
+        Use this instant estimate tool for rides, tours, or grocery delivery. No contact details are required here.
       </p>
 
-      <div class="booking-layout">
-        <div class="card">
-          <form id="bookingForm" class="booking-form">
+      <div class="calculator-grid">
+        <div class="card calculator-card">
+          <form>
             <div class="field-group">
               <label for="serviceType">Service type</label>
-              <select id="serviceType" onchange="toggleServiceFields()" required>
-                <option value="airport">Airport pickup / drop-off</option>
-                <option value="private">Private ride</option>
-                <option value="tour">Island tour</option>
-                <option value="grocery">Grocery / food delivery only</option>
+              <select id="serviceType" onchange="toggleCalculatorFields()">
+                <option value="ride">Ride / Airport / Tour</option>
+                <option value="grocery">Grocery / Food Delivery Only</option>
               </select>
-            </div>
-
-            <div class="field-group">
-              <label for="customerName">Full name</label>
-              <input id="customerName" type="text" placeholder="Your full name" required>
-            </div>
-
-            <div class="field-group">
-              <label for="phoneNumber">Best phone number</label>
-              <input id="phoneNumber" type="tel" placeholder="Best contact number" required>
-            </div>
-
-            <div class="field-group">
-              <label for="emailAddress">Email address</label>
-              <input id="emailAddress" type="email" placeholder="Your email address" required>
-            </div>
-
-            <div class="field-group">
-              <label for="date">Date</label>
-              <input id="date" type="date" required>
-            </div>
-
-            <div class="field-group">
-              <label for="time">Time</label>
-              <input id="time" type="time" required>
             </div>
 
             <div id="rideFields">
               <div class="field-group">
-                <label for="airline">Airline</label>
-                <input id="airline" type="text" placeholder="Airline name">
-              </div>
-
-              <div class="field-group">
-                <label for="flight">Flight number</label>
-                <input id="flight" type="text" placeholder="Flight number">
-              </div>
-
-              <div class="field-group">
-                <label for="pickupLocation">Pickup location / Airbnb</label>
-                <input id="pickupLocation" type="text" placeholder="Hotel, villa, Airbnb, airport, or pickup point">
-              </div>
-
-              <div class="field-group">
-                <label for="destination">Destination</label>
-                <input id="destination" type="text" placeholder="Where are you going?">
+                <label for="zone">Destination area</label>
+                <select id="zone">
+                  <option value="20">Town / Charlotte Amalie ($20)</option>
+                  <option value="22">Bolongo / Southside ($22)</option>
+                  <option value="24">Marriott / Frenchman’s Reef ($24)</option>
+                  <option value="25">Sapphire / East End ($25)</option>
+                  <option value="28">Ritz-Carlton ($28)</option>
+                  <option value="26">Magens Bay ($26)</option>
+                  <option value="30">West End / Mountaintop ($30)</option>
+                  <option value="0">Not sure yet? Ask us</option>
+                </select>
               </div>
 
               <div class="field-group">
@@ -504,15 +404,15 @@ DOCTYPE html>
               </div>
 
               <div class="field-group">
-                <label for="extraStop">Grocery or extra stop</label>
-                <select id="extraStop">
-                  <option value="No">No grocery or extra stop</option>
-                  <option value="Yes (+$20)">Yes, add a grocery / extra stop (+$20)</option>
+                <label for="groceryStop">Grocery or extra stop</label>
+                <select id="groceryStop">
+                  <option value="0">No grocery or extra stop</option>
+                  <option value="20">Yes, add a grocery / extra stop (+$20)</option>
                 </select>
               </div>
             </div>
 
-            <div id="groceryFields" class="hidden">
+            <div id="groceryFields" style="display:none;">
               <div class="field-group">
                 <label for="storeChoice">Store</label>
                 <select id="storeChoice">
@@ -522,131 +422,41 @@ DOCTYPE html>
               </div>
 
               <div class="field-group">
-                <label for="deliveryLocation">Delivery location</label>
-                <input id="deliveryLocation" type="text" placeholder="Hotel, villa, Airbnb, condo, or address">
+                <label for="deliveryType">Delivery type</label>
+                <select id="deliveryType">
+                  <option value="Grocery delivery">Grocery delivery</option>
+                  <option value="Food / essentials delivery">Food / essentials delivery</option>
+                </select>
               </div>
 
               <div class="field-group">
-                <label for="deliveryList">Delivery details</label>
-                <textarea id="deliveryList" placeholder="List what you need delivered, or tell us to contact you for details"></textarea>
+                <label for="deliveryFee">Delivery quote</label>
+                <select id="deliveryFee">
+                  <option value="25">$25 delivery</option>
+                  <option value="30">$30 delivery</option>
+                  <option value="35">$35 delivery</option>
+                  <option value="0">Ask us</option>
+                </select>
               </div>
             </div>
 
             <div class="field-group">
-              <label for="paymentType">Payment method</label>
-              <select id="paymentType">
-                <option value="Cash">Cash</option>
-                <option value="Payment app (+5%)">Payment app (+5%)</option>
-              </select>
-            </div>
-
-            <div class="field-group">
-              <label for="depositOption">Deposit option</label>
-              <select id="depositOption">
-                <option value="No deposit">No deposit</option>
-                <option value="Pay deposit now (10% off)">Pay deposit now (10% off)</option>
-              </select>
-            </div>
-
-            <div class="field-group">
-              <label for="notes">Extra notes</label>
-              <textarea id="notes" placeholder="Anything else we should know?"></textarea>
-            </div>
-
-            <div class="button-row" style="justify-content:flex-start;">
-              <button type="button" class="btn btn-primary" onclick="prepareBooking()">Prepare Booking Details</button>
-              <a class="btn btn-outline" id="emailBookingBtn" href="#">Send Booking by Email</a>
-              <a class="btn btn-outline" id="whatsappBookingBtn" href="#" target="_blank">Send Booking on WhatsApp</a>
-            </div>
-
-            <div class="success-note">
-              After you tap <strong>Prepare Booking Details</strong>, use one of the send buttons above. If you want to reserve a time slot, also tap <strong>Reserve on Calendar</strong>.
-            </div>
-          </form>
-        </div>
-
-        <div class="card">
-          <div class="info-panel">
-            <h3>How it works</h3>
-            <p>1. Fill out this form.</p>
-            <p>2. Tap <strong>Prepare Booking Details</strong>.</p>
-            <p>3. Send the details by email or WhatsApp.</p>
-            <p>4. Then use Google Calendar to reserve your time if needed.</p>
-
-            <div class="button-row" style="justify-content:flex-start;">
-              <a class="btn btn-primary" href="https://calendar.app.google/QhGbrGE2vqHfdK3t5" target="_blank">Reserve on Calendar</a>
-            </div>
-
-            <p class="small-note" style="margin-top:16px;">
-              This keeps Google Calendar on your site, but also makes sure you get the phone number, Airbnb or pickup location, and booking details.
-            </p>
-          </div>
-
-          <div class="quote-box" id="bookingPreview" style="margin-top:18px;">
-            Booking details preview will appear here after you tap <strong>Prepare Booking Details</strong>.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <h2>Quick Price Calculator</h2>
-      <p class="section-note">Base quote shown instantly. Final pricing may vary for custom stops, late-night rides, or larger groups.</p>
-
-      <div class="calculator-grid">
-        <div class="card calculator-card">
-          <form>
-            <div class="field-group">
-              <label for="calcZone">Destination area</label>
-              <select id="calcZone">
-                <option value="20">Town / Charlotte Amalie ($20)</option>
-                <option value="22">Bolongo / Southside ($22)</option>
-                <option value="24">Marriott / Frenchman’s Reef ($24)</option>
-                <option value="25">Sapphire / East End ($25)</option>
-                <option value="28">Ritz-Carlton ($28)</option>
-                <option value="26">Magens Bay ($26)</option>
-                <option value="30">West End / Mountaintop ($30)</option>
-                <option value="0">Not sure yet? Ask us</option>
-              </select>
-            </div>
-
-            <div class="field-group">
-              <label for="calcPeople">Number of people</label>
-              <input id="calcPeople" type="number" value="2" min="1">
-            </div>
-
-            <div class="field-group">
-              <label for="calcBags">Number of bags</label>
-              <input id="calcBags" type="number" value="2" min="0">
-            </div>
-
-            <div class="field-group">
-              <label for="calcGrocery">Grocery or extra stop</label>
-              <select id="calcGrocery">
-                <option value="0">No grocery or extra stop</option>
-                <option value="20">Yes, add a grocery / extra stop (+$20)</option>
-              </select>
-            </div>
-
-            <div class="field-group">
-              <label for="calcPayment">Payment method</label>
-              <select id="calcPayment">
+              <label for="payment">Payment method</label>
+              <select id="payment">
                 <option value="cash">Cash</option>
                 <option value="app">Payment app (+5%)</option>
               </select>
             </div>
 
             <div class="field-group">
-              <label for="calcDeposit">Deposit option</label>
-              <select id="calcDeposit">
+              <label for="deposit">Deposit option</label>
+              <select id="deposit">
                 <option value="no">No deposit</option>
                 <option value="yes">Pay deposit now (10% off)</option>
               </select>
             </div>
 
-            <button class="calc-btn" type="button" onclick="calculateQuote()">Calculate Price</button>
+            <button class="calc-btn" type="button" onclick="calculate()">Calculate Price</button>
           </form>
         </div>
 
@@ -655,15 +465,15 @@ DOCTYPE html>
           <div class="quote-total" id="total">$0.00</div>
 
           <div class="quote-box" id="breakdown">
-            Fill out the calculator and tap Calculate Price.
+            Fill out the form and tap Calculate Price.
           </div>
 
           <p style="margin-top:20px;">
-            <strong>Ask us about weekly rate specials.</strong>
+            <strong>Need a final quote or custom ride? Reserve on Google Calendar and we’ll confirm details.</strong>
           </p>
 
           <div class="button-row" style="justify-content:flex-start; margin-top: 12px;">
-            <a class="btn btn-primary" id="whatsappQuote" href="#" target="_blank">Send Quote on WhatsApp</a>
+            <a class="btn btn-primary" href="https://calendar.app.google/QhGbrGE2vqHfdK3t5" target="_blank">Reserve on Calendar</a>
           </div>
         </div>
       </div>
@@ -673,27 +483,29 @@ DOCTYPE html>
   <section>
     <div class="container">
       <h2>Services</h2>
-      <p class="section-note">Serving airport pickups, resorts, beaches, local neighborhoods, custom destinations, and grocery delivery across St. Thomas.</p>
+      <p class="section-note">
+        Serving airport pickups, resorts, beaches, private rides, island tours, and grocery delivery across St. Thomas.
+      </p>
 
       <div class="services-grid">
         <div class="service-card">
           <h3>Airport Pickups</h3>
-          <p>Easy transportation to and from the airport with reliable communication.</p>
+          <p>Reliable transportation to and from the airport with easy communication.</p>
         </div>
 
         <div class="service-card">
           <h3>Island Tours</h3>
-          <p>Enjoy scenic drives, beaches, local spots, and memorable stops around St. Thomas.</p>
+          <p>Enjoy scenic drives, beaches, lookout points, and local favorites around St. Thomas.</p>
         </div>
 
         <div class="service-card">
           <h3>Private Rides</h3>
-          <p>Need multiple stops or custom transportation? Reach out for private ride options.</p>
+          <p>Need custom transportation or multiple stops? Reach out for private ride options.</p>
         </div>
 
         <div class="service-card">
-          <h3>Grocery / Food Delivery</h3>
-          <p>Need groceries or essentials delivered? We offer delivery from Cost U Less and The Market.</p>
+          <h3>Grocery Delivery</h3>
+          <p>We offer grocery and essentials delivery from Cost U Less and The Market.</p>
         </div>
       </div>
     </div>
@@ -703,7 +515,7 @@ DOCTYPE html>
     <div class="container">
       <h2>Groceries &amp; Order-Ahead Options</h2>
       <p class="section-note">
-        Want to save time after arrival? Guests can plan ahead and we can help with grocery or food delivery from Cost U Less and The Market.
+        Want to save time after arrival? Guests can plan ahead and arrange grocery delivery from Cost U Less and The Market.
       </p>
 
       <div class="services-grid">
@@ -715,13 +527,13 @@ DOCTYPE html>
 
         <div class="service-card">
           <h3>Cost U Less St. Thomas</h3>
-          <p>Helpful for bulk items, drinks, snacks, and house supplies before or after check-in.</p>
+          <p>Helpful for bulk items, snacks, drinks, and house supplies before or after check-in.</p>
           <p><a class="btn btn-primary" href="https://www.costuless.com/" target="_blank">Open Cost U Less</a></p>
         </div>
       </div>
 
       <p class="section-note" style="margin-top:20px;">
-        We are not affiliated with these stores. These links are provided only as a convenience for guests.
+        We are not affiliated with these stores. Links are provided only as a convenience for guests.
       </p>
     </div>
   </section>
@@ -753,4 +565,175 @@ DOCTYPE html>
       <div class="slideshow-wrap">
         <img class="slides active" src="slide1.png" alt="Island photo 1">
         <img class="slides" src="slide2.jpeg" alt="Island photo 2">
-        <img class="slides" src="slide
+        <img class="slides" src="slide3.jpeg" alt="Island photo 3">
+        <img class="slides" src="slide4.jpeg" alt="Island photo 4">
+        <img class="slides" src="slide5.jpeg" alt="Island photo 5">
+        <img class="slides" src="slide6.jpeg" alt="Island photo 6">
+
+        <div class="dots">
+          <span class="dot active" onclick="showSlide(0)"></span>
+          <span class="dot" onclick="showSlide(1)"></span>
+          <span class="dot" onclick="showSlide(2)"></span>
+          <span class="dot" onclick="showSlide(3)"></span>
+          <span class="dot" onclick="showSlide(4)"></span>
+          <span class="dot" onclick="showSlide(5)"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta-box">
+        <h2>Book Your Ride</h2>
+        <p>
+          Book your airport pickup, island ride, private transportation, or grocery delivery in minutes with Google Calendar.
+        </p>
+
+        <div class="button-row">
+          <a class="btn btn-secondary" href="mailto:topdogtaxiandtoursstt@gmail.com?subject=Top%20Dog%20Tour%20and%20Taxi%20Booking%20Request">Book by Email</a>
+          <a class="btn btn-secondary" href="https://calendar.app.google/QhGbrGE2vqHfdK3t5" target="_blank">Reserve on Calendar</a>
+        </div>
+
+        <div class="deposit-box">
+          <select id="depositMethodBottom">
+            <option value="">Choose deposit payment method</option>
+            <option value="https://venmo.com/u/Lauren-Rice-49">Pay deposit with Venmo</option>
+            <option value="https://cash.app/$topdogtourandtaxi">Pay deposit with Cash App</option>
+          </select>
+          <button class="btn btn-primary" onclick="goToDeposit('depositMethodBottom')">Go to Deposit Link</button>
+        </div>
+
+        <p class="deposit-note">Deposits can be paid by Venmo or Cash App.</p>
+
+        <div style="margin-top:22px;">
+          <p><strong>Phone:</strong> <a href="tel:+17867199870" style="color:white;">(786) 719-9870</a></p>
+          <p><strong>Email:</strong> <a href="mailto:topdogtaxiandtoursstt@gmail.com" style="color:white;">topdogtaxiandtoursstt@gmail.com</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Top Dog Tour and Taxi © 2026</p>
+  </footer>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slides');
+    const dots = document.querySelectorAll('.dot');
+
+    function showSlide(index) {
+      slides.forEach((slide) => slide.classList.remove('active'));
+      dots.forEach((dot) => dot.classList.remove('active'));
+      slides[index].classList.add('active');
+      dots[index].classList.add('active');
+      currentSlide = index;
+    }
+
+    function autoSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    setInterval(autoSlide, 3500);
+
+    function goToDeposit(selectId) {
+      const select = document.getElementById(selectId);
+      const url = select.value;
+      if (!url) {
+        alert('Please choose a deposit payment method.');
+        return;
+      }
+      window.open(url, '_blank');
+    }
+
+    function toggleCalculatorFields() {
+      const serviceType = document.getElementById('serviceType').value;
+      const rideFields = document.getElementById('rideFields');
+      const groceryFields = document.getElementById('groceryFields');
+
+      if (serviceType === 'grocery') {
+        rideFields.style.display = 'none';
+        groceryFields.style.display = 'block';
+      } else {
+        rideFields.style.display = 'block';
+        groceryFields.style.display = 'none';
+      }
+    }
+
+    function calculate() {
+      const serviceType = document.getElementById('serviceType').value;
+      const payment = document.getElementById('payment').value;
+      const deposit = document.getElementById('deposit').value;
+
+      if (serviceType === 'grocery') {
+        const storeChoice = document.getElementById('storeChoice').value;
+        const deliveryType = document.getElementById('deliveryType').value;
+        const deliveryFee = Number(document.getElementById('deliveryFee').value);
+
+        if (deliveryFee === 0) {
+          document.getElementById('total').innerText = 'Ask Us';
+          document.getElementById('breakdown').innerHTML =
+            '<strong>Service:</strong> Grocery / Food Delivery Only<br>' +
+            '<strong>Store:</strong> ' + storeChoice + '<br>' +
+            '<strong>Delivery type:</strong> ' + deliveryType + '<br>' +
+            'Please reserve on Google Calendar for a custom grocery delivery quote.';
+          return;
+        }
+
+        let total = deliveryFee;
+        if (deposit === 'yes') total *= 0.9;
+        if (payment === 'app') total *= 1.05;
+
+        document.getElementById('total').innerText = '$' + total.toFixed(2);
+        document.getElementById('breakdown').innerHTML =
+          '<strong>Service:</strong> Grocery / Food Delivery Only<br>' +
+          '<strong>Store:</strong> ' + storeChoice + '<br>' +
+          '<strong>Delivery type:</strong> ' + deliveryType + '<br>' +
+          '<strong>Base delivery fee:</strong> $' + deliveryFee.toFixed(2) + '<br>' +
+          '<strong>Payment type:</strong> ' + (payment === 'app' ? 'Payment app (+5%)' : 'Cash') + '<br>' +
+          '<strong>Deposit:</strong> ' + (deposit === 'yes' ? 'Yes (10% off)' : 'No');
+
+        return;
+      }
+
+      const zoneSelect = document.getElementById('zone');
+      const zoneText = zoneSelect.options[zoneSelect.selectedIndex].text;
+      const base = Number(zoneSelect.value);
+      const people = Number(document.getElementById('people').value);
+      const bags = Number(document.getElementById('bags').value);
+      const groceryStop = Number(document.getElementById('groceryStop').value);
+
+      if (base === 0) {
+        document.getElementById('total').innerText = 'Ask Us';
+        document.getElementById('breakdown').innerHTML =
+          '<strong>Destination area:</strong> ' + zoneText + '<br>' +
+          'Please reserve on Google Calendar and we’ll confirm your exact quote.';
+        return;
+      }
+
+      const markup = people >= 4 ? 5 : 10;
+      const pricePerPerson = base + markup;
+      let total = (pricePerPerson * people) + groceryStop;
+
+      if (deposit === 'yes') total *= 0.9;
+      if (payment === 'app') total *= 1.05;
+
+      document.getElementById('total').innerText = '$' + total.toFixed(2);
+      document.getElementById('breakdown').innerHTML =
+        '<strong>Service:</strong> Ride / Airport / Tour<br>' +
+        '<strong>Destination area:</strong> ' + zoneText + '<br>' +
+        '<strong>Price per person:</strong> $' + pricePerPerson.toFixed(2) + '<br>' +
+        '<strong>People:</strong> ' + people + '<br>' +
+        '<strong>Bags:</strong> ' + bags + '<br>' +
+        '<strong>Grocery / extra stop:</strong> $' + groceryStop.toFixed(2) + '<br>' +
+        '<strong>Payment type:</strong> ' + (payment === 'app' ? 'Payment app (+5%)' : 'Cash') + '<br>' +
+        '<strong>Deposit:</strong> ' + (deposit === 'yes' ? 'Yes (10% off)' : 'No');
+    }
+
+    toggleCalculatorFields();
+  </script>
+
+</body>
+</html>
