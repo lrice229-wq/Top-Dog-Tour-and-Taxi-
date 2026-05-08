@@ -4,44 +4,109 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Private Taxi, Airport Pickup & Grocery Delivery in St. Thomas | Top Dog Tour & Taxi</title>
+  <title>Private Taxi, Airport Pickup, Cruise Pickup & Grocery Delivery in St. Thomas | Top Dog Tour & Taxi</title>
 
-  <meta name="description" content="Book private taxi rides, STT airport pickups, island tours, grocery stops, grocery delivery, essentials pickup, and private transportation in St. Thomas, USVI. No bag fees. Children under 7 ride free." />
-  <meta name="keywords" content="St. Thomas taxi service, private taxi St Thomas USVI, airport pickup St Thomas, STT airport pickup, grocery delivery St Thomas, grocery stop St Thomas, private driver St Thomas, island tours St Thomas, local rides St Thomas, Top Dog Tour and Taxi" />
+  <meta name="description" content="Book private taxi rides, STT airport pickups, cruise ship pickup, private island tours, grocery stops, grocery delivery, essentials pickup, weekly transportation, and private driver service in St. Thomas, USVI. No bag fees. Children under 7 ride free." />
+
+  <meta name="keywords" content="St. Thomas taxi service, private taxi St Thomas USVI, airport pickup St Thomas, STT airport pickup, cruise ship pickup St Thomas, cruise port transportation St Thomas, private island tour St Thomas, grocery delivery St Thomas, grocery pickup St Thomas, private driver St Thomas, weekly transportation St Thomas, Top Dog Tour and Taxi" />
+
   <meta name="robots" content="index, follow" />
-  <meta name="author" content="Top Dog Tour & Taxi" />
-
   <link rel="canonical" href="https://topdogtourandtaxi.com/" />
 
-  <meta property="og:title" content="Private Taxi, Airport Pickup & Grocery Delivery in St. Thomas | Top Dog Tour & Taxi" />
-  <meta property="og:description" content="Private rides, airport pickups, island tours, grocery stops, essentials delivery, and flexible transportation in St. Thomas, USVI." />
+  <meta property="og:title" content="Private Taxi, Airport Pickup, Cruise Pickup & Grocery Delivery in St. Thomas | Top Dog Tour & Taxi" />
+  <meta property="og:description" content="Private rides, airport pickups, cruise ship pickup, island tours, grocery delivery, grocery stops, and flexible transportation in St. Thomas, USVI. No bag fees. Children under 7 ride free." />
   <meta property="og:url" content="https://topdogtourandtaxi.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://topdogtourandtaxi.com/logo1.png" />
 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Private Taxi & Airport Pickup in St. Thomas | Top Dog Tour & Taxi" />
-  <meta name="twitter:description" content="Private rides, STT airport pickups, grocery stops, grocery delivery, and island tours in St. Thomas, USVI." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TaxiService",
+    "name": "Top Dog Tour & Taxi",
+    "url": "https://topdogtourandtaxi.com/",
+    "telephone": "+17867199870",
+    "image": "https://topdogtourandtaxi.com/logo1.png",
+    "areaServed": {
+      "@type": "Place",
+      "name": "St. Thomas, U.S. Virgin Islands"
+    },
+    "description": "Private taxi rides, STT airport pickups, cruise ship pickup, island tours, grocery delivery, grocery stops, essentials pickup, weekly transportation, and private driver service in St. Thomas, USVI.",
+    "priceRange": "$$",
+    "sameAs": [
+      "https://topdogtourandtaxi.com/"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Transportation and Delivery Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Private Taxi Service in St. Thomas"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "STT Airport Pickup"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Cruise Ship Pickup in St. Thomas"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Grocery Delivery in St. Thomas"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Private Island Tours in St. Thomas"
+          }
+        }
+      ]
+    }
+  }
+  </script>
 
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;700&display=swap');
+
     * {
       box-sizing: border-box;
     }
 
     :root {
-      --ocean: #0b6e8a;
-      --deep-ocean: #07384d;
-      --teal: #0f8b8d;
-      --sun: #ffb703;
-      --coral: #ff7b54;
-      --cream: #fff8e6;
-      --light: #eefbff;
+      --sand: #fff1dc;
+      --warm: #f7dfbf;
+      --ocean: #007c89;
+      --deep: #063f4f;
+      --teal: #00a896;
+      --aqua: #8ee3ef;
+      --lagoon: #d8fbff;
+      --palm: #2f7d4f;
+      --sun: #ffd166;
+      --mango: #f4a261;
+      --coral: #f26b5e;
+      --hibiscus: #d94f70;
+      --cream: #fffaf0;
       --white: #ffffff;
-      --text: #17384d;
-      --muted: #5f7480;
-      --border: #d7e8ef;
-      --danger: #8f250d;
-      --shadow: 0 10px 30px rgba(13, 59, 85, 0.14);
+      --text: #18343b;
+      --muted: #55737a;
+      --border: #ead8c0;
+      --shadow: 0 14px 34px rgba(6,63,79,0.16);
+      --shadow-soft: 0 8px 22px rgba(6,63,79,0.10);
       --radius: 18px;
     }
 
@@ -51,10 +116,13 @@
 
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--light);
+      font-family: 'DM Sans', Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(142,227,239,0.22), transparent 34%),
+        radial-gradient(circle at top right, rgba(255,209,102,0.20), transparent 32%),
+        linear-gradient(180deg, #fffaf0 0%, #fff6e7 48%, #fdf8f2 100%);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     a {
@@ -76,7 +144,7 @@
       position: absolute;
       left: -999px;
       top: 12px;
-      background: var(--deep-ocean);
+      background: var(--deep);
       color: white;
       padding: 10px 14px;
       border-radius: 10px;
@@ -91,9 +159,10 @@
       position: sticky;
       top: 0;
       z-index: 99;
-      background: rgba(255, 255, 255, 0.97);
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-      border-bottom: 1px solid var(--border);
+      background: rgba(255,250,240,0.96);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 5px 22px rgba(6,63,79,0.12);
+      border-bottom: 3px solid rgba(255,209,102,0.75);
     }
 
     .topbar-inner {
@@ -110,10 +179,12 @@
       display: flex;
       align-items: center;
       gap: 10px;
+      font-family: 'Playfair Display', serif;
       font-weight: 900;
-      color: var(--ocean);
-      font-size: 1.05rem;
+      color: var(--deep);
+      font-size: 1.08rem;
       white-space: nowrap;
+      letter-spacing: 0.01em;
     }
 
     .brand img {
@@ -133,10 +204,11 @@
       border: 2px solid var(--ocean);
       background: white;
       color: var(--ocean);
-      padding: 8px 14px;
+      padding: 7px 13px;
       border-radius: 999px;
-      font-weight: 900;
+      font-weight: 700;
       cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
     }
 
     .lang-btn.active {
@@ -153,9 +225,10 @@
       background: white;
       color: var(--ocean);
       border-radius: 999px;
-      padding: 10px 16px;
-      font-weight: 900;
+      padding: 9px 16px;
+      font-weight: 700;
       cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
     }
 
     .menu {
@@ -164,9 +237,9 @@
       right: 0;
       top: 50px;
       background: white;
-      min-width: 285px;
+      min-width: 290px;
       border-radius: 18px;
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.16);
       overflow: hidden;
       border: 1px solid var(--border);
     }
@@ -177,39 +250,54 @@
 
     .menu a {
       display: block;
-      padding: 13px 16px;
+      padding: 13px 18px;
       color: var(--text);
-      font-weight: 800;
-      border-bottom: 1px solid #eef4f6;
+      font-weight: 700;
+      border-bottom: 1px solid #f0ece7;
     }
 
-    .menu a:hover,
-    .menu a:focus {
-      background: var(--light);
-      outline: none;
+    .menu a:hover {
+      background: var(--sand);
     }
 
     header.hero {
       position: relative;
       color: white;
       text-align: center;
-      padding: 88px 20px 78px;
+      padding: 95px 20px 84px;
       background:
-        linear-gradient(rgba(7, 46, 62, 0.78), rgba(7, 46, 62, 0.62)),
-        url("home-bg.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+        linear-gradient(135deg, rgba(6,63,79,0.88), rgba(0,124,137,0.58)),
+        radial-gradient(circle at 20% 20%, rgba(255,209,102,0.25), transparent 28%),
+        radial-gradient(circle at 82% 12%, rgba(242,107,94,0.24), transparent 26%),
+        url("home-bg.jpg") center/cover no-repeat;
+      overflow: hidden;
+    }
+
+    header.hero::after {
+      content: "";
+      position: absolute;
+      left: -8%;
+      right: -8%;
+      bottom: -55px;
+      height: 110px;
+      background: var(--cream);
+      border-radius: 50% 50% 0 0;
+      z-index: 0;
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 1;
     }
 
     .top-logo {
-      width: 170px;
-      max-width: 82%;
+      width: 160px;
+      max-width: 80%;
       display: block;
       margin: 0 auto 20px;
-      border-radius: 20px;
+      border-radius: 18px;
       background: white;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.28);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.30);
     }
 
     .logo-fallback {
@@ -218,36 +306,40 @@
       background: white;
       color: var(--ocean);
       border: 3px solid var(--sun);
-      border-radius: 20px;
+      border-radius: 18px;
       padding: 18px;
       max-width: 330px;
+      font-family: 'Playfair Display', serif;
       font-size: 1.5rem;
       font-weight: 900;
     }
 
     .eyebrow {
       display: inline-block;
-      background: rgba(255, 255, 255, 0.16);
-      border: 1px solid rgba(255, 255, 255, 0.36);
-      color: white;
+      background: rgba(255,209,102,0.22);
+      border: 1px solid rgba(255,209,102,0.55);
+      color: var(--sun);
       border-radius: 999px;
-      padding: 8px 14px;
-      font-weight: 900;
+      padding: 7px 16px;
+      font-weight: 700;
       margin-bottom: 16px;
-      backdrop-filter: blur(6px);
+      letter-spacing: 0.04em;
+      font-size: 0.9rem;
+      text-transform: uppercase;
     }
 
     h1 {
-      font-size: clamp(2rem, 5vw, 3.4rem);
-      line-height: 1.08;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.1;
       margin: 0 0 14px;
     }
 
     .subtitle {
-      max-width: 920px;
+      max-width: 900px;
       margin: 0 auto 24px;
-      color: #f7fcff;
-      font-size: 1.13rem;
+      color: #e8f4f6;
+      font-size: 1.1rem;
     }
 
     .button-row {
@@ -260,47 +352,53 @@
 
     .btn {
       display: inline-block;
-      padding: 14px 22px;
+      padding: 13px 22px;
       border-radius: 999px;
-      font-weight: 900;
+      font-weight: 700;
       text-align: center;
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
       border: 0;
       cursor: pointer;
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.16);
+      transition: transform 0.15s, box-shadow 0.15s;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.97rem;
     }
 
-    .btn:hover,
-    .btn:focus {
-      transform: translateY(-1px);
-      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
-      outline: none;
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.22);
     }
 
     .btn-primary {
-      background: var(--coral);
+      background: linear-gradient(135deg, var(--coral), var(--hibiscus));
       color: white;
     }
 
     .btn-secondary {
       background: white;
-      color: var(--ocean);
+      color: var(--deep);
+      border: 2px solid rgba(0,124,137,0.22);
     }
 
     .btn-gold {
-      background: var(--sun);
-      color: var(--deep-ocean);
+      background: linear-gradient(135deg, var(--sun), var(--mango));
+      color: var(--deep);
+    }
+
+    .btn-teal {
+      background: linear-gradient(135deg, var(--teal), var(--ocean));
+      color: white;
     }
 
     .notice {
-      max-width: 940px;
+      max-width: 900px;
       margin: 24px auto 0;
-      background: rgba(255, 255, 255, 0.96);
-      color: var(--danger);
+      background: rgba(255,250,240,0.97);
+      color: var(--deep);
       border: 3px solid var(--sun);
-      border-radius: 18px;
-      padding: 16px;
-      font-weight: 900;
+      border-radius: 16px;
+      padding: 14px 18px;
+      font-weight: 700;
     }
 
     section {
@@ -308,23 +406,24 @@
     }
 
     h2 {
+      font-family: 'Playfair Display', serif;
       text-align: center;
       color: var(--ocean);
-      font-size: clamp(1.7rem, 4vw, 2.2rem);
+      font-size: clamp(1.7rem, 4vw, 2.3rem);
       line-height: 1.15;
       margin: 0 0 14px;
     }
 
     .section-note {
-      max-width: 880px;
-      margin: 0 auto 28px;
+      max-width: 860px;
+      margin: 0 auto 30px;
       text-align: center;
       color: var(--muted);
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(248px, 1fr));
       gap: 18px;
     }
 
@@ -332,28 +431,47 @@
     .highlight,
     .quote-box,
     .faq-item,
-    .testimonial {
-      background: rgba(255, 255, 255, 0.96);
+    .testimonial,
+    .review-card {
+      background: rgba(255,255,255,0.94);
       border-radius: var(--radius);
       padding: 24px;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(15, 139, 141, 0.10);
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(0,124,137,0.12);
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, var(--teal), var(--sun), var(--coral));
     }
 
     .card h3,
     .highlight h3,
     .quote-box h3,
-    .faq-item h3,
-    .testimonial h3 {
+    .testimonial h3,
+    .review-card h3 {
       margin-top: 0;
       color: var(--ocean);
+      font-family: 'Playfair Display', serif;
     }
 
     .highlight {
       max-width: 960px;
       margin: 24px auto;
-      background: var(--cream);
+      background:
+        linear-gradient(135deg, rgba(255,241,220,0.98), rgba(216,251,255,0.72));
       border-left: 7px solid var(--sun);
+      border-top: 1px solid rgba(0,124,137,0.12);
     }
 
     .service-icon {
@@ -361,28 +479,86 @@
       margin-bottom: 8px;
     }
 
-    .price {
-      font-size: 2.15rem;
-      font-weight: 900;
-      color: var(--coral);
-      margin: 8px 0;
-    }
-
     .small {
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       color: var(--muted);
     }
 
-    .tag {
-      display: inline-block;
-      background: #e7f8fc;
-      color: var(--ocean);
-      border: 1px solid #c8edf5;
+    .dark-section {
+      background:
+        radial-gradient(circle at top left, rgba(255,209,102,0.14), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(0,168,150,0.20), transparent 32%),
+        linear-gradient(135deg, #063f4f 0%, #075466 50%, #007c89 100%);
+      color: white;
+    }
+
+    .dark-section h2 {
+      color: var(--sun);
+    }
+
+    .dark-section .section-note {
+      color: #d8fbff;
+    }
+
+    .dark-section .card,
+    .dark-section .testimonial {
+      background: rgba(255,255,255,0.10);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.18);
+      box-shadow: none;
+      backdrop-filter: blur(6px);
+    }
+
+    .dark-section .card h3,
+    .dark-section .testimonial h3 {
+      color: var(--sun);
+    }
+
+    .dark-section .small {
+      color: #d8fbff;
+    }
+
+    .sand-section {
+      background:
+        radial-gradient(circle at top right, rgba(255,209,102,0.22), transparent 34%),
+        linear-gradient(180deg, #fff1dc 0%, #fff7e8 100%);
+    }
+
+    .tropical-divider {
+      height: 12px;
+      background: linear-gradient(90deg, var(--teal), var(--aqua), var(--sun), var(--coral));
+      opacity: 0.85;
+    }
+
+    .cruise-badge-row,
+    .keyword-badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin: 18px 0 24px;
+    }
+
+    .cruise-badge,
+    .keyword-badge {
+      background: white;
+      color: var(--deep);
+      border: 1px solid rgba(0,124,137,0.18);
       border-radius: 999px;
-      padding: 6px 10px;
-      font-weight: 900;
-      font-size: 0.85rem;
-      margin: 4px 4px 4px 0;
+      padding: 8px 14px;
+      font-weight: 700;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .port-note {
+      background: rgba(216,251,255,0.82);
+      border: 2px solid rgba(0,168,150,0.35);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      color: var(--deep);
+      font-weight: 700;
+      margin: 20px auto 0;
+      max-width: 900px;
     }
 
     .steps {
@@ -407,7 +583,7 @@
       color: white;
       display: grid;
       place-items: center;
-      font-weight: 900;
+      font-weight: 700;
     }
 
     .form-grid {
@@ -425,7 +601,7 @@
     }
 
     label {
-      font-weight: 900;
+      font-weight: 700;
       color: var(--ocean);
     }
 
@@ -434,82 +610,190 @@
     textarea {
       width: 100%;
       padding: 12px;
-      border: 1px solid #cfe2ea;
+      border: 1px solid #d0c8be;
       border-radius: 12px;
       font-size: 1rem;
       background: white;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'DM Sans', sans-serif;
     }
 
     textarea {
-      min-height: 105px;
+      min-height: 100px;
       resize: vertical;
     }
 
     .calc-btn {
       width: 100%;
-      padding: 15px;
+      padding: 14px;
       background: linear-gradient(135deg, var(--coral), var(--sun));
       color: white;
       border: 0;
       border-radius: 999px;
-      font-weight: 900;
+      font-weight: 700;
       font-size: 1rem;
       cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
     }
 
     .quote-total {
-      font-size: 2.1rem;
-      font-weight: 900;
+      font-size: 2rem;
+      font-weight: 700;
       color: var(--coral);
       margin: 8px 0;
     }
 
-    .dark-section {
-      background: var(--deep-ocean);
-      color: white;
-    }
-
-    .dark-section h2 {
-      color: white;
-    }
-
-    .dark-section .section-note {
-      color: #dcecf2;
-    }
-
-    .dark-section .card,
-    .dark-section .testimonial {
-      background: rgba(255, 255, 255, 0.10);
-      color: white;
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      box-shadow: none;
-    }
-
-    .dark-section .card h3,
-    .dark-section .testimonial h3 {
-      color: #d9f4ff;
-    }
-
     .faq-list {
       display: grid;
-      gap: 14px;
+      gap: 12px;
       max-width: 960px;
       margin: 0 auto;
     }
 
-    .faq-item h3 {
-      margin: 0 0 8px;
-      font-size: 1.08rem;
+    .faq-item {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      padding: 20px 24px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--ocean);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .faq-question:hover {
+      background: var(--sand);
+    }
+
+    .faq-chevron {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--ocean);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 0.75rem;
+      transition: transform 0.3s;
+    }
+
+    .faq-item.open .faq-chevron {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.3s ease;
+      padding: 0 24px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 500px;
+      padding: 0 24px 20px;
+    }
+
+    .arrival-tip {
+      background: linear-gradient(135deg, #e8f4f2, #d4ede9);
+      border: 2px solid var(--teal);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      max-width: 960px;
+      margin: 0 auto 24px;
+    }
+
+    .arrival-tip h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--deep);
+      margin-top: 0;
+      font-size: 1.4rem;
+    }
+
+    .arrival-tip ul {
+      padding-left: 20px;
+      color: var(--text);
+      margin: 12px 0;
+    }
+
+    .arrival-tip ul li {
+      margin-bottom: 8px;
+    }
+
+    .tip-callout {
+      background: white;
+      border-left: 4px solid var(--sun);
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin-top: 14px;
+      font-weight: 700;
+      color: var(--deep);
+      font-size: 0.97rem;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+    }
+
+    .stars {
+      color: var(--sun);
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    .review-text {
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 12px;
+    }
+
+    .review-author {
+      font-weight: 700;
+      color: var(--ocean);
+    }
+
+    .review-source {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .review-request {
+      max-width: 960px;
+      margin: 24px auto 0;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.96), rgba(216,251,255,0.72));
+      border: 2px dashed rgba(0,124,137,0.32);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .review-request h3 {
+      margin-top: 0;
+      font-family: 'Playfair Display', serif;
+      color: var(--ocean);
     }
 
     .slideshow {
       max-width: 1000px;
       margin: auto;
       overflow: hidden;
-      border-radius: 22px;
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16);
-      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.16);
     }
 
     .slides {
@@ -533,7 +817,7 @@
       height: 12px;
       width: 12px;
       margin: 0 5px;
-      background: #c6d9e6;
+      background: #c6d9d6;
       border-radius: 50%;
       display: inline-block;
       cursor: pointer;
@@ -544,10 +828,12 @@
     }
 
     .contact-strip {
-      background: var(--ocean);
+      background:
+        radial-gradient(circle at top left, rgba(255,209,102,0.15), transparent 28%),
+        linear-gradient(135deg, var(--ocean), var(--deep));
       color: white;
       text-align: center;
-      padding: 42px 20px;
+      padding: 48px 20px;
     }
 
     .contact-strip h2 {
@@ -555,38 +841,37 @@
     }
 
     .contact-strip a {
-      color: white;
-      font-weight: 900;
-      text-decoration: underline;
+      color: var(--sun);
+      font-weight: 700;
+    }
+
+    footer {
+      background: var(--deep);
+      color: #b7d0d6;
+      padding: 36px 0 90px;
     }
 
     .footer-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-      text-align: left;
-    }
-
-    footer {
-      background: #f8fcff;
-      color: #5c7381;
-      padding: 28px 0 90px;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 20px;
     }
 
     footer h3 {
-      color: var(--ocean);
+      color: var(--sun);
       margin-bottom: 8px;
+      font-family: 'Playfair Display', serif;
     }
 
     footer a {
-      color: var(--ocean);
-      font-weight: 900;
+      color: #d8fbff;
+      font-weight: 700;
     }
 
     .copyright {
       text-align: center;
       padding: 18px 20px 0;
-      color: #6e8590;
+      color: #91b5bd;
     }
 
     .mobile-booking {
@@ -597,8 +882,8 @@
       bottom: 0;
       z-index: 100;
       background: white;
-      border-top: 1px solid var(--border);
-      box-shadow: 0 -8px 22px rgba(0, 0, 0, 0.12);
+      border-top: 2px solid var(--sun);
+      box-shadow: 0 -8px 22px rgba(0,0,0,0.12);
       padding: 10px;
       gap: 8px;
     }
@@ -608,10 +893,14 @@
       text-align: center;
       border-radius: 999px;
       padding: 10px 8px;
-      font-weight: 900;
+      font-weight: 700;
       color: white;
       background: var(--ocean);
-      font-size: 0.9rem;
+      font-size: 0.88rem;
+    }
+
+    .mobile-booking a:nth-child(1) {
+      background: var(--ocean);
     }
 
     .mobile-booking a:nth-child(2) {
@@ -620,16 +909,11 @@
 
     .mobile-booking a:nth-child(3) {
       background: var(--sun);
-      color: var(--deep-ocean);
+      color: var(--deep);
     }
 
     @media (max-width: 850px) {
       .topbar-inner {
-        align-items: flex-start;
-        flex-wrap: wrap;
-      }
-
-      .langs {
         flex-wrap: wrap;
       }
 
@@ -646,177 +930,23 @@
       }
 
       .slides {
-        height: 310px;
-      }
-
-      .menu {
-        right: 0;
-        left: auto;
+        height: 300px;
       }
 
       .mobile-booking {
         display: flex;
       }
+
+      .arrival-tip {
+        padding: 20px;
+      }
+
+      .menu {
+        right: auto;
+        left: 0;
+      }
     }
   </style>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "LocalBusiness",
-        "@id": "https://topdogtourandtaxi.com/#business",
-        "name": "Top Dog Tour & Taxi",
-        "url": "https://topdogtourandtaxi.com/",
-        "telephone": "+1-786-719-9870",
-        "email": "topdogtaxiandtoursstt@gmail.com",
-        "image": "https://topdogtourandtaxi.com/logo1.png",
-        "description": "Private taxi rides, STT airport pickups, island tours, grocery pickup, essentials delivery, and private transportation in St. Thomas, U.S. Virgin Islands.",
-        "priceRange": "$$",
-        "areaServed": [
-          {
-            "@type": "City",
-            "name": "St. Thomas"
-          },
-          {
-            "@type": "AdministrativeArea",
-            "name": "U.S. Virgin Islands"
-          }
-        ],
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "St. Thomas",
-          "addressRegion": "VI",
-          "addressCountry": "US"
-        },
-        "openingHours": "Mo-Su 00:00-23:59",
-        "sameAs": [
-          "https://topdogtourandtaxi.com/",
-          "https://wa.me/17867199870"
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://topdogtourandtaxi.com/#website",
-        "url": "https://topdogtourandtaxi.com/",
-        "name": "Top Dog Tour & Taxi",
-        "publisher": {
-          "@id": "https://topdogtourandtaxi.com/#business"
-        }
-      },
-      {
-        "@type": "Service",
-        "@id": "https://topdogtourandtaxi.com/#airport-pickup",
-        "name": "STT Airport Pickup in St. Thomas",
-        "serviceType": "Private airport pickup",
-        "provider": {
-          "@id": "https://topdogtourandtaxi.com/#business"
-        },
-        "areaServed": {
-          "@type": "City",
-          "name": "St. Thomas"
-        },
-        "description": "Private airport pickups from Cyril E. King Airport in St. Thomas, USVI, with no bag fees."
-      },
-      {
-        "@type": "Service",
-        "@id": "https://topdogtourandtaxi.com/#grocery-delivery",
-        "name": "Grocery Delivery and Essentials Pickup in St. Thomas",
-        "serviceType": "Grocery pickup, essentials delivery, food pickup, and airport grocery stops",
-        "provider": {
-          "@id": "https://topdogtourandtaxi.com/#business"
-        },
-        "areaServed": {
-          "@type": "City",
-          "name": "St. Thomas"
-        },
-        "description": "Grocery pickup, essentials delivery, restaurant food pickup, and airport grocery stops for hotels, villas, condos, and vacation rentals in St. Thomas, USVI.",
-        "offers": [
-          {
-            "@type": "Offer",
-            "name": "Grocery stop added to a ride",
-            "price": "20",
-            "priceCurrency": "USD",
-            "url": "https://topdogtourandtaxi.com/"
-          },
-          {
-            "@type": "Offer",
-            "name": "Small essentials pickup",
-            "price": "25",
-            "priceCurrency": "USD",
-            "url": "https://topdogtourandtaxi.com/"
-          },
-          {
-            "@type": "Offer",
-            "name": "Larger grocery pickup",
-            "price": "35",
-            "priceCurrency": "USD",
-            "url": "https://topdogtourandtaxi.com/"
-          }
-        ]
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://topdogtourandtaxi.com/#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://topdogtourandtaxi.com/"
-          }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://topdogtourandtaxi.com/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Do you offer airport pickup in St. Thomas?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Top Dog Tour & Taxi offers private airport pickups from Cyril E. King Airport in St. Thomas, USVI."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you charge bag fees?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. Top Dog Tour & Taxi does not charge bag fees."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do children ride free?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Children under 7 ride free with Top Dog Tour & Taxi."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you offer grocery delivery in St. Thomas?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Top Dog Tour & Taxi offers grocery pickup, essentials delivery, food pickup, and airport grocery stops in St. Thomas, USVI."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can I add a grocery stop to my airport pickup?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. You can request a grocery stop as part of your airport pickup or local ride, subject to availability and order size."
-            }
-          }
-        ]
-      }
-    ]
-  }
-  </script>
 </head>
 
 <body>
@@ -826,27 +956,30 @@
     <div class="topbar-inner">
       <a class="brand" href="#top" aria-label="Top Dog Tour and Taxi home">
         <img src="logo1.png" alt="Top Dog Tour and Taxi logo" onerror="this.style.display='none';" />
-        <span>Top Dog Tour &amp; Taxi</span>
+        Top Dog Tour &amp; Taxi
       </a>
 
-      <div class="langs" aria-label="Language selector">
+      <div class="langs">
         <button class="lang-btn active" onclick="setLanguage('en')" id="btnEn">English</button>
-        <button class="lang-btn" onclick="setLanguage('es')" id="btnEs">EspaÃ±ol</button>
+        <button class="lang-btn" onclick="setLanguage('es')" id="btnEs">Español</button>
       </div>
 
       <div class="menu-wrap">
-        <button class="menu-button" id="menuButton" onclick="toggleMenu()" aria-label="Open menu">â° Menu</button>
-
-        <nav class="menu" id="mainMenu" aria-label="Main navigation">
+        <button class="menu-button" id="menuButton" onclick="toggleMenu()">☰ Menu</button>
+        <nav class="menu" id="mainMenu">
           <a href="#services">Services</a>
           <a href="#airport">Airport Pickups</a>
-          <a href="#grocery">Grocery &amp; Essentials</a>
+          <a href="#cruise">Cruise Ship Pickup</a>
+          <a href="#grocery">Grocery Delivery</a>
+          <a href="#weekly">Weekly Transportation</a>
           <a href="#rates">Rates</a>
           <a href="#quote">Quick Quote</a>
+          <a href="#reviews">Reviews</a>
           <a href="#faq">FAQ</a>
           <a href="#contact">Contact</a>
-          <a href="local-rides.html">Local Rides Page</a>
+          <a href="local-rides.html">Local Rides</a>
           <a href="grocery.html">Grocery Page</a>
+          <a href="cruise-pickup.html">Cruise Ship Page</a>
           <a href="https://wa.me/17867199870?text=Hi%20Top%20Dog%20Tour%20%26%20Taxi%2C%20I%20want%20to%20book%20a%20ride%20or%20grocery%20pickup%20in%20St.%20Thomas." target="_blank" rel="noopener">Book on WhatsApp</a>
         </nav>
       </div>
@@ -855,78 +988,36 @@
 
   <header class="hero" id="top">
     <div class="container">
-      <img
-        src="logo1.png"
-        class="top-logo"
-        alt="Top Dog Tour and Taxi Logo"
-        width="170"
-        height="170"
-        onerror="this.style.display='none';document.getElementById('logoFallback').style.display='block';"
-      />
+      <img src="logo1.png" class="top-logo" alt="Top Dog Tour and Taxi Logo" width="160" height="160"
+        onerror="this.style.display='none';document.getElementById('logoFallback').style.display='block';" />
 
       <div id="logoFallback" class="logo-fallback">Top Dog Tour &amp; Taxi</div>
 
-      <div
-        class="eyebrow"
+      <div class="eyebrow"
         data-en="Private driver service in St. Thomas, USVI"
-        data-es="Servicio privado de chofer en St. Thomas, USVI"
-      >
+        data-es="Servicio privado de chofer en St. Thomas, USVI">
         Private driver service in St. Thomas, USVI
       </div>
 
       <h1
-        data-en="Private Taxi, Airport Pickup & Grocery Delivery in St. Thomas"
-        data-es="Taxi privado, recogida en el aeropuerto y entrega de compras en St. Thomas"
-      >
-        Private Taxi, Airport Pickup &amp; Grocery Delivery in St. Thomas
+        data-en="Private Taxi, Airport Pickup, Cruise Pickup & Grocery Delivery in St. Thomas"
+        data-es="Taxi privado, recogida en aeropuerto, recogida de cruceros y entrega de compras en St. Thomas">
+        Private Taxi, Airport Pickup, Cruise Pickup &amp; Grocery Delivery in St. Thomas
       </h1>
 
-      <p
-        class="subtitle"
-        data-en="Book private rides, STT airport pickups, island tours, grocery stops, grocery delivery, essentials pickup, and flexible transportation in St. Thomas, USVI."
-        data-es="Reserva viajes privados, recogida en el aeropuerto STT, tours de la isla, paradas al supermercado, entrega de compras, artÃ­culos esenciales y transporte flexible en St. Thomas, USVI."
-      >
-        Book private rides, STT airport pickups, island tours, grocery stops, grocery delivery, essentials pickup, and flexible transportation in St. Thomas, USVI.
+      <p class="subtitle"
+        data-en="Book private rides, STT airport pickups, cruise ship pickup, island tours, grocery stops, grocery delivery, essentials pickup, weekly transportation, and flexible private driver service in St. Thomas, USVI."
+        data-es="Reserva viajes privados, recogida en el aeropuerto STT, recogida de cruceros, tours, paradas al supermercado, entrega de compras, transporte semanal y servicio privado de chofer en St. Thomas, USVI.">
+        Book private rides, STT airport pickups, cruise ship pickup, island tours, grocery stops, grocery delivery, essentials pickup, weekly transportation, and flexible private driver service in St. Thomas, USVI.
       </p>
 
       <div class="button-row">
-        <a
-          class="btn btn-primary"
-          href="https://wa.me/17867199870?text=Hi%20Top%20Dog%20Tour%20%26%20Taxi%2C%20I%20want%20to%20book%20a%20ride%20or%20grocery%20pickup%20in%20St.%20Thomas."
-          target="_blank"
-          rel="noopener"
-          data-en="Book on WhatsApp"
-          data-es="Reservar por WhatsApp"
-        >
-          Book on WhatsApp
-        </a>
-
-        <a
-          class="btn btn-secondary"
-          href="tel:7867199870"
-          data-en="Call or Text 786-719-9870"
-          data-es="Llamar o textear 786-719-9870"
-        >
-          Call or Text 786-719-9870
-        </a>
-
-        <a
-          class="btn btn-gold"
-          href="https://calendar.app.google/QhGbrGE2vqHfdK3t5"
-          target="_blank"
-          rel="noopener"
-          data-en="Reserve on Calendar"
-          data-es="Reservar en el calendario"
-        >
-          Reserve on Calendar
-        </a>
+        <a class="btn btn-primary" href="https://wa.me/17867199870?text=Hi%20Top%20Dog%20Tour%20%26%20Taxi%2C%20I%20want%20to%20book%20a%20ride%20or%20grocery%20pickup%20in%20St.%20Thomas." target="_blank" rel="noopener">Book on WhatsApp</a>
+        <a class="btn btn-secondary" href="tel:7867199870">Call or Text 786-719-9870</a>
+        <a class="btn btn-gold" href="https://calendar.app.google/QhGbrGE2vqHfdK3t5" target="_blank" rel="noopener">Reserve on Calendar</a>
       </div>
 
-      <div
-        class="notice"
-        data-en="No bag fees. Children under 7 ride free. Google Calendar bookings must include a contact phone number."
-        data-es="Sin cargos por maletas. NiÃ±os menores de 7 viajan gratis. Las reservas por Google Calendar deben incluir un nÃºmero de telÃ©fono."
-      >
+      <div class="notice">
         No bag fees. Children under 7 ride free. Google Calendar bookings must include a contact phone number.
       </div>
     </div>
@@ -937,40 +1028,32 @@
       <div class="container">
         <h2
           data-en="Private Transportation and Island Errands Made Simple"
-          data-es="Transporte privado y diligencias en la isla sin complicaciones"
-        >
+          data-es="Transporte privado y diligencias en la isla sin complicaciones">
           Private Transportation and Island Errands Made Simple
         </h2>
 
-        <p
-          class="section-note"
-          data-en="Top Dog Tour & Taxi helps visitors and locals move around St. Thomas with private rides, airport pickup, grocery stops, essentials delivery, island tours, and flexible booking."
-          data-es="Top Dog Tour & Taxi ayuda a visitantes y residentes a moverse por St. Thomas con viajes privados, recogida en el aeropuerto, paradas al supermercado, entrega de artÃ­culos esenciales, tours y reservas flexibles."
-        >
-          Top Dog Tour &amp; Taxi helps visitors and locals move around St. Thomas with private rides, airport pickup, grocery stops, essentials delivery, island tours, and flexible booking.
+        <p class="section-note">
+          Top Dog Tour &amp; Taxi helps visitors and locals move around St. Thomas with private rides, airport pickup, cruise ship pickup, grocery delivery, grocery stops, essentials pickup, island tours, weekly transportation, and flexible booking.
         </p>
 
         <div class="grid">
           <div class="card">
-            <h3 data-en="Service Area" data-es="Ãrea de servicio">Service Area</h3>
-            <p data-en="Serving St. Thomas, U.S. Virgin Islands, including airport arrivals, hotels, villas, vacation rentals, beaches, restaurants, ferry areas, and local shopping stops."
-               data-es="Servicio en St. Thomas, Islas VÃ­rgenes de EE. UU., incluyendo llegadas al aeropuerto, hoteles, villas, alojamientos, playas, restaurantes, Ã¡reas de ferry y tiendas locales.">
-              Serving St. Thomas, U.S. Virgin Islands, including airport arrivals, hotels, villas, vacation rentals, beaches, restaurants, ferry areas, and local shopping stops.
+            <h3>Service Area</h3>
+            <p>
+              Serving St. Thomas, U.S. Virgin Islands, including airport arrivals, cruise ship piers, hotels, villas, vacation rentals, beaches, restaurants, ferry areas, shopping stops, and grocery delivery locations.
             </p>
           </div>
 
           <div class="card">
-            <h3 data-en="Fast Booking" data-es="Reserva rÃ¡pida">Fast Booking</h3>
-            <p data-en="Book by WhatsApp, phone, text, or Google Calendar. For airport pickups, please include flight number, passenger count, luggage count, and a good contact number."
-               data-es="Reserva por WhatsApp, llamada, texto o Google Calendar. Para recogidas en el aeropuerto, incluye nÃºmero de vuelo, cantidad de pasajeros, maletas y un buen nÃºmero de contacto.">
-              Book by WhatsApp, phone, text, or Google Calendar. For airport pickups, please include flight number, passenger count, luggage count, and a good contact number.
+            <h3>Fast Booking</h3>
+            <p>
+              Book by WhatsApp, phone, text, or Google Calendar. For airport and cruise pickups, please include arrival details, passenger count, luggage count, and a good contact number.
             </p>
           </div>
 
           <div class="card">
-            <h3 data-en="Simple Policies" data-es="PolÃ­ticas simples">Simple Policies</h3>
-            <p data-en="No bag fees. Children under 7 ride free. Private service means your ride is for you and your party, not a shared public taxi run."
-               data-es="Sin cargos por maletas. NiÃ±os menores de 7 viajan gratis. Servicio privado significa que el viaje es para ti y tu grupo, no un taxi compartido pÃºblico.">
+            <h3>Simple Policies</h3>
+            <p>
               No bag fees. Children under 7 ride free. Private service means your ride is for you and your party, not a shared public taxi run.
             </p>
           </div>
@@ -980,75 +1063,64 @@
 
     <section id="services" class="dark-section">
       <div class="container">
-        <h2 data-en="Choose Your Service" data-es="Elige tu servicio">Choose Your Service</h2>
-
-        <p
-          class="section-note"
-          data-en="Private transportation and island help in St. Thomas, USVI. Choose the service you need below."
-          data-es="Transporte privado y ayuda en la isla de St. Thomas, USVI. Elige el servicio que necesitas abajo."
-        >
+        <h2>Choose Your Service</h2>
+        <p class="section-note">
           Private transportation and island help in St. Thomas, USVI. Choose the service you need below.
         </p>
 
         <div class="grid">
           <div class="card">
-            <div class="service-icon">âï¸</div>
-            <h3 data-en="STT Airport Pickups" data-es="Recogidas en el aeropuerto STT">STT Airport Pickups</h3>
-            <p data-en="Private airport pickup from Cyril E. King Airport to hotels, villas, condos, ferries, and vacation rentals. No bag fees."
-               data-es="Recogida privada desde el aeropuerto Cyril E. King hacia hoteles, villas, condominios, ferries y alojamientos. Sin cargos por maletas.">
+            <div class="service-icon">✈️</div>
+            <h3>STT Airport Pickups</h3>
+            <p>
               Private airport pickup from Cyril E. King Airport to hotels, villas, condos, ferries, and vacation rentals. No bag fees.
             </p>
-            <a class="btn btn-gold" href="#airport" data-en="Airport Pickup Info" data-es="InformaciÃ³n de aeropuerto">Airport Pickup Info</a>
+            <a class="btn btn-gold" href="#airport">Airport Pickup Info</a>
           </div>
 
           <div class="card">
-            <div class="service-icon">ð</div>
-            <h3 data-en="Local Private Rides" data-es="Viajes privados locales">Local Private Rides</h3>
-            <p data-en="Private rides for beaches, dinner, shopping, errands, ferry transfers, appointments, and local transportation around St. Thomas."
-               data-es="Viajes privados para playas, cenas, compras, diligencias, ferries, citas y transporte local en St. Thomas.">
-              Private rides for beaches, dinner, shopping, errands, ferry transfers, appointments, and local transportation around St. Thomas.
+            <div class="service-icon">🚢</div>
+            <h3>Cruise Ship Pickup</h3>
+            <p>
+              Private cruise ship pickup in St. Thomas for beach trips, island tours, shopping, restaurants, scenic stops, grocery stops, and flexible day transportation.
             </p>
-            <a class="btn btn-gold" href="local-rides.html" data-en="Local Rides Page" data-es="PÃ¡gina de viajes locales">Local Rides Page</a>
+            <a class="btn btn-gold" href="#cruise">Cruise Pickup Info</a>
           </div>
 
           <div class="card">
-            <div class="service-icon">ðï¸</div>
-            <h3 data-en="Private Island Tours" data-es="Tours privados de la isla">Private Island Tours</h3>
-            <p data-en="Scenic private island tours with beaches, overlooks, photo stops, shopping, local food stops, and flexible routes."
-               data-es="Tours privados con playas, miradores, paradas para fotos, compras, comida local y rutas flexibles.">
-              Scenic private island tours with beaches, overlooks, photo stops, shopping, local food stops, and flexible routes.
+            <div class="service-icon">🛒</div>
+            <h3>Grocery Delivery</h3>
+            <p>
+              Grocery delivery, essentials pickup, pharmacy stops, water, snacks, beach supplies, and grocery stops for hotels, villas, condos, and vacation rentals.
             </p>
-            <a class="btn btn-gold" href="#rates" data-en="Tour Pricing" data-es="Precios de tours">Tour Pricing</a>
+            <a class="btn btn-gold" href="#grocery">Grocery Delivery Info</a>
           </div>
 
           <div class="card">
-            <div class="service-icon">ð</div>
-            <h3 data-en="Grocery Delivery & Essentials" data-es="Entrega de compras y esenciales">Grocery Delivery &amp; Essentials</h3>
-            <p data-en="Grocery pickup, essentials delivery, food pickup, and airport grocery stops for hotels, villas, condos, and vacation rentals."
-               data-es="Recogida de compras, entrega de esenciales, recogida de comida y paradas al supermercado para hoteles, villas, condominios y alojamientos.">
-              Grocery pickup, essentials delivery, food pickup, and airport grocery stops for hotels, villas, condos, and vacation rentals.
+            <div class="service-icon">🏝️</div>
+            <h3>Private Island Tours</h3>
+            <p>
+              Private island tours with beaches, overlooks, shopping, local food stops, photos, and flexible routing around your schedule.
             </p>
-            <a class="btn btn-gold" href="grocery.html" data-en="Grocery Page" data-es="PÃ¡gina de compras">Grocery Page</a>
+            <a class="btn btn-gold" href="#tours">Tour Info</a>
           </div>
 
           <div class="card">
-            <div class="service-icon">ð</div>
-            <h3 data-en="Daily & Weekly Transportation" data-es="Transporte diario y semanal">Daily &amp; Weekly Transportation</h3>
-            <p data-en="Flexible private transportation packages for visitors, workers, families, and longer stays in St. Thomas."
-               data-es="Paquetes flexibles de transporte privado para visitantes, trabajadores, familias y estadÃ­as largas en St. Thomas.">
-              Flexible private transportation packages for visitors, workers, families, and longer stays in St. Thomas.
+            <div class="service-icon">🚗</div>
+            <h3>Private Driver</h3>
+            <p>
+              Book a private driver in St. Thomas for local rides, dinner transportation, errands, appointments, ferry areas, beach trips, and flexible stops.
             </p>
-            <a class="btn btn-gold" href="#contact" data-en="Ask About Weekly Rates" data-es="Preguntar por precios semanales">Ask About Weekly Rates</a>
+            <a class="btn btn-gold" href="#quote">Get a Quote</a>
           </div>
 
           <div class="card">
-            <div class="service-icon">ð£</div>
-            <h3 data-en="Nighttime Shore Fishing" data-es="Pesca nocturna desde la orilla">Nighttime Shore Fishing</h3>
-            <p data-en="Relaxed nighttime shore fishing experience in St. Thomas. Shore fishing only, with supplies provided."
-               data-es="Experiencia tranquila de pesca nocturna desde la orilla en St. Thomas. Solo pesca desde la orilla, con materiales incluidos.">
-              Relaxed nighttime shore fishing experience in St. Thomas. Shore fishing only, with supplies provided.
+            <div class="service-icon">📅</div>
+            <h3>Weekly Transportation</h3>
+            <p>
+              Ask about weekly transportation rates for repeat rides, work transportation, visitor stays, family trips, or scheduled private transportation.
             </p>
-            <a class="btn btn-gold" href="shore-fishing.html" data-en="Shore Fishing Page" data-es="PÃ¡gina de pesca">Shore Fishing Page</a>
+            <a class="btn btn-gold" href="#weekly">Weekly Rate Info</a>
           </div>
         </div>
       </div>
@@ -1056,311 +1128,396 @@
 
     <section id="airport">
       <div class="container">
-        <h2 data-en="STT Airport Pickup in St. Thomas" data-es="Recogida en el aeropuerto STT en St. Thomas">
-          STT Airport Pickup in St. Thomas
-        </h2>
-
-        <p
-          class="section-note"
-          data-en="Reserve a private airport pickup from Cyril E. King Airport to your hotel, villa, condo, ferry, or vacation rental. Add a grocery stop if you want to arrive stocked and settled."
-          data-es="Reserva recogida privada desde el aeropuerto Cyril E. King hacia tu hotel, villa, condominio, ferry o alojamiento. Agrega una parada al supermercado si quieres llegar con todo listo."
-        >
-          Reserve a private airport pickup from Cyril E. King Airport to your hotel, villa, condo, ferry, or vacation rental. Add a grocery stop if you want to arrive stocked and settled.
+        <h2>STT Airport Pickup in St. Thomas</h2>
+        <p class="section-note">
+          Arriving at Cyril E. King Airport? Book private airport pickup with Top Dog Tour &amp; Taxi for transportation to hotels, villas, vacation rentals, ferry areas, and local destinations across St. Thomas.
         </p>
 
-        <div class="highlight">
-          <h3 data-en="What to Send for Airport Pickup" data-es="QuÃ© enviar para recogida en el aeropuerto">
-            What to Send for Airport Pickup
-          </h3>
+        <div class="arrival-tip">
+          <h3>Airport Pickup Tip</h3>
+          <ul>
+            <li>Send your airline and flight number.</li>
+            <li>Send the number of passengers.</li>
+            <li>Send your luggage count.</li>
+            <li>Send the name or address of your hotel, villa, Airbnb, or destination.</li>
+            <li>Send a good contact number so your driver can reach you.</li>
+          </ul>
+          <div class="tip-callout">
+            No bag fees. Children under 7 ride free.
+          </div>
+        </div>
 
-          <p data-en="Please send your flight number, arrival date and time, number of passengers, luggage count, drop-off location, and a good contact number. When you land at STT, text or call your driver with your meet-up location."
-             data-es="Por favor envÃ­a tu nÃºmero de vuelo, fecha y hora de llegada, cantidad de pasajeros, cantidad de maletas, destino y un buen nÃºmero de contacto. Cuando aterrices en STT, llama o textea al chofer con tu ubicaciÃ³n para encontrarse.">
-            Please send your flight number, arrival date and time, number of passengers, luggage count, drop-off location, and a good contact number. When you land at STT, text or call your driver with your meet-up location.
+        <div class="button-row">
+          <a class="btn btn-primary" href="https://wa.me/17867199870?text=Hi%20Top%20Dog%20Tour%20%26%20Taxi%2C%20I%20want%20to%20book%20STT%20airport%20pickup.%20My%20flight%20number%20is%3A%20" target="_blank" rel="noopener">Book Airport Pickup</a>
+          <a class="btn btn-secondary" href="tel:7867199870">Call or Text</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="tropical-divider"></div>
+
+    <section id="cruise" class="sand-section">
+      <div class="container">
+        <h2
+          data-en="Cruise Ship Pickup in St. Thomas"
+          data-es="Recogida de cruceros en St. Thomas">
+          Cruise Ship Pickup in St. Thomas
+        </h2>
+
+        <p class="section-note">
+          Arriving by cruise ship? Top Dog Tour &amp; Taxi offers private cruise ship pickup from the St. Thomas cruise ports for island tours, beach trips, shopping stops, lunch rides, grocery stops, and private transportation around the island.
+        </p>
+
+        <div class="cruise-badge-row">
+          <span class="cruise-badge">🚢 Cruise Port Pickup</span>
+          <span class="cruise-badge">🏝️ Private Island Tours</span>
+          <span class="cruise-badge">🛍️ Shopping Stops</span>
+          <span class="cruise-badge">🏖️ Beach Trips</span>
+          <span class="cruise-badge">🥘 Lunch Rides</span>
+          <span class="cruise-badge">🛒 Grocery Stops</span>
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <div class="service-icon">🚢</div>
+            <h3>Private Pickup from the Cruise Port</h3>
+            <p>
+              We provide private cruise ship pickup in St. Thomas for guests arriving at the cruise port. Your ride is for you and your party, not a shared public taxi run.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="service-icon">🏝️</div>
+            <h3>Island Tours from the Ship</h3>
+            <p>
+              Book a private island tour from the cruise port with scenic overlooks, beach stops, shopping, local food, photo stops, and flexible transportation while your ship is in port.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="service-icon">🏖️</div>
+            <h3>Beach, Shopping & Lunch Trips</h3>
+            <p>
+              Need a ride to the beach, downtown shopping, Mountain Top, Sapphire, Magens Bay, Secret Harbor, Red Hook, or a lunch spot? We can help plan the route around your port time.
+            </p>
+          </div>
+        </div>
+
+        <div class="highlight">
+          <h3>What to Send When Booking Cruise Ship Pickup</h3>
+          <p>
+            To book your cruise ship pickup, please send your cruise ship name, arrival date, preferred pickup time, number of passengers, where you want to go, and a good contact number.
+          </p>
+
+          <p>
+            We offer private cruise pickup from major St. Thomas cruise arrival areas, including Havensight and Crown Bay, with transportation to beaches, shopping, restaurants, scenic overlooks, grocery stops, and island tour stops.
+          </p>
+
+          <p>
+            <strong>No bag fees. Children under 7 ride free.</strong>
           </p>
 
           <div class="button-row">
-            <a class="btn btn-primary" href="https://wa.me/17867199870?text=Hi%20Top%20Dog%20Tour%20%26%20Taxi%2C%20I%20want%20to%20book%20an%20STT%20airport%20pickup.%20My%20flight%20number%20is%3A" target="_blank" rel="noopener">
-              Book Airport Pickup
+            <a class="btn btn-primary"
+              href="https://wa.me/17867199870?text=Hi%20Top%20Dog%20Tour%20%26%20Taxi%2C%20I%20want%20to%20book%20cruise%20ship%20pickup%20in%20St.%20Thomas.%20My%20ship%20name%20is%3A%20"
+              target="_blank"
+              rel="noopener">
+              Book Cruise Pickup on WhatsApp
             </a>
-            <a class="btn btn-secondary" href="#grocery">
-              Add Grocery Stop
+
+            <a class="btn btn-secondary" href="tel:7867199870">
+              Call or Text 786-719-9870
             </a>
+
+            <a class="btn btn-gold" href="cruise-pickup.html">
+              View Cruise Pickup Details
+            </a>
+          </div>
+
+          <div class="port-note">
+            Best for cruise guests who want a private driver, flexible stops, and a smoother day in St. Thomas without waiting around for a shared taxi.
           </div>
         </div>
       </div>
     </section>
 
-    <section id="grocery" class="dark-section">
+    <section id="grocery">
       <div class="container">
-        <h2 data-en="Grocery Delivery, Essentials Pickup & Airport Grocery Stops" data-es="Entrega de compras, artÃ­culos esenciales y paradas al supermercado">
-          Grocery Delivery, Essentials Pickup &amp; Airport Grocery Stops
-        </h2>
-
-        <p
-          class="section-note"
-          data-en="Need groceries, water, snacks, hygiene items, sunscreen, medicine cabinet basics, or restaurant food pickup in St. Thomas? We can help with grocery pickup, essentials delivery, and grocery stops added to private rides."
-          data-es="Â¿Necesitas compras, agua, snacks, productos de higiene, bloqueador, bÃ¡sicos de farmacia o recogida de comida en St. Thomas? Podemos ayudar con recogida de compras, entrega de esenciales y paradas al supermercado aÃ±adidas a viajes privados."
-        >
-          Need groceries, water, snacks, hygiene items, sunscreen, medicine cabinet basics, or restaurant food pickup in St. Thomas? We can help with grocery pickup, essentials delivery, and grocery stops added to private rides.
+        <h2>Grocery Delivery &amp; Essentials Pickup in St. Thomas</h2>
+        <p class="section-note">
+          Need groceries delivered to your hotel, villa, Airbnb, condo, or vacation rental? Top Dog Tour &amp; Taxi offers grocery delivery, grocery pickup, essentials pickup, pharmacy stops, and private grocery stops throughout St. Thomas, USVI.
         </p>
 
         <div class="grid">
           <div class="card">
-            <h3 data-en="Grocery Stop Added to a Ride" data-es="Parada al supermercado aÃ±adida al viaje">
-              Grocery Stop Added to a Ride
-            </h3>
-            <div class="price">$20+</div>
-            <p data-en="Best for airport arrivals or local rides when you want to stop quickly for groceries before going to your villa, hotel, or rental."
-               data-es="Ideal para llegadas al aeropuerto o viajes locales cuando quieres parar rÃ¡pido por compras antes de ir a tu villa, hotel o alojamiento.">
-              Best for airport arrivals or local rides when you want to stop quickly for groceries before going to your villa, hotel, or rental.
+            <div class="service-icon">🛒</div>
+            <h3>Grocery Delivery Only</h3>
+            <p>
+              You do not need to book a ride to use our grocery delivery service. Send your list, store preference, delivery address, and preferred delivery time.
             </p>
           </div>
 
           <div class="card">
-            <h3 data-en="Small Essentials Pickup" data-es="Recogida pequeÃ±a de esenciales">
-              Small Essentials Pickup
-            </h3>
-            <div class="price">$25+</div>
-            <p data-en="Good for a few bags, snacks, drinks, toiletries, sunscreen, forgotten items, or basic essentials."
-               data-es="Bueno para pocas bolsas, snacks, bebidas, productos de baÃ±o, bloqueador, cosas olvidadas o artÃ­culos bÃ¡sicos.">
-              Good for a few bags, snacks, drinks, toiletries, sunscreen, forgotten items, or basic essentials.
+            <div class="service-icon">🥤</div>
+            <h3>Vacation Essentials</h3>
+            <p>
+              We can help with bottled water, snacks, drinks, beach items, toiletries, pharmacy items, and basic essentials before or during your stay.
             </p>
           </div>
 
           <div class="card">
-            <h3 data-en="Larger Grocery Pickup" data-es="Recogida grande de compras">
-              Larger Grocery Pickup
-            </h3>
-            <div class="price">$35+</div>
-            <p data-en="For larger family grocery orders, bulk items, cases of water, villa stocking, or multiple-store requests. Final price depends on size and timing."
-               data-es="Para compras familiares grandes, artÃ­culos al por mayor, cajas de agua, abastecer villas o pedidos de varias tiendas. El precio final depende del tamaÃ±o y horario.">
-              For larger family grocery orders, bulk items, cases of water, villa stocking, or multiple-store requests. Final price depends on size and timing.
+            <div class="service-icon">🚗</div>
+            <h3>Grocery Stops with Your Ride</h3>
+            <p>
+              Add a grocery stop to your airport pickup, cruise pickup, private ride, or island tour when scheduling your transportation.
             </p>
           </div>
         </div>
 
         <div class="highlight">
-          <h3 data-en="Airport Pickup + Grocery Stop" data-es="Recogida en aeropuerto + parada al supermercado">Airport Pickup + Grocery Stop</h3>
-
-          <p
-            data-en="This is one of the easiest ways to start your trip. Book your STT airport pickup and add a grocery stop before heading to your hotel, villa, condo, or vacation rental."
-            data-es="Esta es una de las formas mÃ¡s fÃ¡ciles de empezar tu viaje. Reserva tu recogida en el aeropuerto STT y agrega una parada al supermercado antes de ir a tu hotel, villa, condominio o alojamiento."
-          >
-            This is one of the easiest ways to start your trip. Book your STT airport pickup and add a grocery stop before heading to your hotel, villa, condo, or vacation rental.
+          <h3>Book Grocery Delivery Only</h3>
+          <p>
+            Send us your grocery list, delivery address, preferred store, preferred delivery time, and a good contact number. We can help with grocery delivery in St. Thomas for vacation rentals, hotels, villas, condos, and local addresses.
           </p>
 
           <div class="button-row">
-            <a class="btn btn-primary" href="https://wa.me/17867199870?text=Hi%20Top%20Dog%20Tour%20%26%20Taxi%2C%20I%20want%20to%20book%20airport%20pickup%20with%20a%20grocery%20stop%20in%20St.%20Thomas." target="_blank" rel="noopener">
-              Book Airport Pickup + Grocery Stop
+            <a class="btn btn-teal"
+              href="https://wa.me/17867199870?text=Hi%20Top%20Dog%20Tour%20%26%20Taxi%2C%20I%20want%20to%20book%20grocery%20delivery%20only%20in%20St.%20Thomas.%20My%20delivery%20address%20is%3A%20"
+              target="_blank"
+              rel="noopener">
+              Book Grocery Delivery Only
             </a>
+
             <a class="btn btn-secondary" href="grocery.html">
-              Grocery &amp; Essentials Page
+              View Grocery Page
             </a>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="how">
+    <section id="tours" class="sand-section">
       <div class="container">
-        <h2 data-en="How Booking Works" data-es="CÃ³mo funciona la reserva">How Booking Works</h2>
-
-        <p
-          class="section-note"
-          data-en="A simple process for private rides, airport pickups, grocery delivery, and island services."
-          data-es="Un proceso simple para viajes privados, recogidas en el aeropuerto, entrega de compras y servicios en la isla."
-        >
-          A simple process for private rides, airport pickups, grocery delivery, and island services.
-        </p>
-
-        <div class="grid steps">
-          <div class="card step">
-            <h3 data-en="Send Your Request" data-es="EnvÃ­a tu solicitud">Send Your Request</h3>
-            <p data-en="Message us with your service type, pickup location, destination, time, passenger count, and any grocery or luggage details."
-               data-es="EscrÃ­benos con el tipo de servicio, ubicaciÃ³n de recogida, destino, hora, cantidad de pasajeros y detalles de compras o maletas.">
-              Message us with your service type, pickup location, destination, time, passenger count, and any grocery or luggage details.
-            </p>
-          </div>
-
-          <div class="card step">
-            <h3 data-en="Confirm Price & Availability" data-es="Confirma precio y disponibilidad">Confirm Price &amp; Availability</h3>
-            <p data-en="We confirm availability, estimated price, timing, and any special details like grocery stops, child riders, or extra stops."
-               data-es="Confirmamos disponibilidad, precio estimado, horario y detalles especiales como paradas al supermercado, niÃ±os o paradas extra.">
-              We confirm availability, estimated price, timing, and any special details like grocery stops, child riders, or extra stops.
-            </p>
-          </div>
-
-          <div class="card step">
-            <h3 data-en="Ride, Tour, or Delivery" data-es="Viaje, tour o entrega">Ride, Tour, or Delivery</h3>
-            <p data-en="Your private driver handles the ride, airport pickup, tour, grocery stop, or essentials delivery."
-               data-es="Tu chofer privado se encarga del viaje, recogida en aeropuerto, tour, parada al supermercado o entrega de esenciales.">
-              Your private driver handles the ride, airport pickup, tour, grocery stop, or essentials delivery.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="rates">
-      <div class="container">
-        <h2 data-en="Starting Rates & Service Options" data-es="Precios iniciales y opciones de servicio">
-          Starting Rates &amp; Service Options
-        </h2>
-
-        <p
-          class="section-note"
-          data-en="Rates depend on pickup location, destination, passenger count, timing, and order size. These are starting points for common services."
-          data-es="Los precios dependen de la ubicaciÃ³n, destino, cantidad de pasajeros, horario y tamaÃ±o del pedido. Estos son precios iniciales para servicios comunes."
-        >
-          Rates depend on pickup location, destination, passenger count, timing, and order size. These are starting points for common services.
+        <h2>Private Island Tours in St. Thomas</h2>
+        <p class="section-note">
+          See St. Thomas like a local with private island tours, beach stops, scenic overlooks, shopping, local food stops, and flexible transportation for your group.
         </p>
 
         <div class="grid">
           <div class="card">
-            <h3 data-en="Private Island Tours" data-es="Tours privados">Private Island Tours</h3>
-            <div class="price">$40</div>
-            <p data-en="Per person, per hour. Children under 7 are free. Ice and cold water included when available."
-               data-es="Por persona, por hora. NiÃ±os menores de 7 gratis. Hielo y agua frÃ­a incluidos cuando estÃ©n disponibles.">
-              Per person, per hour. Children under 7 are free. Ice and cold water included when available.
+            <h3>Popular Tour Stops</h3>
+            <p>
+              Mountain Top, Drake’s Seat, Magens Bay, Sapphire, Secret Harbor, Red Hook, Charlotte Amalie, scenic overlooks, local food stops, beaches, and shopping areas.
             </p>
           </div>
 
           <div class="card">
-            <h3 data-en="Grocery Stop With Ride" data-es="Parada al supermercado con viaje">Grocery Stop With Ride</h3>
-            <div class="price">$20+</div>
-            <p data-en="Add a grocery stop to an airport pickup or local ride. Best for arrival-day convenience."
-               data-es="Agrega una parada al supermercado a una recogida en el aeropuerto o viaje local. Ideal para el dÃ­a de llegada.">
-              Add a grocery stop to an airport pickup or local ride. Best for arrival-day convenience.
+            <h3>Private and Flexible</h3>
+            <p>
+              Your tour can be adjusted around your schedule, interests, cruise ship time, airport arrival, restaurant plans, or beach preference.
             </p>
           </div>
 
           <div class="card">
-            <h3 data-en="Essentials Pickup" data-es="Recogida de esenciales">Essentials Pickup</h3>
-            <div class="price">$25+</div>
-            <p data-en="Small grocery, hygiene, snack, drink, or forgotten-item pickup."
-               data-es="Recogida pequeÃ±a de compras, higiene, snacks, bebidas o cosas olvidadas.">
-              Small grocery, hygiene, snack, drink, or forgotten-item pickup.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3 data-en="Daily / Weekly Driver" data-es="Chofer diario / semanal">Daily / Weekly Driver</h3>
-            <div class="price">Custom</div>
-            <p data-en="Ask about daily and weekly transportation packages for longer stays, workers, families, and frequent rides."
-               data-es="Pregunta por paquetes diarios y semanales para estadÃ­as largas, trabajadores, familias y viajes frecuentes.">
-              Ask about daily and weekly transportation packages for longer stays, workers, families, and frequent rides.
+            <h3>Visitor Friendly</h3>
+            <p>
+              Great for cruise guests, families, couples, vacation rentals, wedding groups, and visitors who want a private driver instead of a shared taxi.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="quote" class="dark-section">
+    <section id="weekly">
       <div class="container">
-        <h2 data-en="Quick Quote Tools" data-es="Herramientas rÃ¡pidas para estimar precio">
-          Quick Quote Tools
-        </h2>
+        <h2>Weekly Transportation Rates in St. Thomas</h2>
+        <p class="section-note">
+          Staying on island for several days or need repeated rides? Ask about weekly transportation rates for private driving, work rides, vacation transportation, errands, appointments, and scheduled pickups.
+        </p>
 
-        <p
-          class="section-note"
-          data-en="Use these tools to estimate a local ride or grocery pickup. Final price depends on availability, timing, stops, order size, and location."
-          data-es="Usa estas herramientas para estimar un viaje local o recogida de compras. El precio final depende de disponibilidad, horario, paradas, tamaÃ±o del pedido y ubicaciÃ³n."
-        >
-          Use these tools to estimate a local ride or grocery pickup. Final price depends on availability, timing, stops, order size, and location.
+        <div class="highlight">
+          <h3>Ask About Weekly Transportation</h3>
+          <p>
+            Weekly rates may be available depending on your schedule, pickup locations, number of rides, and type of transportation needed. This is best for visitors, locals, workers, families, and guests who want reliable private transportation during the week.
+          </p>
+
+          <div class="button-row">
+            <a class="btn btn-primary"
+              href="https://wa.me/17867199870?text=Hi%20Top%20Dog%20Tour%20%26%20Taxi%2C%20I%20want%20to%20ask%20about%20weekly%20transportation%20rates%20in%20St.%20Thomas."
+              target="_blank"
+              rel="noopener">
+              Ask About Weekly Rates
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rates" class="dark-section">
+      <div class="container">
+        <h2>Simple Private Transportation</h2>
+        <p class="section-note">
+          Rates depend on pickup location, destination, time, number of passengers, stops, and service type. Send your trip details for the most accurate quote.
+        </p>
+
+        <div class="grid">
+          <div class="card">
+            <h3>No Bag Fees</h3>
+            <p>
+              We do not charge extra bag fees for standard luggage.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Children Under 7 Ride Free</h3>
+            <p>
+              Children under 7 ride free with your private transportation booking.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Private Service</h3>
+            <p>
+              Your ride is for you and your party. This is private transportation, not a shared public taxi run.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="quote">
+      <div class="container">
+        <h2>Request a Quick Quote</h2>
+        <p class="section-note">
+          Fill out your trip details, then send your quote request by WhatsApp. Because apparently even transportation now requires forms, but at least this one is simple.
         </p>
 
         <div class="form-grid">
           <div class="quote-box">
-            <h3 data-en="Ride Estimate" data-es="Estimado de viaje">Ride Estimate</h3>
+            <h3>Trip Details</h3>
 
             <div class="field">
-              <label for="zone">Destination area</label>
-              <select id="zone">
-                <option value="20">Town / Charlotte Amalie - $20+</option>
-                <option value="22">Bolongo / Southside - $22+</option>
-                <option value="24">Marriott / Frenchman's Reef - $24+</option>
-                <option value="25">Sapphire / East End - $25+</option>
-                <option value="26">Magens Bay - $26+</option>
-                <option value="28">Ritz-Carlton / East End Resort Area - $28+</option>
-                <option value="30">West End / Mountain Top - $30+</option>
-                <option value="0">Not sure yet / Ask us</option>
+              <label for="serviceType">Service Type</label>
+              <select id="serviceType">
+                <option value="Private taxi ride">Private taxi ride</option>
+                <option value="STT airport pickup">STT airport pickup</option>
+                <option value="Cruise ship pickup">Cruise ship pickup</option>
+                <option value="Grocery delivery only">Grocery delivery only</option>
+                <option value="Private island tour">Private island tour</option>
+                <option value="Weekly transportation">Weekly transportation</option>
               </select>
             </div>
 
             <div class="field">
-              <label for="passengers">Passengers</label>
-              <select id="passengers">
-                <option value="0">1-4 passengers</option>
-                <option value="10">5+ passengers / ask for larger vehicle quote</option>
-              </select>
+              <label for="pickup">Pickup Location</label>
+              <input id="pickup" type="text" placeholder="Airport, cruise port, hotel, villa, beach, etc." />
             </div>
 
             <div class="field">
-              <label for="extraStop">Extra stop</label>
-              <select id="extraStop">
-                <option value="0">No extra stop</option>
-                <option value="20">Add grocery or errand stop - $20+</option>
-              </select>
+              <label for="dropoff">Destination</label>
+              <input id="dropoff" type="text" placeholder="Hotel, villa, beach, store, restaurant, etc." />
             </div>
 
-            <button class="calc-btn" onclick="calculateRide()">Estimate Ride</button>
+            <div class="field">
+              <label for="passengers">Number of Passengers</label>
+              <input id="passengers" type="number" min="1" placeholder="Example: 4" />
+            </div>
 
-            <div class="quote-total" id="rideTotal">$0.00+</div>
+            <div class="field">
+              <label for="notes">Notes</label>
+              <textarea id="notes" placeholder="Flight number, ship name, luggage count, grocery list, pickup time, or special requests."></textarea>
+            </div>
 
-            <p class="small" data-en="This is a starting estimate, not a final quote. Message us to confirm exact pricing."
-               data-es="Esto es un estimado inicial, no un precio final. EscrÃ­benos para confirmar el precio exacto.">
-              This is a starting estimate, not a final quote. Message us to confirm exact pricing.
-            </p>
-
-            <a class="btn btn-primary" id="rideWhatsApp" href="https://wa.me/17867199870?text=Hi%20Top%20Dog%20Tour%20%26%20Taxi%2C%20I%20want%20a%20ride%20quote%20in%20St.%20Thomas." target="_blank" rel="noopener">
-              Send Ride Quote Request
-            </a>
+            <button class="calc-btn" onclick="sendQuote()">Send Quote Request on WhatsApp</button>
           </div>
 
-          <div class="quote-box" id="groceryQuote">
-            <h3 data-en="Grocery / Essentials Estimate" data-es="Estimado de compras / esenciales">
-              Grocery / Essentials Estimate
-            </h3>
-
-            <div class="field">
-              <label for="groceryType">Order type</label>
-              <select id="groceryType">
-                <option value="20">Grocery stop added to ride - $20+</option>
-                <option value="25">Small essentials pickup - $25+</option>
-                <option value="35">Larger grocery pickup - $35+</option>
-                <option value="50">Bulk / multiple-store request - custom from $50+</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <label for="rush">Timing</label>
-              <select id="rush">
-                <option value="0">Flexible timing</option>
-                <option value="15">Same-day / rush request - add $15+</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <label for="deliveryArea">Delivery area</label>
-              <select id="deliveryArea">
-                <option value="0">Central / nearby area</option>
-                <option value="10">East End / farther route - add $10+</option>
-                <option value="15">West End / farther route - add $15+</option>
-                <option value="0">Not sure yet</option>
-              </select>
-            </div>
-
-            <button class="calc-btn" onclick="calculateGrocery()">Estimate Grocery Service</button>
-
-            <div class="quote-total" id="groceryTotal">$0.00+</div>
-
-            <p class="small" data-en="Final grocery service pricing depends on store, order size, timing, route, parking, and handling."
-               data-es="El precio final depende de la tienda, tamaÃ±o del pedido, horario, ruta, estacionamiento y manejo.">
-              Final grocery service pricing depends on store, order size, timing, route, parking, and handling.
+          <div class="quote-box">
+            <h3>What to Include</h3>
+            <p>
+              For the fastest quote, send the service type, pickup location, destination, date, time, number of passengers, luggage count, and any extra stops.
             </p>
 
-            <a class="btn btn-primary" id="groceryWhatsApp" href="https://wa.me/17867199870?text=Hi%20Top%20Dog%20Tour%20%26%20Taxi%2C%20I%20want%20a%20grocery%20pickup%20quote%20in%20St.%20Thomas." target="_blank" rel="noopener">
-              Send Grocery Quote Request
+            <p>
+              For cruise ship pickup, include your ship name and pickup time.
+            </p>
+
+            <p>
+              For airport pickup, include your flight number.
+            </p>
+
+            <p>
+              For grocery delivery, include your store preference, list, delivery address, and preferred delivery time.
+            </p>
+
+            <p>
+              <strong>Call, text, or WhatsApp:</strong><br />
+              <a href="tel:7867199870">786-719-9870</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="sand-section">
+      <div class="container">
+        <h2>Reviews Help Visitors Find Us</h2>
+        <p class="section-note">
+          Reviews help Google and AI search understand what Top Dog Tour &amp; Taxi offers: private driver service, airport pickup, cruise ship pickup, grocery delivery, island tours, weekly transportation, and no bag fees in St. Thomas.
+        </p>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">
+              “Private airport pickup in St. Thomas was easy, friendly, and reliable. No bag fees and great communication.”
+            </p>
+            <p class="review-author">Example Review</p>
+            <p class="review-source">Suggested review wording</p>
+          </div>
+
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">
+              “Great cruise ship pickup in St. Thomas. We booked a private island tour from the cruise port and had a smooth day.”
+            </p>
+            <p class="review-author">Example Review</p>
+            <p class="review-source">Suggested review wording</p>
+          </div>
+
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">
+              “Helpful grocery delivery in St. Thomas. They picked up essentials for our villa and made our trip easier.”
+            </p>
+            <p class="review-author">Example Review</p>
+            <p class="review-source">Suggested review wording</p>
+          </div>
+        </div>
+
+        <div class="review-request">
+          <h3>Helpful Words to Mention in a Review</h3>
+          <p>
+            If you enjoyed your service, a Google review helps our small business get found by future visitors and locals. Helpful words to mention include:
+          </p>
+
+          <div class="keyword-badge-row">
+            <span class="keyword-badge">private driver in St. Thomas</span>
+            <span class="keyword-badge">airport pickup</span>
+            <span class="keyword-badge">cruise ship pickup</span>
+            <span class="keyword-badge">grocery delivery</span>
+            <span class="keyword-badge">weekly transportation</span>
+            <span class="keyword-badge">private island tour</span>
+            <span class="keyword-badge">no bag fees</span>
+            <span class="keyword-badge">children under 7 ride free</span>
+          </div>
+
+          <p class="small">
+            Do not copy a fake review. Real reviews from real customers work best. The keyword list simply reminds customers to mention the service they actually booked, because apparently robots now need us to label reality for them.
+          </p>
+
+          <div class="button-row">
+            <a class="btn btn-primary" href="https://www.google.com/search?q=Top+Dog+Tour+and+Taxi+St+Thomas+reviews" target="_blank" rel="noopener">
+              Leave a Google Review
             </a>
           </div>
         </div>
@@ -1369,159 +1526,145 @@
 
     <section id="gallery">
       <div class="container">
-        <h2 data-en="Island Moments" data-es="Momentos de la isla">Island Moments</h2>
-
-        <p
-          class="section-note"
-          data-en="Photos from St. Thomas rides, tours, scenic routes, beaches, lookouts, and local stops."
-          data-es="Fotos de viajes, tours, rutas escÃ©nicas, playas, miradores y paradas locales en St. Thomas."
-        >
-          Photos from St. Thomas rides, tours, scenic routes, beaches, lookouts, and local stops.
+        <h2>See St. Thomas Like a Local</h2>
+        <p class="section-note">
+          Private tours, airport pickup, cruise pickup, grocery delivery, and hidden island stops.
         </p>
 
         <div class="slideshow">
-          <img class="slides active" src="slide1.jpg" alt="Scenic St. Thomas island view" width="1000" height="500" />
-          <img class="slides" src="slide2.jpg" alt="St. Thomas beach and ocean view" width="1000" height="500" loading="lazy" />
-          <img class="slides" src="slide3.jpg" alt="Private island tour stop in St. Thomas" width="1000" height="500" loading="lazy" />
-          <img class="slides" src="slide4.jpg" alt="St. Thomas overlook and tropical scenery" width="1000" height="500" loading="lazy" />
-          <img class="slides" src="slide5.jpg" alt="Local St. Thomas ride and scenic route" width="1000" height="500" loading="lazy" />
-          <img class="slides" src="slide6.jpg" alt="St. Thomas vacation transportation service" width="1000" height="500" loading="lazy" />
+          <img class="slides active" src="slide1.png" alt="St. Thomas private taxi and island tour photo" />
+          <img class="slides" src="slide2.jpeg" alt="St. Thomas beach and island transportation" />
+          <img class="slides" src="slide3.jpeg" alt="Private driver service in St. Thomas" />
+          <img class="slides" src="slide4.jpeg" alt="St. Thomas scenic island tour" />
+          <img class="slides" src="slide5.jpeg" alt="Cruise ship pickup and island tour in St. Thomas" />
+          <img class="slides" src="slide6.jpeg" alt="Grocery delivery and private transportation in St. Thomas" />
 
-          <div class="dots" aria-label="Gallery navigation">
-            <span class="dot active" onclick="showSlide(0)" aria-label="Show slide 1"></span>
-            <span class="dot" onclick="showSlide(1)" aria-label="Show slide 2"></span>
-            <span class="dot" onclick="showSlide(2)" aria-label="Show slide 3"></span>
-            <span class="dot" onclick="showSlide(3)" aria-label="Show slide 4"></span>
-            <span class="dot" onclick="showSlide(4)" aria-label="Show slide 5"></span>
-            <span class="dot" onclick="showSlide(5)" aria-label="Show slide 6"></span>
+          <div class="dots">
+            <span class="dot active" onclick="showSlide(0)"></span>
+            <span class="dot" onclick="showSlide(1)"></span>
+            <span class="dot" onclick="showSlide(2)"></span>
+            <span class="dot" onclick="showSlide(3)"></span>
+            <span class="dot" onclick="showSlide(4)"></span>
+            <span class="dot" onclick="showSlide(5)"></span>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="reviews" class="dark-section">
+    <section id="faq" class="sand-section">
       <div class="container">
-        <h2 data-en="Why Visitors Book Top Dog" data-es="Por quÃ© los visitantes reservan con Top Dog">
-          Why Visitors Book Top Dog
-        </h2>
-
-        <p
-          class="section-note"
-          data-en="Private service, simple communication, local knowledge, and flexible transportation for real island travel."
-          data-es="Servicio privado, comunicaciÃ³n simple, conocimiento local y transporte flexible para moverse en la isla."
-        >
-          Private service, simple communication, local knowledge, and flexible transportation for real island travel.
-        </p>
-
-        <div class="grid">
-          <div class="testimonial">
-            <h3 data-en="Private, Not Shared" data-es="Privado, no compartido">Private, Not Shared</h3>
-            <p data-en="Your ride is for you and your party. That means less confusion, less waiting, and a more comfortable arrival."
-               data-es="Tu viaje es para ti y tu grupo. Eso significa menos confusiÃ³n, menos espera y una llegada mÃ¡s cÃ³moda.">
-              Your ride is for you and your party. That means less confusion, less waiting, and a more comfortable arrival.
-            </p>
-          </div>
-
-          <div class="testimonial">
-            <h3 data-en="Grocery Help After Arrival" data-es="Ayuda con compras al llegar">Grocery Help After Arrival</h3>
-            <p data-en="Add groceries, essentials, food pickup, or a store stop so you do not waste your first day figuring out island errands."
-               data-es="Agrega compras, artÃ­culos esenciales, comida o una parada a la tienda para no perder tu primer dÃ­a resolviendo diligencias.">
-              Add groceries, essentials, food pickup, or a store stop so you do not waste your first day figuring out island errands.
-            </p>
-          </div>
-
-          <div class="testimonial">
-            <h3 data-en="Easy Communication" data-es="ComunicaciÃ³n fÃ¡cil">Easy Communication</h3>
-            <p data-en="Call, text, WhatsApp, or reserve by calendar. For arrival service, just send your flight number and contact number."
-               data-es="Llama, textea, escribe por WhatsApp o reserva por calendario. Para llegadas, solo envÃ­a tu vuelo y nÃºmero de contacto.">
-              Call, text, WhatsApp, or reserve by calendar. For arrival service, just send your flight number and contact number.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq">
-      <div class="container">
-        <h2 data-en="Frequently Asked Questions" data-es="Preguntas frecuentes">
-          Frequently Asked Questions
-        </h2>
-
-        <p
-          class="section-note"
-          data-en="Quick answers about airport pickups, private rides, grocery delivery, grocery stops, and booking in St. Thomas."
-          data-es="Respuestas rÃ¡pidas sobre recogidas en aeropuerto, viajes privados, entrega de compras, paradas al supermercado y reservas en St. Thomas."
-        >
-          Quick answers about airport pickups, private rides, grocery delivery, grocery stops, and booking in St. Thomas.
+        <h2>Frequently Asked Questions</h2>
+        <p class="section-note">
+          Quick answers about private taxi service, airport pickup, cruise ship pickup, grocery delivery, and private driver service in St. Thomas.
         </p>
 
         <div class="faq-list">
           <div class="faq-item">
-            <h3 data-en="Do you offer airport pickup in St. Thomas?" data-es="Â¿Ofrecen recogida en el aeropuerto en St. Thomas?">
+            <button class="faq-question" onclick="toggleFaq(this)">
               Do you offer airport pickup in St. Thomas?
-            </h3>
-            <p data-en="Yes. We offer private STT airport pickups from Cyril E. King Airport to hotels, villas, condos, ferries, vacation rentals, and other locations in St. Thomas."
-               data-es="SÃ­. Ofrecemos recogidas privadas desde el aeropuerto STT Cyril E. King hacia hoteles, villas, condominios, ferries, alojamientos y otros lugares en St. Thomas.">
-              Yes. We offer private STT airport pickups from Cyril E. King Airport to hotels, villas, condos, ferries, vacation rentals, and other locations in St. Thomas.
-            </p>
+              <span class="faq-chevron">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes. Top Dog Tour &amp; Taxi offers private STT airport pickup from Cyril E. King Airport to hotels, villas, condos, ferries, vacation rentals, and local destinations in St. Thomas.
+              </p>
+            </div>
           </div>
 
           <div class="faq-item">
-            <h3 data-en="Do you charge bag fees?" data-es="Â¿Cobran por maletas?">Do you charge bag fees?</h3>
-            <p data-en="No. We do not charge bag fees."
-               data-es="No. No cobramos cargos por maletas.">
-              No. We do not charge bag fees.
-            </p>
+            <button class="faq-question" onclick="toggleFaq(this)">
+              Do you offer cruise ship pickup in St. Thomas?
+              <span class="faq-chevron">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes. Top Dog Tour &amp; Taxi offers private cruise ship pickup in St. Thomas for guests arriving by cruise ship. We can provide transportation to beaches, restaurants, shopping areas, scenic stops, grocery stops, and private island tours.
+              </p>
+            </div>
           </div>
 
           <div class="faq-item">
-            <h3 data-en="Do children under 7 ride free?" data-es="Â¿Los niÃ±os menores de 7 viajan gratis?">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              What information do I need to send for cruise pickup?
+              <span class="faq-chevron">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Please send your cruise ship name, arrival date, preferred pickup time, number of passengers, destination or tour plans, and a good contact number.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              Do you pick up from Havensight and Crown Bay?
+              <span class="faq-chevron">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes. We can help with private cruise pickup from major St. Thomas cruise arrival areas, including Havensight and Crown Bay. Please send your ship name and arrival details when booking.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              Do you offer grocery delivery only?
+              <span class="faq-chevron">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes. You can book grocery delivery only without booking a ride. Send your grocery list, delivery address, store preference, preferred delivery time, and contact number.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              Do you charge bag fees?
+              <span class="faq-chevron">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                No. Top Dog Tour &amp; Taxi does not charge bag fees for standard luggage.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
               Do children under 7 ride free?
-            </h3>
-            <p data-en="Yes. Children under 7 ride free."
-               data-es="SÃ­. Los niÃ±os menores de 7 viajan gratis.">
-              Yes. Children under 7 ride free.
-            </p>
+              <span class="faq-chevron">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes. Children under 7 ride free with your private transportation booking.
+              </p>
+            </div>
           </div>
 
           <div class="faq-item">
-            <h3 data-en="Do you deliver groceries in St. Thomas?" data-es="Â¿Entregan compras en St. Thomas?">
-              Do you deliver groceries in St. Thomas?
-            </h3>
-            <p data-en="Yes. We offer grocery pickup, essentials delivery, food pickup, and grocery stops added to rides in St. Thomas, USVI."
-               data-es="SÃ­. Ofrecemos recogida de compras, entrega de esenciales, recogida de comida y paradas al supermercado aÃ±adidas a viajes en St. Thomas, USVI.">
-              Yes. We offer grocery pickup, essentials delivery, food pickup, and grocery stops added to rides in St. Thomas, USVI.
-            </p>
+            <button class="faq-question" onclick="toggleFaq(this)">
+              Can I ask about weekly transportation rates?
+              <span class="faq-chevron">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes. Weekly transportation rates may be available depending on your schedule, locations, number of rides, and service needs. Message us with your weekly transportation details for a quote.
+              </p>
+            </div>
           </div>
 
           <div class="faq-item">
-            <h3 data-en="Can I add a grocery stop to my airport pickup?" data-es="Â¿Puedo agregar una parada al supermercado a mi recogida del aeropuerto?">
-              Can I add a grocery stop to my airport pickup?
-            </h3>
-            <p data-en="Yes. You can request a grocery stop with your airport pickup or local ride. This is best booked in advance, especially for larger orders."
-               data-es="SÃ­. Puedes pedir una parada al supermercado con tu recogida del aeropuerto o viaje local. Es mejor reservarlo con anticipaciÃ³n, especialmente para pedidos grandes.">
-              Yes. You can request a grocery stop with your airport pickup or local ride. This is best booked in advance, especially for larger orders.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3 data-en="Can I book by WhatsApp?" data-es="Â¿Puedo reservar por WhatsApp?">
-              Can I book by WhatsApp?
-            </h3>
-            <p data-en="Yes. WhatsApp is one of the fastest ways to book a ride, airport pickup, grocery stop, grocery delivery, or island service."
-               data-es="SÃ­. WhatsApp es una de las formas mÃ¡s rÃ¡pidas de reservar un viaje, recogida en aeropuerto, parada al supermercado, entrega de compras o servicio en la isla.">
-              Yes. WhatsApp is one of the fastest ways to book a ride, airport pickup, grocery stop, grocery delivery, or island service.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3 data-en="What should I include when booking?" data-es="Â¿QuÃ© debo incluir al reservar?">
-              What should I include when booking?
-            </h3>
-            <p data-en="Send your date, time, pickup location, destination, passenger count, luggage count, flight number if applicable, and a good contact phone number."
-               data-es="EnvÃ­a fecha, hora, ubicaciÃ³n de recogida, destino, cantidad de pasajeros, maletas, nÃºmero de vuelo si aplica y un buen nÃºmero de contacto.">
-              Send your date, time, pickup location, destination, passenger count, luggage count, flight number if applicable, and a good contact phone number.
-            </p>
+            <button class="faq-question" onclick="toggleFaq(this)">
+              Is this a shared taxi or private driver service?
+              <span class="faq-chevron">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Top Dog Tour &amp; Taxi offers private driver service. Your booking is for you and your party, not a shared public taxi run.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -1529,15 +1672,9 @@
 
     <section id="contact" class="contact-strip">
       <div class="container">
-        <h2 data-en="Book a Ride, Grocery Pickup, or Island Service" data-es="Reserva un viaje, recogida de compras o servicio en la isla">
-          Book a Ride, Grocery Pickup, or Island Service
-        </h2>
-
-        <p
-          data-en="For the fastest response, call, text, or send a WhatsApp message with your service request, date, time, pickup location, destination, and contact number."
-          data-es="Para una respuesta mÃ¡s rÃ¡pida, llama, textea o envÃ­a un WhatsApp con tu servicio, fecha, hora, ubicaciÃ³n de recogida, destino y nÃºmero de contacto."
-        >
-          For the fastest response, call, text, or send a WhatsApp message with your service request, date, time, pickup location, destination, and contact number.
+        <h2>Book Your Private Ride, Cruise Pickup, Airport Pickup, or Grocery Delivery</h2>
+        <p>
+          Call, text, or WhatsApp Top Dog Tour &amp; Taxi for private transportation in St. Thomas, USVI.
         </p>
 
         <p>
@@ -1551,17 +1688,8 @@
         </p>
 
         <div class="button-row">
-          <a class="btn btn-gold" href="https://wa.me/17867199870?text=Hi%20Top%20Dog%20Tour%20%26%20Taxi%2C%20I%20want%20to%20book%20a%20ride%20or%20grocery%20pickup%20in%20St.%20Thomas." target="_blank" rel="noopener">
-            Message on WhatsApp
-          </a>
-
-          <a class="btn btn-secondary" href="sms:7867199870?body=Hi%20Top%20Dog%20Tour%20%26%20Taxi%2C%20I%20want%20to%20book%20a%20ride%20or%20grocery%20pickup%20in%20St.%20Thomas.">
-            Text to Book
-          </a>
-
-          <a class="btn btn-primary" href="https://calendar.app.google/QhGbrGE2vqHfdK3t5" target="_blank" rel="noopener">
-            Reserve on Calendar
-          </a>
+          <a class="btn btn-gold" href="https://wa.me/17867199870?text=Hi%20Top%20Dog%20Tour%20%26%20Taxi%2C%20I%20want%20to%20book%20a%20ride%20in%20St.%20Thomas." target="_blank" rel="noopener">Book on WhatsApp</a>
+          <a class="btn btn-secondary" href="https://calendar.app.google/QhGbrGE2vqHfdK3t5" target="_blank" rel="noopener">Reserve on Calendar</a>
         </div>
       </div>
     </section>
@@ -1571,168 +1699,134 @@
     <div class="container footer-grid">
       <div>
         <h3>Top Dog Tour &amp; Taxi</h3>
-        <p>Private transportation, airport pickups, island tours, grocery pickup, essentials delivery, and flexible service in St. Thomas, USVI.</p>
-      </div>
-
-      <div>
-        <h3>Contact</h3>
         <p>
-          Phone / WhatsApp:<br />
-          <a href="tel:7867199870">786-719-9870</a>
-        </p>
-        <p>
-          Email:<br />
-          <a href="mailto:topdogtaxiandtoursstt@gmail.com">topdogtaxiandtoursstt@gmail.com</a>
+          Private taxi service, airport pickup, cruise ship pickup, grocery delivery, island tours, weekly transportation, and private driver service in St. Thomas, USVI.
         </p>
       </div>
 
       <div>
         <h3>Services</h3>
-        <p>
-          <a href="#airport">STT Airport Pickup</a><br />
-          <a href="local-rides.html">Private Taxi Rides</a><br />
-          <a href="grocery.html">Grocery Delivery</a><br />
-          <a href="#rates">Island Tours</a><br />
-          <a href="#contact">Daily / Weekly Rates</a>
-        </p>
+        <p><a href="#airport">STT Airport Pickup</a></p>
+        <p><a href="#cruise">Cruise Ship Pickup</a></p>
+        <p><a href="#grocery">Grocery Delivery</a></p>
+        <p><a href="#weekly">Weekly Transportation</a></p>
       </div>
 
       <div>
-        <h3>Service Area</h3>
-        <p>Serving St. Thomas, U.S. Virgin Islands, including hotels, villas, condos, vacation rentals, beaches, restaurants, stores, and airport arrivals.</p>
+        <h3>Contact</h3>
+        <p><a href="tel:7867199870">786-719-9870</a></p>
+        <p><a href="mailto:topdogtaxiandtoursstt@gmail.com">topdogtaxiandtoursstt@gmail.com</a></p>
+        <p><a href="https://topdogtourandtaxi.com/">topdogtourandtaxi.com</a></p>
+      </div>
+
+      <div>
+        <h3>Policies</h3>
+        <p>No bag fees.</p>
+        <p>Children under 7 ride free.</p>
+        <p>Private service for you and your party.</p>
       </div>
     </div>
 
     <div class="copyright">
-      Top Dog Tour &amp; Taxi Â© 2026. No bag fees. Children under 7 ride free.
+      © 2026 Top Dog Tour &amp; Taxi. St. Thomas, U.S. Virgin Islands.
     </div>
   </footer>
 
-  <div class="mobile-booking" aria-label="Quick booking options">
+  <div class="mobile-booking">
     <a href="tel:7867199870">Call</a>
-    <a href="sms:7867199870?body=Hi%20Top%20Dog%20Tour%20%26%20Taxi%2C%20I%20want%20to%20book%20a%20ride%20or%20grocery%20pickup%20in%20St.%20Thomas.">Text</a>
     <a href="https://wa.me/17867199870?text=Hi%20Top%20Dog%20Tour%20%26%20Taxi%2C%20I%20want%20to%20book%20a%20ride%20or%20grocery%20pickup%20in%20St.%20Thomas." target="_blank" rel="noopener">WhatsApp</a>
+    <a href="https://wa.me/17867199870?text=Hi%20Top%20Dog%20Tour%20%26%20Taxi%2C%20I%20want%20to%20book%20cruise%20ship%20pickup%20in%20St.%20Thomas." target="_blank" rel="noopener">Cruise</a>
   </div>
 
   <script>
-    let currentLanguage = "en";
-
-    function setLanguage(lang) {
-      currentLanguage = lang;
-      document.documentElement.lang = lang;
-
-      const en = document.getElementById("btnEn");
-      const es = document.getElementById("btnEs");
-
-      if (en && es) {
-        en.classList.toggle("active", lang === "en");
-        es.classList.toggle("active", lang === "es");
-      }
-
-      document.querySelectorAll("[data-en][data-es]").forEach(function (el) {
-        el.textContent = el.getAttribute("data-" + lang);
-      });
-    }
-
     function toggleMenu() {
       const menu = document.getElementById("mainMenu");
-      if (menu) {
-        menu.classList.toggle("open");
-      }
+      menu.classList.toggle("open");
     }
 
-    document.addEventListener("click", function (e) {
+    document.addEventListener("click", function(event) {
       const menu = document.getElementById("mainMenu");
       const button = document.getElementById("menuButton");
 
-      if (menu && button && !menu.contains(e.target) && !button.contains(e.target)) {
+      if (!menu.contains(event.target) && !button.contains(event.target)) {
         menu.classList.remove("open");
       }
     });
 
-    function money(n) {
-      return "$" + Number(n).toFixed(2) + "+";
+    function toggleFaq(button) {
+      const item = button.parentElement;
+      item.classList.toggle("open");
     }
 
-    function calculateRide() {
-      const zone = Number(document.getElementById("zone").value || 0);
-      const passengers = Number(document.getElementById("passengers").value || 0);
-      const extraStop = Number(document.getElementById("extraStop").value || 0);
-      const total = zone + passengers + extraStop;
+    function setLanguage(language) {
+      const elements = document.querySelectorAll("[data-en][data-es]");
+      const btnEn = document.getElementById("btnEn");
+      const btnEs = document.getElementById("btnEs");
 
-      const totalBox = document.getElementById("rideTotal");
-      const link = document.getElementById("rideWhatsApp");
+      elements.forEach(function(element) {
+        element.textContent = element.getAttribute("data-" + language);
+      });
 
-      if (zone === 0) {
-        totalBox.textContent = "Custom quote";
+      if (language === "en") {
+        btnEn.classList.add("active");
+        btnEs.classList.remove("active");
+        document.documentElement.lang = "en";
       } else {
-        totalBox.textContent = money(total);
+        btnEs.classList.add("active");
+        btnEn.classList.remove("active");
+        document.documentElement.lang = "es";
       }
-
-      const text = encodeURIComponent(
-        "Hi Top Dog Tour & Taxi, I want a ride quote in St. Thomas. My estimated starting price from the website is " +
-        (zone === 0 ? "custom quote" : money(total)) +
-        ". Pickup location: . Destination: . Date/time: . Passengers: . Bags: ."
-      );
-
-      link.href = "https://wa.me/17867199870?text=" + text;
     }
 
-    function calculateGrocery() {
-      const groceryType = Number(document.getElementById("groceryType").value || 0);
-      const rush = Number(document.getElementById("rush").value || 0);
-      const deliveryArea = Number(document.getElementById("deliveryArea").value || 0);
-      const total = groceryType + rush + deliveryArea;
-
-      const totalBox = document.getElementById("groceryTotal");
-      const link = document.getElementById("groceryWhatsApp");
-
-      totalBox.textContent = money(total);
-
-      const text = encodeURIComponent(
-        "Hi Top Dog Tour & Taxi, I want a grocery pickup or essentials delivery quote in St. Thomas. My estimated starting price from the website is " +
-        money(total) +
-        ". Store/order list: . Delivery location: . Date/time needed: ."
-      );
-
-      link.href = "https://wa.me/17867199870?text=" + text;
-    }
-
-    let s = 0;
+    let currentSlide = 0;
     const slides = document.querySelectorAll(".slides");
     const dots = document.querySelectorAll(".dot");
 
-    function showSlide(i) {
-      slides.forEach(function (x) {
-        x.classList.remove("active");
-      });
+    function showSlide(index) {
+      if (!slides.length) return;
 
-      dots.forEach(function (x) {
-        x.classList.remove("active");
-      });
+      slides[currentSlide].classList.remove("active");
+      dots[currentSlide].classList.remove("active");
 
-      if (slides[i]) {
-        slides[i].classList.add("active");
-      }
+      currentSlide = index;
 
-      if (dots[i]) {
-        dots[i].classList.add("active");
-      }
-
-      s = i;
+      slides[currentSlide].classList.add("active");
+      dots[currentSlide].classList.add("active");
     }
 
-    setInterval(function () {
-      if (slides.length) {
-        s = (s + 1) % slides.length;
-        showSlide(s);
-      }
-    }, 3500);
+    function nextSlide() {
+      if (!slides.length) return;
 
-    document.addEventListener("DOMContentLoaded", function () {
-      calculateRide();
-      calculateGrocery();
-    });
+      let next = currentSlide + 1;
+
+      if (next >= slides.length) {
+        next = 0;
+      }
+
+      showSlide(next);
+    }
+
+    setInterval(nextSlide, 5000);
+
+    function sendQuote() {
+      const serviceType = document.getElementById("serviceType").value;
+      const pickup = document.getElementById("pickup").value.trim();
+      const dropoff = document.getElementById("dropoff").value.trim();
+      const passengers = document.getElementById("passengers").value.trim();
+      const notes = document.getElementById("notes").value.trim();
+
+      const message =
+        "Hi Top Dog Tour & Taxi, I want a quote for: " + serviceType +
+        ". Pickup location: " + pickup +
+        ". Destination: " + dropoff +
+        ". Number of passengers: " + passengers +
+        ". Notes: " + notes;
+
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappUrl = "https://wa.me/17867199870?text=" + encodedMessage;
+
+      window.open(whatsappUrl, "_blank");
+    }
   </script>
 </body>
 </html>
