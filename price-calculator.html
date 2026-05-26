@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Top Dog Price Calculator</title><style>body{font-family:Arial,sans-serif;background:#f4fbff;margin:0;padding:20px} .box{max-width:720px;margin:0 auto;background:#fff;padding:20px;border-radius:14px;box-shadow:0 8px 24px rgba(0,0,0,.1)} label,select,input{display:block;width:100%;margin-bottom:12px} button{padding:12px 14px;border:0;border-radius:999px;background:#0b6e8a;color:#fff;font-weight:700;cursor:pointer} .total{font-size:1.7rem;font-weight:800;margin-top:12px} .floating-sms{position:fixed;right:16px;bottom:16px;background:#12b76a;color:#fff;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:800}</style></head>
+<body>
+<div class="box">
+<h1>Airport Price Calculator</h1>
+<p>Use this page for quick airport pickup estimates.</p>
+<label for="destination">Destination</label>
+<select id="destination">
+<option value="25">Sapphire / Margaritaville — $25</option>
+<option value="23">Red Hook — $23</option>
+<option value="20">Bolongo — $20</option>
+<option value="12">Crown Bay — $12</option>
+<option value="15">Blackbeard’s Castle — $15</option>
+<option value="18">Marriott / Frenchman’s Reef — $18</option>
+<option value="25">Magens / Peterborg — $25</option>
+<option value="25">Ritz / Secret Harbour — $25</option>
+<option value="15">Havensight — $15</option>
+<option value="ask">Airbnb / villa not listed — custom/ask</option>
+</select>
+<label for="people">Number of people</label>
+<input id="people" type="number" min="1" value="2">
+<button onclick="calc()">Calculate</button>
+<div class="total" id="total">$0.00</div>
+<div id="details">Choose destination and tap Calculate.</div>
+<p><a href="index.html">← Back to Home</a></p>
+</div>
+<a class="floating-sms" href="sms:+17867199870">Chat Now</a>
+<script>function calc(){const d=document.getElementById('destination');const v=d.value;const p=Number(document.getElementById('people').value);const total=document.getElementById('total');const details=document.getElementById('details');if(v==='ask'){total.innerText='Ask Us';details.innerText='Please text us for custom villa/Airbnb pricing.';return;}const rate=Number(v);const t=rate*p;total.innerText='$'+t.toFixed(2);details.innerHTML='<b>Rate:</b> $'+rate.toFixed(2)+' per person<br><b>People:</b> '+p+'<br><b>Destination:</b> '+d.options[d.selectedIndex].text;}</script>
+</body></html>
