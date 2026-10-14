@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grocery Delivery in St. Thomas, USVI | Top Dog Tour &amp; Taxi</title>
-  <meta name="description" content="Need groceries, hygiene items, or a same-day essentials run in St. Thomas? Book grocery pickup, delivery, or an airport grocery stop with Top Dog Tour &amp; Taxi.">
+  <title>St. Thomas Grocery Delivery &amp; Stops | Top Dog Tour &amp; Taxi</title>
+  <meta name="description" content="Arrange grocery pickup, essentials delivery, or a grocery stop with private transportation in St. Thomas, USVI.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://topdogtourandtaxi.com/grocery.html">
-  <meta property="og:title" content="Grocery Delivery in St. Thomas, USVI | Top Dog Tour &amp; Taxi">
-  <meta property="og:description" content="Grocery pickup, essentials delivery, and airport grocery stops for hotels, villas, vacation rentals, and airport arrivals in St. Thomas, USVI.">
+  <meta property="og:title" content="St. Thomas Grocery Delivery &amp; Stops | Top Dog Tour &amp; Taxi">
+  <meta property="og:description" content="Arrange grocery pickup, essentials delivery, or a grocery stop with private transportation in St. Thomas, USVI.">
   <meta property="og:url" content="https://topdogtourandtaxi.com/grocery.html">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://topdogtourandtaxi.com/grocery-bg.jpg">
@@ -43,7 +44,7 @@ section{padding:54px 0}h2{text-align:center;color:var(--ocean);font-size:2rem;ma
 .steps{counter-reset:step}.step{position:relative;padding-left:62px}.step:before{counter-increment:step;content:counter(step);position:absolute;left:20px;top:24px;width:30px;height:30px;border-radius:50%;background:var(--sun);display:grid;place-items:center;font-weight:900;color:#17384d}.faq details{background:white;border:1px solid #dbeaf0;border-radius:16px;margin:12px 0;padding:16px;box-shadow:0 6px 18px #0001}.faq summary{cursor:pointer;font-weight:900;color:var(--ocean)}.contact-strip{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:16px}.contact-strip a{font-weight:900}.trust-list{margin:0;padding-left:20px}.trust-list li{margin-bottom:8px}
 footer{text-align:center;padding:30px;color:#5c7381;background:#f8fcff}.footer-contact{margin-top:8px;font-weight:800}
 @media(max-width:850px){.form-grid{grid-template-columns:1fr}.topbar-inner{align-items:flex-start}.langs{flex-wrap:wrap}.btn{width:100%}h1{font-size:2rem}.menu{right:0;left:auto}.pricing-table{font-size:.95rem}.pricing-table th,.pricing-table td{padding:12px}.step{padding-left:24px}.step:before{position:static;margin-bottom:10px}}
-  </style>
+  .floating-sms{position:fixed;right:16px;bottom:18px;z-index:1100;background:#12b76a;color:#fff;padding:12px 18px;border-radius:999px;font-weight:900;text-decoration:none;box-shadow:0 10px 24px #0003}.floating-sms:focus,.floating-sms:hover{filter:brightness(1.08)}</style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -59,13 +60,6 @@ footer{text-align:center;padding:30px;color:#5c7381;background:#f8fcff}.footer-c
           "https://topdogtourandtaxi.com/logo1.png",
           "https://topdogtourandtaxi.com/grocery-bg.jpg"
         ],
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "St. Thomas",
-          "addressRegion": "VI",
-          "postalCode": "00802",
-          "addressCountry": "US"
-        },
         "areaServed": [
           {"@type": "City", "name": "St. Thomas"},
           {"@type": "AdministrativeArea", "name": "U.S. Virgin Islands"}
@@ -121,10 +115,10 @@ footer{text-align:center;padding:30px;color:#5c7381;background:#f8fcff}.footer-c
       <button class="lang-btn" onclick="setLanguage('es')" id="btnEs">Español</button>
     </div>
     <div class="menu-wrap">
-      <button class="menu-button" id="menuButton" onclick="toggleMenu()">☰ Menu</button>
+      <button class="menu-button" id="menuButton" onclick="toggleMenu()" aria-label="Open navigation menu" aria-controls="mainMenu">☰ Menu</button>
       <nav class="menu" id="mainMenu" aria-label="Main navigation">
         <a href="index.html">Home</a>
-        <a href="airport.html">Airport Pickups</a>
+        <a href="airport.html">Airport Pickups</a><a href="cruise-pickup.html">Cruise Port Transportation</a>
         <a href="local-rides.html">Local Rides</a>
         <a href="tours.html">Island Tours</a>
         <a href="grocery.html">Grocery &amp; Essentials</a>
@@ -394,5 +388,5 @@ function calcGrocery(){
  document.getElementById('quoteWhatsapp').href='https://wa.me/17867199870?text='+text;
 }
 </script>
-</body>
+<a class="floating-sms" href="sms:+17867199870" aria-label="Text Top Dog Tour and Taxi">Chat Now</a></body>
 </html>
