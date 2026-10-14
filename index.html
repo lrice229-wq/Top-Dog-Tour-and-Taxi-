@@ -4,19 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Private Taxi, Airport Pickup, Cruise Pickup & Grocery Delivery in St. Thomas | Top Dog Tour & Taxi</title>
-
-  <meta name="description" content="Book private taxi rides, STT airport pickups, cruise ship pickup, private island tours, grocery stops, grocery delivery, essentials pickup, weekly transportation, and private driver service in St. Thomas, USVI. No bag fees. Children under 7 ride free." />
+  <title>St. Thomas Taxi &amp; Private Tours | Top Dog Tour &amp; Taxi</title>
+  <meta name="description" content="Book a private St. Thomas taxi, STT airport pickup, cruise port transportation, local ride, or island tour. Call, text, WhatsApp, or request a quote.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://topdogtourandtaxi.com/">
+  <meta property="og:title" content="St. Thomas Taxi &amp; Private Tours | Top Dog Tour &amp; Taxi">
+  <meta property="og:description" content="Book a private St. Thomas taxi, STT airport pickup, cruise port transportation, local ride, or island tour. Call, text, WhatsApp, or request a quote.">
+  <meta property="og:url" content="https://topdogtourandtaxi.com/">
+  <meta property="og:type" content="website">
 
   <meta name="keywords" content="St. Thomas taxi service, private taxi St Thomas USVI, airport pickup St Thomas, STT airport pickup, cruise ship pickup St Thomas, cruise port transportation St Thomas, private island tour St Thomas, grocery delivery St Thomas, grocery pickup St Thomas, private driver St Thomas, weekly transportation St Thomas, Top Dog Tour and Taxi" />
-
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://topdogtourandtaxi.com/" />
-
-  <meta property="og:title" content="Private Taxi, Airport Pickup, Cruise Pickup & Grocery Delivery in St. Thomas | Top Dog Tour & Taxi" />
-  <meta property="og:description" content="Private rides, airport pickups, cruise ship pickup, island tours, grocery delivery, grocery stops, and flexible transportation in St. Thomas, USVI. No bag fees. Children under 7 ride free." />
-  <meta property="og:url" content="https://topdogtourandtaxi.com/" />
-  <meta property="og:type" content="website" />
   <meta property="og:image" content="https://topdogtourandtaxi.com/logo1.png" />
 
   <script type="application/ld+json">
@@ -874,6 +871,23 @@
       color: #91b5bd;
     }
 
+
+    .floating-sms {
+      position: fixed;
+      right: 16px;
+      bottom: 90px;
+      z-index: 1100;
+      background: #12b76a;
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 800;
+      text-decoration: none;
+      box-shadow: 0 10px 24px rgba(0,0,0,.22);
+    }
+
+    .floating-sms:hover { filter: brightness(1.08); }
+
     .mobile-booking {
       display: none;
       position: fixed;
@@ -965,7 +979,7 @@
       </div>
 
       <div class="menu-wrap">
-        <button class="menu-button" id="menuButton" onclick="toggleMenu()">☰ Menu</button>
+        <button class="menu-button" id="menuButton" onclick="toggleMenu()" aria-label="Open navigation menu" aria-controls="mainMenu">☰ Menu</button>
         <nav class="menu" id="mainMenu">
           <a href="#services">Services</a>
           <a href="#airport">Airport Pickups</a>
@@ -974,6 +988,7 @@
           <a href="#weekly">Weekly Transportation</a>
           <a href="#rates">Rates</a>
           <a href="#quote">Quick Quote</a>
+          <a href="price-calculator.html">Price Calculator</a>
           <a href="#reviews">Reviews</a>
           <a href="#faq">FAQ</a>
           <a href="#contact">Contact</a>
@@ -1035,6 +1050,32 @@
         <p class="section-note">
           Top Dog Tour &amp; Taxi helps visitors and locals move around St. Thomas with private rides, airport pickup, cruise ship pickup, grocery delivery, grocery stops, essentials pickup, island tours, weekly transportation, and flexible booking.
         </p>
+
+        <div class="quote-box" style="margin-bottom:24px;">
+          <h3>Airport Price Calculator</h3>
+          <div class="field">
+            <label for="airportZoneHome">Destination</label>
+            <select id="airportZoneHome">
+              <option value="25">Sapphire / Margaritaville — $25</option>
+              <option value="23">Red Hook — $23</option>
+              <option value="20">Bolongo — $20</option>
+              <option value="12">Crown Bay — $12</option>
+              <option value="15">Blackbeard’s Castle — $15</option>
+              <option value="18">Marriott / Frenchman’s Reef — $18</option>
+              <option value="25">Magens / Peterborg — $25</option>
+              <option value="25">Ritz / Secret Harbour — $25</option>
+              <option value="15">Havensight — $15</option>
+              <option value="ask">Airbnb / villa not listed — custom/ask</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="airportPeopleHome">Number of people</label>
+            <input id="airportPeopleHome" type="number" min="1" value="2" />
+          </div>
+          <button class="calc-btn" onclick="calcAirportHome()">Calculate Airport Rate</button>
+          <div class="quote-total" id="airportTotalHome" style="margin-top:14px;">$0.00</div>
+          <div class="quote-box" id="airportBreakdownHome">Choose destination and tap Calculate Airport Rate.</div>
+        </div>
 
         <div class="grid">
           <div class="card">
@@ -1357,7 +1398,7 @@
       <div class="container">
         <h2>Simple Private Transportation</h2>
         <p class="section-note">
-          Rates depend on pickup location, destination, time, number of passengers, stops, and service type. Send your trip details for the most accurate quote.
+          Airport pickup base rates are listed below and in our calculator. Crown Bay and Havensight are priced separately.
         </p>
 
         <div class="grid">
@@ -1533,11 +1574,11 @@
 
         <div class="slideshow">
           <img class="slides active" src="slide1.png" alt="St. Thomas private taxi and island tour photo" />
-          <img class="slides" src="slide2.jpeg" alt="St. Thomas beach and island transportation" />
-          <img class="slides" src="slide3.jpeg" alt="Private driver service in St. Thomas" />
-          <img class="slides" src="slide4.jpeg" alt="St. Thomas scenic island tour" />
-          <img class="slides" src="slide5.jpeg" alt="Cruise ship pickup and island tour in St. Thomas" />
-          <img class="slides" src="slide6.jpeg" alt="Grocery delivery and private transportation in St. Thomas" />
+          <img class="slides" loading="lazy" decoding="async" src="slide2.jpeg" alt="St. Thomas beach and island transportation" />
+          <img class="slides" loading="lazy" decoding="async" src="slide3.jpeg" alt="Private driver service in St. Thomas" />
+          <img class="slides" loading="lazy" decoding="async" src="slide4.jpeg" alt="St. Thomas scenic island tour" />
+          <img class="slides" loading="lazy" decoding="async" src="slide5.jpeg" alt="Cruise ship pickup and island tour in St. Thomas" />
+          <img class="slides" loading="lazy" decoding="async" src="slide6.jpeg" alt="Grocery delivery and private transportation in St. Thomas" />
 
           <div class="dots">
             <span class="dot active" onclick="showSlide(0)"></span>
@@ -1738,6 +1779,8 @@
     <a href="https://wa.me/17867199870?text=Hi%20Top%20Dog%20Tour%20%26%20Taxi%2C%20I%20want%20to%20book%20cruise%20ship%20pickup%20in%20St.%20Thomas." target="_blank" rel="noopener">Cruise</a>
   </div>
 
+  <a class="floating-sms" href="sms:+17867199870">Chat Now</a>
+
   <script>
     function toggleMenu() {
       const menu = document.getElementById("mainMenu");
@@ -1807,6 +1850,28 @@
     }
 
     setInterval(nextSlide, 5000);
+
+
+    function calcAirportHome() {
+      const zone = document.getElementById("airportZoneHome");
+      const zoneValue = zone.value;
+      const people = Number(document.getElementById("airportPeopleHome").value);
+      const total = document.getElementById("airportTotalHome");
+      const breakdown = document.getElementById("airportBreakdownHome");
+
+      if (zoneValue === "ask") {
+        total.innerText = "Ask Us";
+        breakdown.innerHTML = "Airbnb/villa not listed? Message us for an exact quote.";
+        return;
+      }
+
+      const rate = Number(zoneValue);
+      const tripTotal = rate * people;
+      total.innerText = "$" + tripTotal.toFixed(2);
+      breakdown.innerHTML = "<b>Destination:</b> " + zone.options[zone.selectedIndex].text +
+        "<br><b>Rate:</b> $" + rate.toFixed(2) + " per person" +
+        "<br><b>People:</b> " + people;
+    }
 
     function sendQuote() {
       const serviceType = document.getElementById("serviceType").value;
