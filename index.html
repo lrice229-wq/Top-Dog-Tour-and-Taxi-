@@ -1184,7 +1184,27 @@
         transition-duration: .01ms !important;
       }
     }
-  .floating-sms{position:fixed;right:16px;bottom:90px;z-index:1100;background:#12b76a;color:#fff;padding:12px 18px;border-radius:999px;font-weight:900;text-decoration:none;box-shadow:0 10px 24px #0003}</style>
+  .floating-sms{position:fixed;right:16px;bottom:90px;z-index:1100;background:#12b76a;color:#fff;padding:12px 18px;border-radius:999px;font-weight:900;text-decoration:none;box-shadow:0 10px 24px #0003}
+
+/* Bright, coastal colors with clear contrast and comfortable tap targets. */
+:root{--ink:#153c4a;--muted:#4a6872;--navy:#073f55;--navy-2:#075a6b;--teal:#007174;--aqua:#def8f1;--sand:#fff2df;--gold:#ffd166;--gold-dark:#734600;--line:#d5e7e2}
+body{background:#fffaf4}.site-header{background:rgba(255,253,246,.98);border-top:5px solid #f77e6b}
+.hero{min-height:500px;padding-block:0;background:#087e86}.hero-shade{background:linear-gradient(90deg,rgba(2,75,93,.94),rgba(0,128,135,.58)),linear-gradient(0deg,rgba(3,65,80,.22),transparent)}
+.hero-grid{display:block;padding-block:80px}.hero-grid>div{max-width:810px}.hero .eyebrow{color:#b9fff0}.hero-lead{max-width:650px}
+.button-primary{background:#ffd166;color:#183845}.button-primary:hover{background:#ffe091}.button-teal{background:#007174;color:#fff}
+#services{background:linear-gradient(180deg,#fff9ec,#fff2df);padding-block:78px}.services-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.service-card{border:1px solid #c9e9df;border-top:6px solid #16a89e;background:#e4fbf3;min-height:330px}.service-card:nth-child(2){border-top-color:#f47d69;background:#fff0e9}.service-card:nth-child(3){border-top-color:#ffca59;background:#fff7dd}
+.service-icon{background:#d6f8ef;color:#075d67}.service-card:nth-child(2) .service-icon{background:#ffebe4}.service-card:nth-child(3) .service-icon{background:#fff0c7}
+.card-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:auto}.service-card .card-actions a{margin-top:0}.service-card .card-actions .button{color:#173845;background:#ffd166;padding:12px 18px}.service-card .card-actions .service-link{color:#006b73}
+.more-services{margin:28px 0 0;color:#355e67}.more-services a{color:#006b73;font-weight:800}
+.calculator-section{background:#dcf8f2;color:#153c4a}.calculator-section .section-kicker{color:#007174}.calculator-section .section-heading{color:#073f55}.calculator-section .section-intro{color:#476871}
+.result-card{background:#fff6df;color:#153c4a}.result-card .estimate-label,.result-card .estimate-note{color:#476871}.result-card .estimate-total{color:#075a6b}
+.quote-section{background:#fff8ed}.simple-quote{padding:36px;border-radius:24px;background:#e2f8f2;border:1px solid #bee7dd}.simple-quote h2{color:#073f55;margin-bottom:10px}.simple-quote p{max-width:760px;color:#3d626a}.simple-quote .hero-actions{margin-top:20px}
+.review-callout{background:#fff0df}.contact-section{background:#075a6b}.mobile-actions{grid-template-columns:1.2fr .8fr}
+@media(max-width:900px){.services-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:650px){.hero{min-height:auto}.hero-shade{background:linear-gradient(180deg,rgba(0,94,110,.80),rgba(0,91,106,.92))}.hero-grid{padding:60px 0 68px}.services-grid{grid-template-columns:1fr}.service-card{min-height:0}.service-card .card-actions{width:100%;margin-top:12px}.service-card .card-actions .button{width:100%}.simple-quote{padding:26px 20px}.mobile-actions{grid-template-columns:1.2fr .8fr}}
+
+</style>
 
 <title>St. Thomas Private Driver &amp; Cruise Taxi | Top Dog</title>
 <meta name="description" content="St. Thomas private driver, daily and weekly transportation, cruise port taxi and private island tours. Crown Bay, Havensight and STT airport pickup.">
@@ -1313,7 +1333,7 @@
       "name": "Can I arrange several days of transportation?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Arrange daily or weekly transportation in St. Thomas for beaches, restaurants, grocery stores, excursions and other destinations based on your plans. The daily rate for 2 people is $100; pricing varies with length of stay. For 3 or more people, request a custom quote. Confirm the schedule and included trips before booking."
+        "text": "Yes. Arrange daily or weekly transportation in St. Thomas for beaches, restaurants, grocery stores, excursions and other destinations based on your plans. Send your dates, group size, destinations and expected rides for a custom quote. Confirm the schedule and included trips before booking."
       }
     }
   ]
@@ -1335,12 +1355,12 @@
       </a>
 
       <nav class="desktop-nav" id="siteNav" aria-label="Main navigation">
-        <a href="weekly-rates.html">Daily &amp; weekly</a>
-        <a href="#airport">Airport</a>
+        <a href="#services">Services</a>
         <a href="cruise-pickup.html">Cruise pickup</a>
-        <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3RsGZ25cfRCJijLFOuhZ4RxNrr72U5yxFNUqqR9U23FXZei4HqZlpoCpI7_FhxUN5nwMmXyM6N" target="_blank" rel="noopener">Booking calendar</a>
-        <a class="button button-teal" href="https://wa.me/17867199870?text=Hi%20Top%20Dog%20Tour%20%26%20Taxi%2C%20I%20need%20transportation%20in%20St.%20Thomas." target="_blank" rel="noopener">WhatsApp us</a>
-      <a href="price-calculator.html">Price Calculator</a></nav>
+        <a href="airport.html">Airport</a>
+        <a href="weekly-rates.html">Daily &amp; weekly</a>
+        <a class="button button-teal" href="sms:+17867199870?body=Hi%20Top%20Dog%21%20I%20would%20like%20a%20transportation%20quote%20in%20St.%20Thomas.%20Date%3A%20%20Number%20of%20guests%3A%20%20Pickup%20location%3A%20%20Plans%3A%20">Text us</a>
+      </nav>
 
       <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Open menu">☰</button>
     </div>
@@ -1350,151 +1370,50 @@
     <section class="hero" aria-labelledby="hero-title">
       <img class="hero-photo" src="hero-st-thomas.webp" width="1600" height="1200" alt="St. Thomas harbor and island view" fetchpriority="high">
       <div class="hero-shade" aria-hidden="true"></div>
-
-      <div class="container hero-grid">
-        <div>
-          <p class="eyebrow">Serving St. Thomas, U.S. Virgin Islands</p>
-          <h1 id="hero-title">St. Thomas Private Driver, Daily Packages &amp; Cruise Pickup</h1>
-          <p class="hero-lead">Plan a private driver for the day, daily or weekly transportation during your stay, or cruise pickup and island tours from Crown Bay and Havensight. STT airport transportation is also available.</p>
-
-          <div class="hero-actions">
-            <a class="button button-primary" href="weekly-rates.html">Daily &amp; Weekly Packages</a>
-            <a class="button button-secondary" href="cruise-pickup.html">Cruise Pickup &amp; Tours</a>
-            <a class="button button-primary" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3RsGZ25cfRCJijLFOuhZ4RxNrr72U5yxFNUqqR9U23FXZei4HqZlpoCpI7_FhxUN5nwMmXyM6N" target="_blank" rel="noopener">Book with Google Calendar</a>
-            <a class="button button-primary" href="https://wa.me/17867199870?text=Hi%20Top%20Dog%20Tour%20%26%20Taxi%2C%20I%20need%20a%20ride%20in%20St.%20Thomas.%20My%20pickup%20location%20is%3A%20" target="_blank" rel="noopener">Get a quote on WhatsApp</a>
-            <a class="button button-outline" href="tel:+17867199870">Call&nbsp;786&#8209;719&#8209;9870</a>
-          </div>
-
-          <ul class="benefit-row" aria-label="Service benefits">
-            <li class="benefit">Private group service</li>
-            <li class="benefit">No bag fees</li>
-            <li class="benefit">Children under 7 ride free</li>
-          </ul>
+      <div class="container hero-grid"><div>
+        <p class="eyebrow">Locally run · St. Thomas, USVI</p>
+        <h1 id="hero-title">St. Thomas Taxi &amp; Private Driver</h1>
+        <p class="hero-lead">Airport pickups, cruise port rides, island tours, and daily or weekly transportation—planned around your trip.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="sms:+17867199870?body=Hi%20Top%20Dog%21%20I%20would%20like%20a%20transportation%20quote%20in%20St.%20Thomas.%20Date%3A%20%20Number%20of%20guests%3A%20%20Pickup%20location%3A%20%20Plans%3A%20">Text Us for a Quote</a>
+          <a class="button button-secondary" href="#services">See Our Services</a>
         </div>
-
-        <aside class="fast-card" aria-label="Fast booking information">
-          <p class="mini-label">Fastest way to book</p>
-          <h2>Send your trip details</h2>
-          <p>We can quote your ride faster when your first message includes:</p>
-          <ul class="detail-list">
-            <li><span aria-hidden="true">1.</span><span>Pickup and destination</span></li>
-            <li><span aria-hidden="true">2.</span><span>Date and pickup time</span></li>
-            <li><span aria-hidden="true">3.</span><span>Number of passengers</span></li>
-            <li><span aria-hidden="true">4.</span><span>Flight, ship or luggage details</span></li>
-          </ul>
-          <a class="button button-teal" href="#quote">Build my message</a>
-        </aside>
-      </div>
+        <ul class="benefit-row" aria-label="Service benefits"><li class="benefit">Private for your group</li><li class="benefit">No bag fees</li><li class="benefit">Children under 7 ride free</li></ul>
+      </div></div>
     </section>
 
-    <section class="trust-strip" aria-label="Top Dog service highlights">
-      <div class="container trust-grid">
-        <div class="trust-item">
-          <strong>STT Airport</strong>
-          <span>Cyril E. King pickup</span>
-        </div>
-        <div class="trust-item">
-          <strong>Cruise Ports</strong>
-          <span>Havensight &amp; Crown Bay</span>
-        </div>
-        <div class="trust-item">
-          <strong>Island-wide</strong>
-          <span>Hotels, villas &amp; beaches</span>
-        </div>
-        <div class="trust-item">
-          <strong>Easy booking</strong>
-          <span>Call, text or WhatsApp</span>
-        </div>
-      </div>
-    </section>
+    
 
     <section id="services" aria-labelledby="services-title">
       <div class="container">
-        <p class="section-kicker">Choose your service</p>
-        <h2 class="section-heading" id="services-title">Transportation for the way you’re visiting St. Thomas</h2>
-        <p class="section-intro">Airport arrivals, cruise days, beach plans, dinners, errands and longer stays—all in one place.</p>
-
+        <p class="section-kicker">Explore with Top Dog</p>
+        <h2 class="section-heading" id="services-title">How can we help you get around?</h2>
+        <p class="section-intro">Choose what you need, then text us your plans for a quote.</p>
         <div class="services-grid">
           <article class="service-card">
-            <span class="service-icon" aria-hidden="true">●</span>
-            <h3>Private Driver for the Day</h3>
-            <p>Looking for a St. Thomas private driver? Plan beach visits, restaurant trips, grocery stops, excursions and other destinations around your day.</p>
-            <a href="local-rides.html">Plan your day →</a>
+            <span class="service-icon" aria-hidden="true">☀</span>
+            <h3>Private Driving | Daily &amp; Weekly</h3>
+            <p>Plan private rides during your St. Thomas stay for beaches, shopping, restaurants and sightseeing. Ask about grocery stops at Cost-U-Less, The Market or PriceSmart.</p>
+            <div class="card-actions"><a class="button button-primary" href="sms:+17867199870?body=Hi%20Top%20Dog%21%20I%20am%20interested%20in%20daily%20or%20weekly%20private%20driving%20in%20St.%20Thomas.%20Dates%3A%20%20Number%20of%20guests%3A%20%20Where%20we%20are%20staying%3A%20%20Plans%3A%20">Text Us for a Quote</a><a class="service-link" href="weekly-rates.html">Daily &amp; weekly details →</a></div>
           </article>
-
-          <article class="service-card">
-            <span class="service-icon" aria-hidden="true">□</span>
-            <h3>Daily &amp; Weekly Transportation</h3>
-            <p>Daily rate for 2 people: $100. Pricing varies with length of stay. For 3 or more people, request a custom quote for your plans.</p>
-            <a href="weekly-rates.html">Explore packages &amp; request a quote →</a>
-          </article>
-
           <article class="service-card">
             <span class="service-icon" aria-hidden="true">⚓</span>
-            <h3>Cruise Pickup &amp; Private Tours</h3>
-            <p>Pickup from Havensight or Crown Bay for beaches, shopping, restaurants, scenic stops and private island tours.</p>
-            <a href="cruise-pickup.html">Cruise pickup details →</a>
+            <h3>Cruise Pickup &amp; Island Tours</h3>
+            <p>Arriving by cruise ship? Arrange private transportation from Havensight or Crown Bay for beaches, sightseeing and island tours.</p>
+            <div class="card-actions"><a class="button button-primary" href="sms:+17867199870?body=Hi%20Top%20Dog%21%20I%20would%20like%20a%20cruise%20pickup%20quote%20in%20St.%20Thomas.%20Ship%3A%20%20Date%3A%20%20Port%3A%20%20Number%20of%20guests%3A%20%20Plans%3A%20%20All-aboard%20time%3A%20">Text Us for a Quote</a><a class="service-link" href="cruise-pickup.html">Cruise pickup details →</a></div>
           </article>
-
-          <article class="service-card">
+          <article class="service-card" id="airport">
             <span class="service-icon" aria-hidden="true">✈</span>
             <h3>STT Airport Pickup</h3>
-            <p>Private pickup from Cyril E. King Airport to hotels, villas, vacation rentals, ferries and destinations across St. Thomas.</p>
-            <a href="airport.html">Airport pickup details →</a>
-          </article>
-
-          <article class="service-card">
-            <span class="service-icon" aria-hidden="true">◇</span>
-            <h3>Private Island Tours</h3>
-            <p>Flexible tours with overlooks, beaches, shopping, local food and photo stops chosen around your group.</p>
-            <a href="tours.html">Explore island tours →</a>
-          </article>
-
-          <article class="service-card">
-            <span class="service-icon" aria-hidden="true">▣</span>
-            <h3>Grocery Stops &amp; Delivery</h3>
-            <p>Add a grocery stop to your ride or arrange delivery of water, snacks and vacation essentials to your stay.</p>
-            <a href="grocery.html">Grocery service details →</a>
+            <p>Request private pickup from Cyril E. King Airport to your hotel, villa, resort or ferry. Send your flight details and luggage count.</p>
+            <div class="card-actions"><a class="button button-primary" href="sms:+17867199870?body=Hi%20Top%20Dog%21%20I%20would%20like%20an%20STT%20airport%20pickup%20quote.%20Flight%3A%20%20Arrival%20date%20and%20time%3A%20%20Destination%3A%20%20Guests%3A%20%20Bags%3A%20">Text Us for a Quote</a><a class="service-link" href="airport.html">Airport pickup details →</a></div>
           </article>
         </div>
+        <p class="more-services">More ways to explore: <a href="local-rides.html">local rides</a> · <a href="tours.html">island tours</a> · <a href="grocery.html">grocery service</a></p>
       </div>
     </section>
 
-    <section class="split-section" id="airport" aria-labelledby="airport-title">
-      <div class="container split-grid">
-        <div class="feature-photo">
-          <img src="airport-stt.webp" width="900" height="1100" alt="Cyril E. King Airport runway in St. Thomas" loading="lazy">
-          <div class="feature-badge">Private pickup from Cyril E. King Airport (STT)</div>
-        </div>
-
-        <div class="split-copy">
-          <p class="section-kicker">STT airport transportation</p>
-          <h2 class="section-heading" id="airport-title">Start your vacation with a driver ready for your arrival</h2>
-          <p class="section-intro">Share your airline, flight number, arrival time, destination, passenger count and luggage count so your driver can plan the pickup.</p>
-
-          <ul class="check-list">
-            <li>No separate fee for standard luggage</li>
-            <li>Children under 7 ride free</li>
-            <li>Up to 4 passengers when traveling with luggage</li>
-            <li>Hotels, villas, Airbnbs, ferry areas and resorts</li>
-          </ul>
-
-          <div class="hero-actions">
-            <a class="button button-teal" href="https://wa.me/17867199870?text=Hi%20Top%20Dog%20Tour%20%26%20Taxi%2C%20I%20need%20STT%20airport%20pickup.%20Airline%2Fflight%3A%20%20Arrival%20date%2Ftime%3A%20%20Destination%3A%20%20Passengers%3A%20%20Bags%3A%20" target="_blank" rel="noopener">Book airport pickup</a>
-            <a class="button button-secondary" href="airport.html">See airport details</a>
-          </div>
-
-          <ul class="route-pills" aria-label="Popular airport destinations">
-            <li>Red Hook</li>
-            <li>Margaritaville</li>
-            <li>Sapphire</li>
-            <li>Frenchman’s Reef</li>
-            <li>Magens Bay</li>
-            <li>Secret Harbour</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+    
 
     <section class="calculator-section" id="rates" aria-labelledby="rates-title">
       <div class="container">
@@ -1533,116 +1452,22 @@
             <span class="estimate-label">Estimated trip total</span>
             <strong class="estimate-total" id="estimateTotal">$24</strong>
             <p class="estimate-note" id="estimateNote">Crown Bay · 2 passengers at $12 per person</p>
-            <a class="button button-primary" id="bookEstimate" href="https://wa.me/17867199870" target="_blank" rel="noopener">Send this trip on WhatsApp</a>
+            <a class="button button-primary" id="bookEstimate" href="sms:+17867199870?body=Hi%20Top%20Dog%21%20I%20would%20like%20an%20STT%20airport%20pickup%20quote.%20Flight%3A%20%20Arrival%20date%20and%20time%3A%20%20Destination%3A%20%20Guests%3A%20%20Bags%3A%20">Text This Trip for a Quote</a>
           </div>
         </div>
       </div>
     </section>
 
-<section class="calculator-section" aria-labelledby="airport-calculator-title"><div class="container">        <div class="quote-box" style="margin-bottom:24px;">
-          <h2 id="airport-calculator-title">Airport Price Calculator</h2>
-          <div class="field">
-            <label for="airportZoneHome">Destination</label>
-            <select id="airportZoneHome">
-              <option value="25">Sapphire / Margaritaville — $25</option>
-              <option value="23">Red Hook — $23</option>
-              <option value="20">Bolongo — $20</option>
-              <option value="12">Crown Bay — $12</option>
-              <option value="15">Blackbeard’s Castle — $15</option>
-              <option value="18">Marriott / Frenchman’s Reef — $18</option>
-              <option value="25">Magens / Peterborg — $25</option>
-              <option value="25">Ritz / Secret Harbour — $25</option>
-              <option value="15">Havensight — $15</option>
-              <option value="ask">Airbnb / villa not listed — custom/ask</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="airportPeopleHome">Number of people</label>
-            <input id="airportPeopleHome" type="number" min="1" value="2" />
-          </div>
-          <button class="calc-btn" onclick="calcAirportHome()">Calculate Airport Rate</button>
-          <div class="quote-total" id="airportTotalHome" style="margin-top:14px;">$0.00</div>
-          <div class="quote-box" id="airportBreakdownHome">Choose destination and tap Calculate Airport Rate.</div>
-        </div>
 
-        </div></section>
-    <section aria-labelledby="popular-routes-title">
-      <div class="container">
-        <p class="section-kicker">Popular airport routes</p>
-        <h2 class="section-heading" id="popular-routes-title">Plan the ride from STT to your first stop</h2>
-        <p class="section-intro">These common per-person estimates make it easier to budget before you land. Confirm your date, flight and destination when booking.</p>
-
-        <div class="ride-types">
-          <article class="ride-type">
-            <h3>STT Airport to Red Hook</h3>
-            <p><strong>$23 per person.</strong> Convenient for the ferry terminal, East End stays, restaurants and nearby connections.</p>
-            <a href="stt-airport-to-red-hook.html">See Red Hook pickup details →</a>
-          </article>
-          <article class="ride-type">
-            <h3>STT Airport to Magens Bay</h3>
-            <p><strong>$25 per person.</strong> For Magens Bay and Peterborg-area accommodations, with standard luggage included.</p>
-            <a href="stt-airport-to-magens-bay.html">See Magens Bay pickup details →</a>
-          </article>
-          <article class="ride-type">
-            <h3>STT Airport to Sapphire</h3>
-            <p><strong>$25 per person.</strong> The same estimate applies to Sapphire, Margaritaville, the Ritz and Secret Harbour.</p>
-            <a href="airport.html">Compare all airport destinations →</a>
-          </article>
-        </div>
-      </div>
-    </section>
+    
 
     <section class="quote-section" id="quote" aria-labelledby="quote-title">
-      <div class="container quote-shell">
-        <div class="quote-copy">
-          <p class="section-kicker">Quick quote</p>
-          <h2 class="section-heading" id="quote-title">Build your booking message</h2>
-          <p>Enter the basics and we’ll open WhatsApp with your trip details already organized.</p>
-          <div class="quote-tip"><strong>Airport?</strong> Add your flight and luggage. <strong>Cruise?</strong> Add your ship and all-aboard time.</div>
-        </div>
-
-        <form class="quote-form" id="quoteForm">
-          <div class="field-full">
-            <label for="serviceType">Service</label>
-            <select id="serviceType">
-              <option>Private driver for the day</option>
-              <option>Private taxi ride</option>
-              <option>STT airport pickup</option>
-              <option>Cruise port pickup</option>
-              <option>Private island tour</option>
-              <option>Grocery stop or delivery</option>
-              <option>Daily or weekly transportation</option>
-            </select>
-          </div>
-
-          <div>
-            <label for="pickup">Pickup location</label>
-            <input id="pickup" type="text" autocomplete="off" placeholder="Airport, hotel, villa or port">
-          </div>
-          <div>
-            <label for="destination">Destination</label>
-            <input id="destination" type="text" placeholder="Hotel, beach, restaurant or area">
-          </div>
-          <div>
-            <label for="tripDate">Date</label>
-            <input id="tripDate" type="date">
-          </div>
-          <div>
-            <label for="tripTime">Pickup time</label>
-            <input id="tripTime" type="time">
-          </div>
-          <div class="field-full">
-            <label for="passengers">Passengers</label>
-            <input id="passengers" type="number" min="1" max="12" inputmode="numeric" placeholder="Number of passengers">
-          </div>
-          <div class="field-full">
-            <label for="notes">Length of stay, planned rides, flight, ship, luggage or other details</label>
-            <textarea id="notes" placeholder="Anything we should know"></textarea>
-          </div>
-
-          <button class="button button-teal" type="submit">Send quote request on WhatsApp</button>
-        </form>
-      </div>
+      <div class="container"><div class="simple-quote">
+        <p class="section-kicker">Let’s plan your ride</p>
+        <h2 class="section-heading" id="quote-title">Text us your trip details</h2>
+        <p>Send your date, group size, pickup location and plans. For airport rides, include your flight; for cruises, include your ship and all-aboard time.</p>
+        <div class="hero-actions"><a class="button button-primary" href="sms:+17867199870?body=Hi%20Top%20Dog%21%20I%20would%20like%20a%20transportation%20quote%20in%20St.%20Thomas.%20Date%3A%20%20Number%20of%20guests%3A%20%20Pickup%20location%3A%20%20Plans%3A%20">Text Us for a Quote</a><a class="button button-secondary" href="https://wa.me/17867199870" target="_blank" rel="noopener">WhatsApp</a><a class="button button-secondary" href="https://calendar.app.google/QhGbrGE2vqHfdK3t5" target="_blank" rel="noopener">Booking Calendar</a></div>
+      </div></div>
     </section>
 
     <aside class="review-callout" aria-labelledby="review-title">
@@ -1686,7 +1511,7 @@
           </details>
           <details>
             <summary>Can I arrange several days of transportation?</summary>
-            <p>Yes. Arrange daily or weekly transportation in St. Thomas for beaches, restaurants, grocery stores, excursions and other destinations based on your plans. The daily rate for 2 people is $100; pricing varies with length of stay. For 3 or more people, request a custom quote. Confirm the schedule and included trips before booking.</p>
+            <p>Yes. Arrange daily or weekly transportation in St. Thomas for beaches, restaurants, grocery stores, excursions and other destinations based on your plans. Send your dates, group size, destinations and expected rides for a custom quote. Confirm the schedule and included trips before booking.</p>
           </details>
         </div>
       </div>
@@ -1698,11 +1523,7 @@
           <h2 id="contact-title">Ready for your ride?</h2>
           <p>Call, text or WhatsApp Top Dog Tour &amp; Taxi for private transportation in St. Thomas, U.S. Virgin Islands.</p>
         </div>
-        <div class="contact-actions">
-          <a class="button button-primary" href="https://wa.me/17867199870?text=Hi%20Top%20Dog%20Tour%20%26%20Taxi%2C%20I%20need%20transportation%20in%20St.%20Thomas." target="_blank" rel="noopener">WhatsApp&nbsp;786&#8209;719&#8209;9870</a>
-          <a class="button button-outline" href="tel:+17867199870">Call</a>
-          <a class="button button-outline" href="sms:+17867199870">Send a text</a>
-        </div>
+        <div class="contact-actions"><a class="button button-primary" href="sms:+17867199870?body=Hi%20Top%20Dog%21%20I%20would%20like%20a%20transportation%20quote%20in%20St.%20Thomas.%20Date%3A%20%20Number%20of%20guests%3A%20%20Pickup%20location%3A%20%20Plans%3A%20">Text 786-719-9870</a><a class="button button-outline" href="tel:+17867199870">Call</a><a class="button button-outline" href="https://wa.me/17867199870" target="_blank" rel="noopener">WhatsApp</a></div>
       </div>
     </section>
   </main>
@@ -1735,10 +1556,7 @@
     </div>
   </footer>
 
-  <nav class="mobile-actions" aria-label="Quick contact">
-    <a class="button button-secondary" href="tel:+17867199870">Call</a>
-    <a class="button button-primary" href="https://wa.me/17867199870?text=Hi%20Top%20Dog%20Tour%20%26%20Taxi%2C%20I%20need%20a%20ride%20in%20St.%20Thomas." target="_blank" rel="noopener">WhatsApp quote</a>
-  </nav>
+  <nav class="mobile-actions" aria-label="Quick contact"><a class="button button-primary" href="sms:+17867199870?body=Hi%20Top%20Dog%21%20I%20would%20like%20a%20transportation%20quote%20in%20St.%20Thomas.%20Date%3A%20%20Number%20of%20guests%3A%20%20Pickup%20location%3A%20%20Plans%3A%20">Text Us</a><a class="button button-secondary" href="tel:+17867199870">Call</a></nav>
 
   <script>
     const phoneNumber = "17867199870";
@@ -1776,7 +1594,7 @@
       if (zone.value === "custom") {
         total.textContent = "Ask us";
         note.textContent = "Send the property name or address for an exact quote.";
-        bookEstimate.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent("Hi Top Dog Tour & Taxi, I need an airport pickup quote for a villa or Airbnb that is not listed. The property/address is: ")}`;
+        bookEstimate.href = `sms:+${phoneNumber}?body=${encodeURIComponent("Hi Top Dog Tour & Taxi, I need an airport pickup quote for a villa or Airbnb that is not listed. The property/address is: ")}`;
         return;
       }
 
@@ -1787,59 +1605,17 @@
       note.textContent = `${destinationName} · ${passengerCount} ${passengerCount === 1 ? "passenger" : "passengers"} at $${perPerson} per person`;
 
       const message = `Hi Top Dog Tour & Taxi, I want to book STT airport pickup to ${destinationName} for ${passengerCount} ${passengerCount === 1 ? "passenger" : "passengers"}. The calculator estimate is $${estimate}. My flight and arrival details are: `;
-      bookEstimate.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+      bookEstimate.href = `sms:+${phoneNumber}?body=${encodeURIComponent(message)}`;
     }
 
     document.getElementById("calculateRate").addEventListener("click", calculateAirportRate);
     zone.addEventListener("change", calculateAirportRate);
     people.addEventListener("change", calculateAirportRate);
 
-    document.getElementById("quoteForm").addEventListener("submit", (event) => {
-      event.preventDefault();
 
-      const service = document.getElementById("serviceType").value;
-      const pickup = document.getElementById("pickup").value.trim() || "not entered";
-      const destination = document.getElementById("destination").value.trim() || "not entered";
-      const date = document.getElementById("tripDate").value || "not entered";
-      const time = document.getElementById("tripTime").value || "not entered";
-      const passengers = document.getElementById("passengers").value || "not entered";
-      const notes = document.getElementById("notes").value.trim() || "none";
-
-      const message = `Hi Top Dog Tour & Taxi, I would like a quote.
-
-Service: ${service}
-Pickup: ${pickup}
-Destination: ${destination}
-Date: ${date}
-Time: ${time}
-Passengers: ${passengers}
-Details: ${notes}`;
-
-      window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank", "noopener");
-    });
 
     calculateAirportRate();
   </script>
-<a class="floating-sms" href="sms:+17867199870">Chat Now</a><script>    function calcAirportHome() {
-      const zone = document.getElementById("airportZoneHome");
-      const zoneValue = zone.value;
-      const people = Number(document.getElementById("airportPeopleHome").value);
-      const total = document.getElementById("airportTotalHome");
-      const breakdown = document.getElementById("airportBreakdownHome");
-
-      if (zoneValue === "ask") {
-        total.innerText = "Ask Us";
-        breakdown.innerHTML = "Airbnb/villa not listed? Message us for an exact quote.";
-        return;
-      }
-
-      const rate = Number(zoneValue);
-      const tripTotal = rate * people;
-      total.innerText = "$" + tripTotal.toFixed(2);
-      breakdown.innerHTML = "<b>Destination:</b> " + zone.options[zone.selectedIndex].text +
-        "<br><b>Rate:</b> $" + rate.toFixed(2) + " per person" +
-        "<br><b>People:</b> " + people;
-    }
-
-</script></body>
+</body>
 </html>
+
